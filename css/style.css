@@ -1,6 +1,9 @@
 /* Brunderman Building Co Inc — site styles
    Bold charcoal + orange (headline weight), clean rounded cards (layout). */
 
+/* Self-hosted variable fonts (latin subset) — no third-party font requests */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(/fonts/inter-latin-var.woff2) format('woff2'); }
+@font-face { font-family: 'Oswald'; font-style: normal; font-weight: 500 700; font-display: swap; src: url(/fonts/oswald-latin-var.woff2) format('woff2'); }
 @font-face { font-family: "Oswald Fallback"; src: local("Arial Narrow"), local("Arial"); size-adjust: 82%; ascent-override: 145%; descent-override: 35%; line-gap-override: 0%; }
 @font-face { font-family: "Inter Fallback"; src: local("Arial"); size-adjust: 107%; ascent-override: 90%; descent-override: 22.4%; line-gap-override: 0%; }
 

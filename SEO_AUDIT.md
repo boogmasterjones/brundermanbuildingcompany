@@ -21,7 +21,7 @@ Method: a custom crawler over every built page (`node _generate/audit.js` — re
 ## ✅ Fixed in this pass
 
 ### Performance / Core Web Vitals
-1. **Render-blocking Google Fonts** delayed first paint by ~1.6 s on mobile → fonts now load after first paint; metric-matched fallback `@font-face` rules (size-adjust / ascent-override) keep layout from shifting when they swap in.
+1. **Render-blocking Google Fonts** delayed first paint by ~1.6 s on mobile → fonts are now self-hosted (no Google Fonts connection at all); metric-matched fallback `@font-face` rules (size-adjust / ascent-override) keep layout from shifting when they swap in.
 2. **Render-blocking stylesheet** → CSS is minified at build time and inlined in each page (one less blocking request; ~7 KB gzipped).
 3. **Analytics script** (67 KB unused JS, most of the blocking time) → gtag loads ~1.2 s after page load; a `gtag()` stub queues events so call-click tracking still records. With the placeholder ID the script is not requested at all.
 4. Dropped the `backdrop-filter` blur on mobile stat cards (expensive paint on low-end phones).
@@ -90,7 +90,7 @@ One H1 per page with its words present in body copy · no heading-level jumps ·
 16. Client read-through of process claims (unchanged from LAUNCH_TODO).
 
 ### Optional / later
-17. **Self-host the two fonts** (WOFF2 in `/fonts/`) to drop both Google Fonts connections entirely — needs the font files downloaded; say the word and I will do it.
+17. ~~Self-host the two fonts~~ — done: Inter + Oswald variable WOFF2 (latin, 70 KB total) served from `/fonts/` with `font-display: swap` and a 1-year cache. The site now makes zero third-party requests until GA4 is configured.
 18. `aggregateRating`/`review` schema intentionally **not** added: Google treats self-hosted LocalBusiness review markup as self-serving (no stars, and a policy risk).
 19. Add a guide every month or two (ideas: impact windows vs. shutters, elevating a home in Punta Gorda Isles, lanai enclosure rules, remodel-vs-rebuild after flood damage, choosing a seawall-lot floor plan). Bump `SITE.lastmod` on each content change.
 20. When call volume justifies it, swap in a call-tracking number — one line in `_generate/parts.js` (keep the real number in schema/GBP for NAP).

@@ -25,7 +25,6 @@ const path = require('path');
 // CSS is minified and inlined into every page at build time (no render-blocking stylesheet request).
 const minifyCss = (css) => css.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{}:;,>])\s*/g, '$1').replace(/;}/g, '}').trim();
 const CSS = minifyCss(fs.readFileSync(path.join(__dirname, '..', 'css', 'style.css'), 'utf8'));
-const FONTS_URL = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap';
 const GA_LIVE = !/X{6,}/.test(SITE.ga4);
 
 const SERVICES_NAV = [
@@ -161,16 +160,6 @@ ${GA_LIVE ? `  gtag('js', new Date());
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <meta name="twitter:image" content="${SITE.domain}/images/og-image.png">
-<script>
-  /* Web fonts load after first paint; metric-matched fallbacks in the CSS keep layout stable meanwhile. */
-  window.addEventListener('load', function () {
-    var l = document.createElement('link');
-    l.rel = 'stylesheet';
-    l.href = '${FONTS_URL}';
-    document.head.appendChild(l);
-  });
-</script>
-<noscript><link rel="stylesheet" href="${FONTS_URL}"></noscript>
 <style>${CSS}</style>
 ${ga}
 ${ld}
