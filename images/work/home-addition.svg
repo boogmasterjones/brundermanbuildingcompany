@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img" aria-label="Home Additions placeholder">
+<defs><pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#fff" stroke-opacity=".07"/></pattern></defs>
+<rect width="480" height="360" fill="#23272b"/><rect width="480" height="360" fill="url(#g)"/>
+<g fill="none" stroke="#ff8a4c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M70 250v-80l95-55 95 55v80z"/><path d="M260 250v-65h150v65z" stroke-dasharray="9 7"/><path d="M260 185l75-38 75 38" stroke-dasharray="9 7"/><path d="M335 205v30M320 220h30"/></g>
+<text x="240" y="300" text-anchor="middle" font-family="Oswald,Impact,Arial Narrow,sans-serif" font-size="22" letter-spacing="3" fill="#fff">HOME ADDITIONS</text>
+<text x="240" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#c9c4ba">PROJECT PHOTO COMING SOON</text>
+</svg>

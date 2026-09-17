@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img" aria-label="Kitchen Remodeling placeholder">
+<defs><pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#fff" stroke-opacity=".07"/></pattern></defs>
+<rect width="480" height="360" fill="#23272b"/><rect width="480" height="360" fill="url(#g)"/>
+<g fill="none" stroke="#ff8a4c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="70" y="95" width="340" height="55"/><path d="M155 95v55M240 95v55M325 95v55"/><rect x="70" y="190" width="340" height="60"/><path d="M155 190v60M325 190v60"/><rect x="200" y="172" width="80" height="18"/><path d="M240 150v22"/></g>
+<text x="240" y="300" text-anchor="middle" font-family="Oswald,Impact,Arial Narrow,sans-serif" font-size="22" letter-spacing="3" fill="#fff">KITCHEN REMODELING</text>
+<text x="240" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#c9c4ba">PROJECT PHOTO COMING SOON</text>
+</svg>
