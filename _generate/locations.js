@@ -6,11 +6,11 @@ module.exports = [
   {
     slug: 'port-charlotte',
     city: 'Port Charlotte',
-    title: 'Home Builder & Remodeler in Port Charlotte, FL | Brunderman',
-    description: 'Port Charlotte home builder and remodeler with four decades of local experience and 200+ homes built in Charlotte County. Custom homes, kitchens & baths.',
+    title: 'General Contractor in Port Charlotte, FL | Brunderman Building',
+    description: 'General contractor in Port Charlotte, FL for new homes, remodels and additions. Four decades of local experience and 200+ homes built in Charlotte County.',
     eyebrow: 'Our Home Market · Charlotte County',
-    h1: 'Home Builder & Remodeler in Port Charlotte, FL',
-    lead: 'Port Charlotte is where we have done most of our building for four decades. If you need a home builder or remodeler who knows these streets, canals, and block homes, you have found one.',
+    h1: 'General Contractor in Port Charlotte, FL',
+    lead: 'Port Charlotte is where we have done most of our building for four decades. If you need a general contractor who knows these streets, canals, and block homes, you have found one.',
     facts: [
       ['Population', 'About 60,000 (2020 Census)'],
       ['County', 'Charlotte County (unincorporated)'],
@@ -20,7 +20,7 @@ module.exports = [
     intro: [
       'Port Charlotte was laid out in the late 1950s by General Development Corporation as one of the largest planned communities in Florida — tens of thousands of platted lots threaded with roughly 165 miles of canals. With around 60,000 residents today, it remains unincorporated, which means building permits run through Charlotte County rather than a city hall. Brunderman Building Co Inc has spent four decades working inside that system, and the majority of the 200-plus homes we have built in Charlotte County stand here.',
       'That history gives us an unusual familiarity with the housing stock. We know the low-slung 1960s and 70s block ranches off Edgewater Drive and Midway Boulevard, with their terrazzo floors and jalousie-era window openings. We know the 1980s and 90s homes around Murdock and the newer construction in Gulf Cove and South Gulf Cove. And we know what Hurricane Charley in 2004 and Hurricane Ian in 2022 did to roofs, soffits, lanais, and interiors across every one of those neighborhoods, because we were building here through both storms.',
-      'Whether you are building new on a vacant lot in Section 15 or finally redoing the kitchen in a house you have owned for thirty years, working with a home builder and remodeler based right here keeps the project simple. Site visits are easy, suppliers are close, and the local permitting process is one we work with every week.',
+      'Whether you are building new on a vacant lot in Section 15 or finally redoing the kitchen in a house you have owned for thirty years, working with a general contractor based right here in Port Charlotte keeps the project simple. Site visits are easy, suppliers are close, and the local permitting process is one we work with every week.',
     ],
     localH2: 'Building and Remodeling on Port Charlotte Lots',
     local: [
@@ -34,9 +34,9 @@ module.exports = [
       'Replacing alcove tubs and shower windows with waterproofed walk-in showers and better storage.',
       'Primary suites, in-law suites, and garage bays designed around 80-by-125-foot lot setbacks and septic fields.',
     ],
-    seoH2: 'Port Charlotte Home Builder and Remodeling Contractor Near You',
+    seoH2: 'A Port Charlotte General Contractor Near You',
     seo: [
-      'People searching for a home builder near me in Port Charlotte FL, or for a Port Charlotte remodeling contractor, tend to find a mix of out-of-area companies advertising into the market and a smaller group of builders who genuinely work here every week. Brunderman Building Co Inc is local in the literal sense: our office sits just off US-41 near the Charlotte Harbor bridges, a few minutes from the Port Charlotte Town Center and Charlotte Sports Park. More than 800 customers have hired us, and BuildZoom places us in the top 5% of builders.',
+      'People searching for a general contractor near me in Port Charlotte FL, or for a Port Charlotte building contractor, tend to find a mix of out-of-area companies advertising into the market and a smaller group of builders who genuinely work here every week. Brunderman Building Co Inc is local in the literal sense: our office sits just off US-41 near the Charlotte Harbor bridges, a few minutes from the Port Charlotte Town Center and Charlotte Sports Park. More than 800 customers have hired us, and BuildZoom places us in the top 5% of builders.',
       'Our Port Charlotte work covers the full range — custom home construction, home remodeling, kitchen remodeling, bathroom remodeling, and home additions. As a general contractor we coordinate every trade under one contract, handle Charlotte County permitting, and build to the Florida Building Code requirements for this wind-borne debris region. Homeowners choose a builder and remodeler with deep roots here because the advice is grounded in what has actually held up in Port Charlotte over forty years.',
     ],
     variantsH3: 'Port Charlotte Neighborhoods We Work In',

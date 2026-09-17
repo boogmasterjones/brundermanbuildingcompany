@@ -16,7 +16,17 @@ const SITE = {
   ga4: 'G-XXXXXXXXXX', // PLACEHOLDER — replace with real GA4 Measurement ID
   formAction: 'https://formsubmit.co/brundermanbuilding@comcast.net', // lead inbox — swap if needed
   lastmod: '2026-09-17',
+  lat: 26.9646837, // from the Google Business Profile pin
+  lng: -82.0651628,
 };
+
+const fs = require('fs');
+const path = require('path');
+// CSS is minified and inlined into every page at build time (no render-blocking stylesheet request).
+const minifyCss = (css) => css.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{}:;,>])\s*/g, '$1').replace(/;}/g, '}').trim();
+const CSS = minifyCss(fs.readFileSync(path.join(__dirname, '..', 'css', 'style.css'), 'utf8'));
+const FONTS_URL = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap';
+const GA_LIVE = !/X{6,}/.test(SITE.ga4);
 
 const SERVICES_NAV = [
   ['custom-home-construction', 'Custom Home Construction'],
@@ -76,6 +86,9 @@ function businessSchema() {
     url: `${SITE.domain}/`,
     telephone: SITE.phoneTel,
     image: `${SITE.domain}/images/og-image.png`,
+    logo: `${SITE.domain}/images/logo-512.png`,
+    hasMap: SITE.gbp,
+    geo: { '@type': 'GeoCoordinates', latitude: SITE.lat, longitude: SITE.lng },
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE.street,
@@ -86,48 +99,80 @@ function businessSchema() {
     },
     areaServed: LOCATIONS_NAV.map(([, n]) => ({ '@type': 'City', name: `${n}, FL` })),
     knowsAbout: SERVICES_NAV.map(([, n]) => n),
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Building and remodeling services',
+      itemListElement: SERVICES_NAV.map(([slug, n]) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: n, url: `${SITE.domain}/services/${slug}.html` } })),
+    },
     sameAs: [SITE.gbp],
   };
 }
 
-function head({ title, description, path, schemas = [] }) {
-  const url = `${SITE.domain}${path}`;
-  const ld = [businessSchema(), ...schemas]
+function head({ title, description, path: pagePath, schemas = [], place = 'Port Charlotte, Florida', noindex = false }) {
+  const url = `${SITE.domain}${pagePath}`;
+  const webPage = { '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${url}#webpage`, url, name: title, description, inLanguage: 'en-US', isPartOf: { '@id': `${SITE.domain}/#website` }, about: { '@id': `${SITE.domain}/#business` } };
+  const ld = [businessSchema(), webPage, ...schemas]
     .map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`)
     .join('\n');
+  // Analytics loads after the page is interactive; the gtag() stub queues events (incl. call clicks) until then.
+  const ga = `<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+${GA_LIVE ? `  gtag('js', new Date());
+  gtag('config', '${SITE.ga4}');
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=${SITE.ga4}';
+      document.head.appendChild(s);
+    }, 1200);
+  });` : `  /* GA4 not configured yet — set SITE.ga4 in _generate/parts.js and rebuild */`}
+</script>`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="geo.region" content="US-FL">
-<meta name="geo.placename" content="Port Charlotte, Florida">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
+<meta name="robots" content="${noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'}">
 <link rel="canonical" href="${url}">
+<meta name="geo.region" content="US-FL">
+<meta name="geo.placename" content="${esc(place)}">
+<meta name="geo.position" content="${SITE.lat};${SITE.lng}">
+<meta name="ICBM" content="${SITE.lat}, ${SITE.lng}">
+<meta name="theme-color" content="#1c1c1c">
+<meta name="format-detection" content="telephone=no">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${url}">
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:image" content="${SITE.domain}/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(SITE.name)} — home builder and remodeler in Port Charlotte, FL">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <meta name="twitter:image" content="${SITE.domain}/images/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="/css/style.css?v=2">
-<script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.ga4}"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '${SITE.ga4}');
+  /* Web fonts load after first paint; metric-matched fallbacks in the CSS keep layout stable meanwhile. */
+  window.addEventListener('load', function () {
+    var l = document.createElement('link');
+    l.rel = 'stylesheet';
+    l.href = '${FONTS_URL}';
+    document.head.appendChild(l);
+  });
 </script>
+<noscript><link rel="stylesheet" href="${FONTS_URL}"></noscript>
+<style>${CSS}</style>
+${ga}
 ${ld}
 </head>
 <body>
@@ -156,8 +201,10 @@ ${SERVICES_NAV.map(([slug, n]) => `          <a href="/services/${slug}.html"${c
           <div class="menu-areas">
 ${LOCATIONS_NAV.map(([slug, n]) => `            <a href="/locations/${slug}.html"${cur(slug)}>${n}</a>`).join('\n')}
           </div>
+          <a href="/service-areas.html"${cur('areas')}>All Service Areas</a>
           <span class="menu-label">Company</span>
           <a href="/about.html"${cur('about')}>About &amp; Contact</a>
+          <a href="/guides.html"${cur('guides')}>Homeowner Guides</a>
           <a href="/about.html#quote">Request a Quote</a>
         </div>
       </div>
@@ -183,23 +230,25 @@ function footer() {
         </address>
       </div>
       <div>
-        <h3>Services</h3>
+        <p class="footer-title">Services</p>
         <ul>
 ${SERVICES_NAV.map(([slug, n]) => `          <li><a href="/services/${slug}.html">${n}</a></li>`).join('\n')}
           <li><a href="/services.html">All Services</a></li>
         </ul>
       </div>
       <div>
-        <h3>Service Areas</h3>
+        <p class="footer-title">Service Areas</p>
         <ul>
 ${LOCATIONS_NAV.map(([slug, n]) => `          <li><a href="/locations/${slug}.html">${n}, FL</a></li>`).join('\n')}
         </ul>
       </div>
       <div>
-        <h3>Get Started</h3>
+        <p class="footer-title">Company</p>
         <ul>
           <li><a href="/about.html">About &amp; Contact</a></li>
           <li><a href="/about.html#quote">Request a Quote</a></li>
+          <li><a href="/service-areas.html">All Service Areas</a></li>
+          <li><a href="/guides.html">Homeowner Guides</a></li>
           <li><a href="${SITE.gbp}" rel="noopener" target="_blank">Find Us on Google</a></li>
         </ul>
         <a ${callAttr('footer_cta_phone_button')} class="btn btn-primary btn-sm" style="margin-top:18px;">Call ${SITE.phoneDisplay}</a>
@@ -295,7 +344,7 @@ ${services.map((s) => `              <label class="check-item"><input type="chec
 
       <div class="quote-chat">
         <span class="eyebrow-dark">Let's Talk</span>
-        <h2>Let's Get in Touch!</h2>
+        <p class="h2-like">Let's Get in Touch!</p>
         <p>Tell us what you're planning — a new custom home, a kitchen or bath remodel, an addition — and we'll follow up to talk through scope, budget, and timing. Prefer the phone? Call and talk to a builder directly.</p>
         <a ${callAttr(label)} class="btn btn-primary">${ICON.phone} Call ${SITE.phoneDisplay}</a>
         <div class="quote-trust">
@@ -379,4 +428,4 @@ const TRUST_BAR = `<div class="trust-bar"><div class="container">
 </div></div>
 `;
 
-module.exports = { SITE, SERVICES_NAV, LOCATIONS_NAV, ICON, esc, stars, callAttr, head, header, footer, quoteSection, ctaBand, faqBlock, faqSchema, breadcrumbSchema, pageHero, TRUST_BAR };
+module.exports = { CSS, SITE, SERVICES_NAV, LOCATIONS_NAV, ICON, esc, stars, callAttr, head, header, footer, quoteSection, ctaBand, faqBlock, faqSchema, breadcrumbSchema, pageHero, TRUST_BAR };

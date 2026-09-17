@@ -5,6 +5,7 @@ const path = require('path');
 const P = require('./parts');
 const SERVICES = require('./services');
 const LOCATIONS = require('./locations');
+const GUIDES = require('./guides');
 const { SITE, ICON, esc, stars, callAttr } = P;
 
 const ROOT = path.join(__dirname, '..');
@@ -48,7 +49,7 @@ function workSection() {
     <div class="work-gallery">
       <div class="work-track" tabindex="0" aria-label="Project photo carousel">
 ${WORK.map(([file, t, s]) => `        <div class="work-slide">
-          <div class="work-slide-media"><img src="/images/work/${file}.svg" alt="${esc(t)} project by Brunderman Building Co Inc — ${esc(s)}" loading="lazy" width="480" height="360"></div>
+          <div class="work-slide-media"><img src="/images/work/${file}.svg" alt="${esc(t)} — ${esc(s)} (illustration)" loading="lazy" width="480" height="360"></div>
           <div class="work-slide-caption"><strong>${esc(t)}</strong><span>${esc(s)}</span></div>
         </div>`).join('\n')}
       </div>
@@ -110,7 +111,7 @@ write('index.html',
     title: 'Home Builder in Port Charlotte, FL | Brunderman Building Co Inc',
     description: 'Port Charlotte home builder and remodeler with four decades of experience. 200+ homes built in Charlotte County. Custom homes, kitchens, baths & additions.',
     path: '/',
-    schemas: [P.faqSchema(HOME_FAQS), { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.name, url: `${SITE.domain}/` }],
+    schemas: [P.faqSchema(HOME_FAQS), { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${SITE.domain}/#website`, name: SITE.name, url: `${SITE.domain}/`, publisher: { '@id': `${SITE.domain}/#business` } }],
   }) +
   P.header() +
   `<main id="main">
@@ -141,7 +142,7 @@ write('index.html',
 </section>
 ` +
   workSection() +
-  P.quoteSection({ alt: false, label: 'home_quote_section_phone_button' }) +
+  P.quoteSection({ alt: false, label: 'home_quote_section_phone_button', heading: 'Request a Quote From a Port Charlotte Home Builder' }) +
   reviewsSection().replace('<section id="reviews">', '<section id="reviews" class="section-alt">') +
   `<section id="services">
   <div class="container">
@@ -198,8 +199,8 @@ ${P.TRUST_BAR}
       <div class="prose collapsible">
         <span class="eyebrow-dark">Service Area</span>
         <h2>Port Charlotte and 50 Miles Around It</h2>
-        <p>Our office is on Pinnacle Street near Charlotte Harbor, minutes from US-41 and the heart of Port Charlotte. From there our service area reaches about 50 miles in every direction: north through North Port to Venice, west along State Road 776 to Englewood and Rotonda West, across the Peace River to Punta Gorda, and south down Burnt Store Road and I-75 to Cape Coral and Fort Myers.</p>
-        <p>The region shares a climate and a building code, but every community has its own character. Port Charlotte and North Port are defined by platted lots and canals. Punta Gorda Isles and Cape Coral are waterfront markets where flood elevation and seawalls shape every plan. Englewood has coastal high-hazard zones on Manasota Key, while Venice and Fort Myers have historic districts with design review. As a home builder working across all of them, we plan each project around the local rules rather than finding out about them halfway through.</p>
+        <p>Our office is on Pinnacle Street near Charlotte Harbor, minutes from US-41 and the heart of Port Charlotte. From there our service area reaches about 50 miles in every direction: north through <a href="/locations/north-port.html">North Port</a> to <a href="/locations/venice.html">Venice</a>, west along State Road 776 to <a href="/locations/englewood.html">Englewood</a> and Rotonda West, across the Peace River to <a href="/locations/punta-gorda.html">Punta Gorda</a>, and south down Burnt Store Road and I-75 to <a href="/locations/cape-coral.html">Cape Coral</a> and <a href="/locations/fort-myers.html">Fort Myers</a>.</p>
+        <p>The region shares a climate and a building code, but every community has its own character. Port Charlotte and North Port are defined by platted lots and canals. Punta Gorda Isles and Cape Coral are waterfront markets where flood elevation and seawalls shape every plan. Englewood has coastal high-hazard zones on Manasota Key, while Venice and Fort Myers have historic districts with design review. As a home builder working across all of them, we plan each project around the local rules rather than finding out about them halfway through. See <a href="/service-areas.html">all service areas</a>, or read our <a href="/guides.html">homeowner guides</a> on flood rules, permits, and building on your own lot.</p>
       </div>
       <div>
         ${areaGrid().replace('class="area-grid"', 'class="area-grid two"')}
@@ -219,7 +220,7 @@ ${P.TRUST_BAR}
 write('services.html',
   P.head({
     title: 'Building & Remodeling Services in Port Charlotte, FL | Brunderman',
-    description: 'Building and remodeling services in Port Charlotte, FL: custom home construction, home remodeling, kitchens, bathrooms and additions from one experienced builder.',
+    description: 'Building and remodeling services in Port Charlotte, FL: custom homes, home remodeling, kitchens, bathrooms and additions from one experienced builder.',
     path: '/services.html',
     schemas: [P.breadcrumbSchema([['Home', '/'], ['Services', '/services.html']])],
   }) +
@@ -276,7 +277,7 @@ ${serviceCards()}
   </div>
 </section>
 ` +
-  P.quoteSection({ alt: false, label: 'services_hub_quote_phone_button' }) +
+  P.quoteSection({ alt: false, label: 'services_hub_quote_phone_button', heading: 'Tell Us What You Want Built' }) +
   `</main>
 ` +
   P.footer(),
@@ -305,7 +306,7 @@ for (const s of SERVICES) {
     <div class="split">
       <div class="prose collapsible">
         <span class="eyebrow-dark">${s.name}</span>
-        <h2>Built by a Builder With Four Decades Behind It</h2>
+        <h2>${s.introH2}</h2>
 ${s.intro.map((p) => `        <p>${p}</p>`).join('\n')}
       </div>
       <aside class="fact-card">
@@ -347,12 +348,13 @@ ${s.variants.map((v) => `        <li>${v}</li>`).join('\n')}
       <h3>${s.name} Service Area</h3>
       <p>${s.areaP}</p>
       <p>Looking for something else? See our other services: ${SERVICES.filter((o) => o.slug !== s.slug).map((o) => `<a href="/services/${o.slug}.html">${o.name.toLowerCase()}</a>`).join(', ')}.</p>
+      <p><strong>Related guide:</strong> <a href="/guides/${s.guide[0]}.html">${s.guide[1]}</a>.</p>
     </div>
   </div>
 </section>
 ` +
     P.faqBlock(s.faqs, `${s.name} FAQ`, true) +
-    P.quoteSection({ alt: false, label: 'service_page_quote_phone_button' }) +
+    P.quoteSection({ alt: false, label: 'service_page_quote_phone_button', heading: `Request a ${s.name} Quote` }) +
     `</main>
 ` +
     P.footer(),
@@ -361,13 +363,18 @@ ${s.variants.map((v) => `        <li>${v}</li>`).join('\n')}
 
 // ---------- Location pages ----------
 for (const l of LOCATIONS) {
-  const crumbs = [['Home', '/'], ['Service Areas', '/#areas'], [`${l.city}, FL`, `/locations/${l.slug}.html`]];
+  const crumbs = [['Home', '/'], ['Service Areas', '/service-areas.html'], [`${l.city}, FL`, `/locations/${l.slug}.html`]];
   write(`locations/${l.slug}.html`,
     P.head({
       title: l.title,
       description: l.description,
       path: `/locations/${l.slug}.html`,
-      schemas: [P.breadcrumbSchema([['Home', '/'], [`${l.city}, FL`, `/locations/${l.slug}.html`]]), P.faqSchema(l.faqs)],
+      place: `${l.city}, Florida`,
+      schemas: [
+        P.breadcrumbSchema(crumbs),
+        P.faqSchema(l.faqs),
+        { '@context': 'https://schema.org', '@type': 'Service', name: `Home building and remodeling in ${l.city}, FL`, serviceType: 'Home construction and remodeling', provider: { '@id': `${SITE.domain}/#business` }, areaServed: { '@type': 'City', name: `${l.city}, FL` }, url: `${SITE.domain}/locations/${l.slug}.html` },
+      ],
     }) +
     P.header() +
     `<main id="main">
@@ -420,6 +427,7 @@ ${l.variants.map((v) => `        <li>${v}</li>`).join('\n')}
       </ul>
       <h3>${l.nearbyH3}</h3>
       <p>${l.nearby}</p>
+      <p><strong>Helpful reading:</strong> ${GUIDES.map((g) => `<a href="/guides/${g.slug}.html">${g.short}</a>`).join(' · ')}</p>
     </div>
   </div>
 </section>
@@ -478,6 +486,17 @@ ${SERVICES.map((s) => `          <li><a href="/services/${s.slug}.html">${s.name
   </div>
 </section>
 ${P.TRUST_BAR}
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow-dark">Find Us</span>
+      <h2>Our Office Near Charlotte Harbor</h2>
+      <p>${SITE.street}, ${SITE.city}, ${SITE.region} ${SITE.zip} — just off US-41, minutes from Port Charlotte and the Peace River bridges.</p>
+    </div>
+    <div class="map-embed"><iframe title="Map showing the ${esc(SITE.name)} office" src="https://www.google.com/maps?q=${encodeURIComponent(SITE.legalName + ', ' + SITE.street + ', ' + SITE.city + ', ' + SITE.region + ' ' + SITE.zip)}&amp;output=embed" width="600" height="340" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    <div class="reviews-cta"><a href="${SITE.gbp}" target="_blank" rel="noopener" class="btn btn-outline-dark">Get Directions on Google Maps</a></div>
+  </div>
+</section>
 <section class="section-alt">
   <div class="container">
     <div class="section-head">
@@ -496,10 +515,139 @@ ${P.TRUST_BAR}
   P.footer(),
   '0.7');
 
+// ---------- Service areas hub ----------
+const AREA_BLURBS = {
+  'port-charlotte': 'Our home market: platted lots, 165 miles of canals, and most of the 200+ homes we have built.',
+  'punta-gorda': 'Waterfront building in Punta Gorda Isles and Burnt Store Isles, plus the downtown historic district.',
+  'north-port': 'Build-on-your-lot homes with well, septic, and site work, and remodels in established communities.',
+  'englewood': 'Coastal construction on both sides of the county line — Rotonda West, Manasota Key, Cape Haze.',
+  'venice': 'Character-sensitive remodeling on the island and practical updates in South Venice and Venice Gardens.',
+  'cape-coral': 'Canal-front custom homes and post-storm renovations across 400 miles of waterways.',
+  'fort-myers': 'From 1920s bungalows to riverfront homes off McGregor Boulevard and new construction out east.',
+};
+write('service-areas.html',
+  P.head({
+    title: 'Service Areas in Southwest Florida | Brunderman Building Co Inc',
+    description: 'Brunderman Building Co Inc serves Port Charlotte and about 50 miles around it: Punta Gorda, North Port, Englewood, Venice, Cape Coral and Fort Myers, FL.',
+    path: '/service-areas.html',
+    schemas: [P.breadcrumbSchema([['Home', '/'], ['Service Areas', '/service-areas.html']])],
+  }) +
+  P.header('areas') +
+  `<main id="main">
+` +
+  P.pageHero({
+    crumbs: [['Home', '/'], ['Service Areas', '/service-areas.html']],
+    eyebrow: 'Charlotte · Sarasota · Lee · DeSoto Counties',
+    h1: 'Service Areas: Port Charlotte &amp; Southwest Florida',
+    lead: 'Port Charlotte is the center of our service area, which reaches about 50 miles in every direction.',
+    label: 'areas_hub_hero_phone_button',
+  }) +
+  `<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow-dark">Where We Build</span>
+      <h2>Seven Communities, One Experienced Builder</h2>
+      <p>Each of these Southwest Florida communities has its own building department, flood maps, and housing stock. Choose yours for local detail.</p>
+    </div>
+    <div class="card-grid">
+${P.LOCATIONS_NAV.map(([slug, n, c]) => `      <a class="card" href="/locations/${slug}.html"><span class="card-icon">${ICON.pin}</span><h3>${n}, FL</h3><p>${AREA_BLURBS[slug]} <em>${esc(c)}.</em></p><span class="card-link">Building in ${n}</span></a>`).join('\n')}
+    </div>
+  </div>
+</section>
+<section class="section-alt">
+  <div class="container">
+    <div class="prose collapsible narrow">
+      <h2>How Far Our Service Area Reaches</h2>
+      <p>Our office sits on Pinnacle Street near Charlotte Harbor, close to the middle of Charlotte County. From there, a 50-mile radius covers all of Charlotte County, the southern half of Sarasota County, most of Lee County, and the western edge of DeSoto County — the heart of Southwest Florida.</p>
+      <p>Beyond the seven communities above, that includes Deep Creek, Harbour Heights, Lake Suzy, Charlotte Harbor, El Jobean, Gulf Cove and South Gulf Cove, Rotonda West, Cape Haze, Placida, Boca Grande, Burnt Store, Nokomis, Laurel, Osprey, North Fort Myers, Matlacha, and Arcadia. If you are not sure whether your property is inside our service areas, call <a ${callAttr('areas_hub_inline_phone_link')}>${SITE.phoneDisplay}</a> and ask.</p>
+      <h3>Why Local Knowledge Matters</h3>
+      <p>The Florida Building Code is statewide, but almost everything else about building is local. Port Charlotte and Englewood are unincorporated, so permits run through the county; Punta Gorda, North Port, Venice, Cape Coral, and Fort Myers each run their own building divisions. Flood zones, utility availability, deed restrictions, and historic-district review change from one neighborhood to the next. Four decades of working across this region means we have dealt with nearly all of it before.</p>
+      <h3>Services Available in Every Area</h3>
+      <ul class="cols">
+${SERVICES.map((s) => `        <li><a href="/services/${s.slug}.html">${s.name}</a></li>`).join('\n')}
+      </ul>
+    </div>
+  </div>
+</section>
+` +
+  P.quoteSection({ alt: false, label: 'areas_hub_quote_phone_button', heading: 'Request a Quote in Your Area' }) +
+  `</main>
+` +
+  P.footer(),
+  '0.8');
+
+// ---------- Guides ----------
+const renderBlock = ([tag, html]) => {
+  if (tag === 'ul') return `      <ul>\n${html.map((li) => `        <li>${li}</li>`).join('\n')}\n      </ul>`;
+  if (tag === 'note') return `      <p class="guide-note">${html}</p>`;
+  return `      <${tag}>${html}</${tag}>`;
+};
+write('guides.html',
+  P.head({
+    title: 'Building & Remodeling Guides for SW Florida | Brunderman',
+    description: 'Plain-English guides for Southwest Florida homeowners: the FEMA 50% rule, building on your own lot, and which remodeling projects need a permit.',
+    path: '/guides.html',
+    schemas: [P.breadcrumbSchema([['Home', '/'], ['Guides', '/guides.html']])],
+  }) +
+  P.header('guides') +
+  `<main id="main">
+` +
+  P.pageHero({ crumbs: [['Home', '/'], ['Guides', '/guides.html']], eyebrow: 'Homeowner Guides', h1: 'Building &amp; Remodeling Guides for Southwest Florida Homeowners', lead: 'Straight answers to the questions we hear most, from a builder with four decades of local experience.', label: 'guides_hub_hero_phone_button' }) +
+  `<section>
+  <div class="container">
+    <div class="section-head"><span class="eyebrow-dark">Guides</span><h2>Read Before You Build or Remodel</h2><p>Practical homeowner guides on the rules and site conditions that shape building and remodeling projects in Charlotte, Sarasota, and Lee counties.</p></div>
+    <div class="card-grid">
+${GUIDES.map((g) => `      <a class="card" href="/guides/${g.slug}.html"><span class="card-icon">${ICON.ruler}</span><h3>${g.h1}</h3><p>${g.card}</p><span class="card-link">Read the guide</span></a>`).join('\n')}
+    </div>
+  </div>
+</section>
+` +
+  P.ctaBand('guides_hub_cta_phone_button', 'Have a Question About Your Project?', 'Call and talk it through with a builder.').replace('href="#quote"', 'href="/about.html#quote"') +
+  `</main>
+` +
+  P.footer().replace('<a href="#quote" class="btn btn-outline">Get a Quote</a>', '<a href="/about.html#quote" class="btn btn-outline">Get a Quote</a>'),
+  '0.6');
+
+for (const g of GUIDES) {
+  const crumbs = [['Home', '/'], ['Guides', '/guides.html'], [g.h1, `/guides/${g.slug}.html`]];
+  write(`guides/${g.slug}.html`,
+    P.head({
+      title: g.title,
+      description: g.description,
+      path: `/guides/${g.slug}.html`,
+      schemas: [
+        P.breadcrumbSchema(crumbs),
+        { '@context': 'https://schema.org', '@type': 'Article', headline: g.h1, description: g.description, datePublished: SITE.lastmod, dateModified: SITE.lastmod, author: { '@id': `${SITE.domain}/#business` }, publisher: { '@id': `${SITE.domain}/#business` }, image: `${SITE.domain}/images/og-image.png`, mainEntityOfPage: `${SITE.domain}/guides/${g.slug}.html` },
+      ],
+    }) +
+    P.header('guides') +
+    `<main id="main">
+` +
+    P.pageHero({ crumbs: [['Home', '/'], ['Guides', '/guides.html'], ['This guide', `/guides/${g.slug}.html`]], eyebrow: 'Homeowner Guide', h1: g.h1, lead: g.lead, label: 'guide_hero_phone_button' }) +
+    `<section>
+  <div class="container">
+    <article class="prose narrow guide">
+${g.body.map(renderBlock).join('\n')}
+      <h2>${g.moreH2}</h2>
+      <ul>
+${g.related.map(([href, tx]) => `        <li><a href="${href}">${tx}</a></li>`).join('\n')}
+${GUIDES.filter((o) => o.slug !== g.slug).map((o) => `        <li><a href="/guides/${o.slug}.html">${o.h1}</a></li>`).join('\n')}
+      </ul>
+    </article>
+  </div>
+</section>
+` +
+    P.quoteSection({ alt: true, label: 'guide_quote_phone_button', heading: g.quoteH2 }) +
+    `</main>
+` +
+    P.footer(),
+    '0.6');
+}
+
 // ---------- Thank-you + 404 ----------
 const simplePage = (file, title, h1, body, robots) =>
   write(file,
-    P.head({ title, description: body.replace(/<[^>]+>/g, ''), path: `/${file}` }).replace('<title>', `${robots ? '<meta name="robots" content="noindex">\n' : ''}<title>`) +
+    P.head({ title, description: body.replace(/<[^>]+>/g, ''), path: `/${file}`, noindex: robots }) +
     P.header() +
     `<main id="main">
 <section class="center-page">

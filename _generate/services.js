@@ -1,6 +1,44 @@
 // Service page content. Each entry is written by hand — no shared body copy.
-const AREA_P = (lead) =>
-  `${lead} Our home base is Charlotte County, and we regularly take on work in <a href="/locations/port-charlotte.html">Port Charlotte</a>, <a href="/locations/punta-gorda.html">Punta Gorda</a>, <a href="/locations/north-port.html">North Port</a>, <a href="/locations/englewood.html">Englewood</a>, <a href="/locations/venice.html">Venice</a>, <a href="/locations/cape-coral.html">Cape Coral</a>, and <a href="/locations/fort-myers.html">Fort Myers</a>, along with the smaller communities in between — Deep Creek, Harbour Heights, Rotonda West, Gulf Cove, El Jobean, Burnt Store, Nokomis, and Boca Grande. If your property sits in Charlotte, Sarasota, Lee, or DeSoto County and is within about 50 miles of Port Charlotte, it is inside our service area.`;
+// Per-service "service area" paragraphs — written separately so no two pages share a block of copy.
+const AREA = {
+  "custom-home-construction": "Most of the custom homes we have built stand in Charlotte County — on platted lots in <a href=\"/locations/port-charlotte.html\">Port Charlotte</a>, on the sailboat canals of <a href=\"/locations/punta-gorda.html\">Punta Gorda Isles</a>, and on acreage out toward Deep Creek and Harbour Heights. We also build on owners' lots in <a href=\"/locations/north-port.html\">North Port</a>, where thousands of vacant parcels are still waiting for a house, around Rotonda West and <a href=\"/locations/englewood.html\">Englewood</a>, and on Gulf-access and freshwater lots in northwest <a href=\"/locations/cape-coral.html\">Cape Coral</a>. Infill and teardown sites in <a href=\"/locations/venice.html\">Venice</a> and <a href=\"/locations/fort-myers.html\">Fort Myers</a> round out a custom home construction territory that reaches roughly 50 miles from our office in every direction. See the full <a href=\"/service-areas.html\">service area map and city guides</a>.",
+  "home-remodeling": "Home remodeling keeps our crews moving all over the region. In <a href=\"/locations/port-charlotte.html\">Port Charlotte</a> and <a href=\"/locations/north-port.html\">North Port</a> the work is mostly 1960s–1990s block homes that need opening up. In <a href=\"/locations/punta-gorda.html\">Punta Gorda</a>, <a href=\"/locations/englewood.html\">Englewood</a>, and <a href=\"/locations/cape-coral.html\">Cape Coral</a>, waterfront renovations have to be planned around flood rules. <a href=\"/locations/venice.html\">Venice</a> and <a href=\"/locations/fort-myers.html\">Fort Myers</a> add historic districts with design review. We also remodel in Gulf Cove, El Jobean, Lake Suzy, Burnt Store, Nokomis, and Boca Grande — if the house is within about 50 miles of Port Charlotte, it is in range. Each community has its own page under <a href=\"/service-areas.html\">service areas</a>.",
+  "kitchen-remodeling": "We remodel kitchens from <a href=\"/locations/venice.html\">Venice</a> in the north to <a href=\"/locations/fort-myers.html\">Fort Myers</a> in the south. Closest to home are the ranch kitchens of <a href=\"/locations/port-charlotte.html\">Port Charlotte</a> and the builder-grade kitchens of <a href=\"/locations/north-port.html\">North Port</a> subdivisions such as Heron Creek and Bobcat Trail. Waterfront kitchens in <a href=\"/locations/punta-gorda.html\">Punta Gorda Isles</a> and <a href=\"/locations/cape-coral.html\">Cape Coral</a> are often re-planned around the canal view, and seasonal owners in <a href=\"/locations/englewood.html\">Englewood</a> and Rotonda West frequently schedule a kitchen remodeling project for the months they are up north. Browse every community we cover on the <a href=\"/service-areas.html\">service areas page</a>.",
+  "bathroom-remodeling": "Bathroom remodeling is available anywhere within about 50 miles of our Charlotte County office. That takes in the hall baths and small primary baths of older <a href=\"/locations/port-charlotte.html\">Port Charlotte</a> homes, the garden-tub bathrooms common in <a href=\"/locations/north-port.html\">North Port</a> and <a href=\"/locations/cape-coral.html\">Cape Coral</a>, accessible shower conversions for long-term residents of <a href=\"/locations/punta-gorda.html\">Punta Gorda</a>, <a href=\"/locations/venice.html\">Venice</a>, and <a href=\"/locations/englewood.html\">Englewood</a>, and the re-piping that older bathrooms in <a href=\"/locations/fort-myers.html\">Fort Myers</a> often need. Smaller communities — Deep Creek, Harbour Heights, South Gulf Cove, Placida, Nokomis — are covered too. Find your town under <a href=\"/service-areas.html\">service areas</a>.",
+  "home-additions": "Where an addition can go depends on local zoning, so it helps that we work with every building department in the area: Charlotte County for <a href=\"/locations/port-charlotte.html\">Port Charlotte</a> and the south side of <a href=\"/locations/englewood.html\">Englewood</a>, the City of <a href=\"/locations/punta-gorda.html\">Punta Gorda</a>, the City of <a href=\"/locations/north-port.html\">North Port</a>, Sarasota County and the City of <a href=\"/locations/venice.html\">Venice</a>, and in Lee County the cities of <a href=\"/locations/cape-coral.html\">Cape Coral</a> and <a href=\"/locations/fort-myers.html\">Fort Myers</a>. We build home additions in all of them, along with Rotonda West, Deep Creek, Burnt Store, and the rest of the communities inside our 50-mile radius. Details for each city are on the <a href=\"/service-areas.html\">service areas page</a>."
+};
+
+const INTRO_H2 = {
+  "custom-home-construction": "A Custom Home Builder With 200+ Local Homes Behind It",
+  "home-remodeling": "Home Remodeling Led by an Experienced Builder",
+  "kitchen-remodeling": "Kitchen Remodeling That Starts With the Layout",
+  "bathroom-remodeling": "Bathroom Remodeling Built for Florida Humidity",
+  "home-additions": "Home Additions That Look Original to the House"
+};
+
+// [guide slug, link text] — related article shown on each service page
+const GUIDE = {
+  "custom-home-construction": [
+    "building-on-your-lot-port-charlotte-north-port",
+    "Building on your own lot in Port Charlotte or North Port: what to check first"
+  ],
+  "home-remodeling": [
+    "fema-50-percent-rule-charlotte-county",
+    "The FEMA 50% rule, explained for Southwest Florida homeowners"
+  ],
+  "kitchen-remodeling": [
+    "remodeling-permits-southwest-florida",
+    "Which remodeling projects need a permit in Southwest Florida?"
+  ],
+  "bathroom-remodeling": [
+    "remodeling-permits-southwest-florida",
+    "Which remodeling projects need a permit in Southwest Florida?"
+  ],
+  "home-additions": [
+    "fema-50-percent-rule-charlotte-county",
+    "The FEMA 50% rule, explained for Southwest Florida homeowners"
+  ]
+};
 
 module.exports = [
   {
@@ -307,4 +345,4 @@ module.exports = [
       ['Can my lanai be converted into a real room?', 'Frequently, yes — but it has to be done properly to count as living area. That usually means verifying or upgrading the slab and footing, building insulated exterior walls, installing impact-rated windows and doors, extending HVAC, and permitting the work.'],
     ],
   },
-].map((s) => ({ ...s, areaP: AREA_P(s.areaLead) }));
+].map((s) => ({ ...s, areaP: AREA[s.slug], introH2: INTRO_H2[s.slug], guide: GUIDE[s.slug] }));

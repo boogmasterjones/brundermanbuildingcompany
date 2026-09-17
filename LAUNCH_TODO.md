@@ -14,7 +14,7 @@ node _generate/build.js
 - `_generate/services.js` / `_generate/locations.js` — page copy.
 - `_generate/build.js` — homepage, about, reviews, carousel slides, sitemap.
 
-Edit there and rebuild rather than hand-editing the 17 HTML files. Deploy = drag-and-drop the folder (or connect the repo) on Netlify; `_headers` sets caching.
+Edit there and rebuild rather than hand-editing the HTML files. CSS lives in css/style.css and is minified + inlined into every page at build, so rebuild after CSS edits too. `node _generate/audit.js` re-runs the on-page SEO crawl. Deploy = drag-and-drop the folder (or connect the repo) on Netlify; `_headers` sets caching.
 
 ## Still needs your input
 
@@ -30,7 +30,7 @@ Edit there and rebuild rather than hand-editing the 17 HTML files. Deploy = drag
 
 ## Already done
 
-- 15 indexable pages: home, services hub, 5 service pages (1,150–1,400 words), 7 location pages (1,000–1,150 words, each written separately with real local detail), about/contact; plus thank-you + 404 (noindex).
+- 20 indexable pages (see SEO_AUDIT.md for the full audit + off-page to-do list): home, services hub, service-areas hub, guides hub + 3 guides, 5 service pages (1,150–1,400 words), 7 location pages (1,000–1,150 words, each written separately with real local detail), about/contact; plus thank-you + 404 (noindex).
 - Unique titles (≤65 chars) + meta descriptions, one H1 per page, canonical, lang, OG/Twitter tags, 1200×630 OG image, favicon, apple-touch-icon.
 - Schema: HomeAndConstructionBusiness (all pages), Service, FAQPage, BreadcrumbList, WebSite.
 - Every `tel:` link fires a GA4 `call_click` event with a distinct `event_label`; form fires `quote_form_submit`.
