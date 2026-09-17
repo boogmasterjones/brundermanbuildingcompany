@@ -1,35 +1,25 @@
 // Brunderman Building Co Inc — small progressive enhancements, no dependencies.
 (function () {
-  // Mobile nav
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.querySelector('.main-nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
+  var mobile = window.matchMedia('(max-width: 640px)');
 
-  // Services dropdown
+  // Header "Menu" dropdown
   document.querySelectorAll('.nav-drop').forEach(function (drop) {
     var btn = drop.querySelector('.nav-drop-btn');
     if (!btn) return;
+    function close() {
+      drop.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
       var open = drop.classList.toggle('open');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     document.addEventListener('click', function (e) {
-      if (!drop.contains(e.target)) {
-        drop.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
+      if (!drop.contains(e.target) || e.target.closest('.nav-drop-menu a')) close();
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        drop.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
+      if (e.key === 'Escape' && drop.classList.contains('open')) { close(); btn.focus(); }
     });
   });
 
@@ -39,7 +29,8 @@
     if (!track) return;
     function step(dir) {
       var slide = track.querySelector('.work-slide');
-      var amount = slide ? slide.getBoundingClientRect().width + 20 : track.clientWidth;
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 20;
+      var amount = slide ? slide.getBoundingClientRect().width + gap : track.clientWidth;
       var max = track.scrollWidth - track.clientWidth;
       if (dir > 0 && track.scrollLeft >= max - 4) { track.scrollTo({ left: 0, behavior: 'smooth' }); return; }
       if (dir < 0 && track.scrollLeft <= 4) { track.scrollTo({ left: max, behavior: 'smooth' }); return; }
@@ -51,30 +42,111 @@
     if (next) next.addEventListener('click', function () { step(1); });
   });
 
-  // Quote form: require a phone OR an email, and at least one service
+  // Long copy: show the lead paragraph, tuck the rest behind "Read more" (CSS only hides it on mobile)
+  document.querySelectorAll('.collapsible').forEach(function (box) {
+    var firstP = box.querySelector(':scope > p');
+    if (!firstP) return;
+    var rest = [];
+    for (var n = firstP.nextElementSibling; n; n = n.nextElementSibling) rest.push(n);
+    if (!rest.length) return;
+    var more = document.createElement('div');
+    more.className = 'more';
+    rest.forEach(function (n) { more.appendChild(n); });
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'more-btn';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = 'Read more +';
+    btn.addEventListener('click', function () {
+      var open = box.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Show less –' : 'Read more +';
+    });
+    box.appendChild(more);
+    box.appendChild(btn);
+  });
+
+  // Scope cards: tap-to-open on mobile, always open (and inert) on desktop
+  var accCards = document.querySelectorAll('.card-acc');
+  function syncAcc() {
+    accCards.forEach(function (d) { d.open = !mobile.matches; });
+  }
+  if (accCards.length) {
+    syncAcc();
+    if (mobile.addEventListener) mobile.addEventListener('change', syncAcc);
+    accCards.forEach(function (d) {
+      d.querySelector('summary').addEventListener('click', function (e) {
+        if (!mobile.matches) e.preventDefault();
+      });
+    });
+  }
+
+  // Quote form: questions appear one at a time as each is answered
   document.querySelectorAll('.quote-form').forEach(function (form) {
+    var steps = Array.prototype.slice.call(form.querySelectorAll('.form-step'));
+    var bar = form.querySelector('.form-progress-bar');
+    var field = function (n) { return form.querySelector('[name="' + n + '"]'); };
+    var name = field('name'), phone = field('phone'), email = field('email'), area = field('service-area');
+    form.classList.add('is-progressive');
+    form.noValidate = true; // validated by hand below so hidden steps never block submit silently
+
+    function hasContact() {
+      var digits = phone.value.replace(/\D/g, '').length;
+      var mailOk = email.value.trim() !== '' && email.checkValidity();
+      return digits >= 10 || mailOk;
+    }
+    var done = {
+      contact: function () { return name.value.trim().length > 1 && hasContact(); },
+      area: function () { return !!area.value; },
+      service: function () { return !!form.querySelector('[name="service[]"]:checked'); },
+      timing: function () { return !!form.querySelector('[name="timing"]:checked'); },
+      status: function () { return !!form.querySelector('[name="status"]:checked'); },
+      message: function () { return false; }
+    };
+
+    function update() {
+      var count = 0, open = true;
+      steps.forEach(function (s) {
+        if (open) s.classList.add('is-shown');
+        var ok = done[s.dataset.step]();
+        if (s.classList.contains('is-shown') && ok) count++;
+        open = open && ok;
+      });
+      form.classList.toggle('can-submit', done.contact() && done.area() && done.service());
+      if (bar) bar.style.width = Math.min(100, Math.round((count / 5) * 100)) + '%';
+    }
+    form.addEventListener('input', function () {
+      [phone, email, area].forEach(function (i) { i.setCustomValidity(''); });
+      update();
+    });
+    form.addEventListener('change', update);
+    update();
+    window.addEventListener('pageshow', update); // browser autofill / back-forward cache
+
     form.addEventListener('submit', function (e) {
-      var phone = form.querySelector('[name="phone"]');
-      var email = form.querySelector('[name="email"]');
-      if (phone && email && !phone.value.trim() && !email.value.trim()) {
+      steps.forEach(function (s) { s.classList.add('is-shown'); });
+      form.classList.add('can-submit');
+      phone.setCustomValidity(hasContact() ? '' : 'Please enter a phone number or an email so we can reach you.');
+      var firstBox = form.querySelector('[name="service[]"]');
+      if (firstBox) firstBox.setCustomValidity(done.service() ? '' : 'Please select at least one service.');
+      if (!form.checkValidity()) {
         e.preventDefault();
-        phone.setCustomValidity('Please enter a phone number or an email so we can reach you.');
-        phone.reportValidity();
-        return;
-      }
-      var boxes = form.querySelectorAll('[name="service[]"]');
-      if (boxes.length && !form.querySelector('[name="service[]"]:checked')) {
-        e.preventDefault();
-        boxes[0].setCustomValidity('Please select at least one service.');
-        boxes[0].reportValidity();
+        form.reportValidity();
+        if (firstBox) firstBox.setCustomValidity('');
         return;
       }
       if (typeof gtag === 'function') {
         gtag('event', 'quote_form_submit', { event_category: 'engagement', event_label: location.pathname });
       }
     });
-    form.addEventListener('input', function () {
-      form.querySelectorAll('input').forEach(function (i) { i.setCustomValidity(''); });
-    });
   });
+
+  // Mobile call bar: slide away while the quote form is on screen so it never covers the fields
+  var mobileBar = document.querySelector('.mobile-bar');
+  var quoteCard = document.querySelector('.quote-card');
+  if (mobileBar && quoteCard && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      mobileBar.classList.toggle('is-hidden', entries[0].isIntersecting);
+    }, { threshold: 0.15 }).observe(quoteCard);
+  }
 })();

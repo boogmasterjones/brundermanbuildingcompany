@@ -120,7 +120,7 @@ function head({ title, description, path, schemas = [] }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css?v=2">
 <script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.ga4}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -137,27 +137,31 @@ ${ld}
 
 function header(current = '') {
   const cur = (p) => (current === p ? ' aria-current="page"' : '');
-  return `<div class="city-strip" aria-hidden="true"><div class="city-strip-inner">${LOCATIONS_NAV.map(([, n]) => `<span>${n}</span>`).join('')}</div></div>
+  const cities = LOCATIONS_NAV.map(([, n]) => `<span>${n}</span>`).join('');
+  return `<div class="city-strip" aria-hidden="true"><div class="city-strip-inner"><div class="city-set">${cities}</div><div class="city-set dup">${cities}</div></div></div>
 <header class="site-header">
   <div class="container">
     <a href="/" class="logo" aria-label="${esc(SITE.name)} — home">
       <span class="logo-icon">${LOGO_MARK}</span>
       <span class="logo-name">Brunderman Building Co.<span class="logo-sub">Port Charlotte &amp; Southwest Florida</span></span>
     </a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-    <nav class="main-nav" id="main-nav" aria-label="Main">
+    <nav class="main-nav" aria-label="Main">
       <div class="nav-drop">
-        <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Services <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="nav-drop-menu">
-          <a href="/services.html"${cur('services')}>All Services</a>
+        <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true" aria-controls="site-menu">Menu <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-drop-menu" id="site-menu">
+          <span class="menu-label">Services</span>
 ${SERVICES_NAV.map(([slug, n]) => `          <a href="/services/${slug}.html"${cur(slug)}>${n}</a>`).join('\n')}
+          <a href="/services.html"${cur('services')}>All Services</a>
+          <span class="menu-label">Service Areas</span>
+          <div class="menu-areas">
+${LOCATIONS_NAV.map(([slug, n]) => `            <a href="/locations/${slug}.html"${cur(slug)}>${n}</a>`).join('\n')}
+          </div>
+          <span class="menu-label">Company</span>
+          <a href="/about.html"${cur('about')}>About &amp; Contact</a>
+          <a href="/about.html#quote">Request a Quote</a>
         </div>
       </div>
-      <a href="/#areas">Service Areas</a>
-      <a href="/about.html"${cur('about')}>About &amp; Contact</a>
-      <a ${callAttr('header_phone_button')} class="btn btn-primary btn-sm header-call">${ICON.phone} ${SITE.phoneDisplay}</a>
+      <a ${callAttr('header_phone_button')} class="btn btn-primary btn-sm header-call" aria-label="Call ${SITE.phoneDisplay}">${ICON.phone}<span class="call-num">${SITE.phoneDisplay}</span><span class="call-short">Call</span></a>
     </nav>
   </div>
 </header>
@@ -211,7 +215,7 @@ ${LOCATIONS_NAV.map(([slug, n]) => `          <li><a href="/locations/${slug}.ht
   <a ${callAttr('mobile_bar_phone_button')} class="btn btn-primary">${ICON.phone} Call Now</a>
   <a href="#quote" class="btn btn-outline">Get a Quote</a>
 </div>
-<script src="/js/main.js" defer></script>
+<script src="/js/main.js?v=2" defer></script>
 </body>
 </html>
 `;
@@ -236,44 +240,56 @@ function quoteSection({ alt = true, label = 'quote_section_phone_button', headin
           <input type="hidden" name="_template" value="table">
           <p style="display:none"><label>Leave this field blank: <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
 
-          <label class="field-label" style="margin-top:0;" for="q-name">Full Name *</label>
-          <div class="field-row">
-            <input type="text" id="q-name" name="name" placeholder="Full Name" autocomplete="name" required>
-            <input type="tel" name="phone" placeholder="Phone (or email below)" autocomplete="tel" aria-label="Phone number">
-          </div>
+          <div class="form-progress" aria-hidden="true"><span class="form-progress-bar"></span></div>
 
-          <label class="field-label" for="q-email">Email &amp; Project Location *</label>
-          <p class="field-hint">Phone or email required so we can reach you.</p>
-          <div class="field-row">
-            <input type="email" id="q-email" name="email" placeholder="Email (or phone above)" autocomplete="email">
+          <fieldset class="form-step" data-step="contact">
+            <legend class="field-label">How Can We Reach You? *</legend>
+            <input type="text" name="name" placeholder="Full Name" autocomplete="name" aria-label="Full name" required>
+            <div class="field-row">
+              <input type="tel" name="phone" placeholder="Phone" autocomplete="tel" aria-label="Phone number">
+              <input type="email" name="email" placeholder="Email" autocomplete="email" aria-label="Email address">
+            </div>
+            <p class="field-hint">Phone or email — whichever you prefer.</p>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="area">
+            <legend class="field-label">Where Is The Project? *</legend>
             <select name="service-area" aria-label="City or service area" required>
               <option value="" disabled${defaultArea ? '' : ' selected'}>City / Service Area</option>
 ${areas.map((a) => `              <option${a === defaultArea ? ' selected' : ''}>${a}</option>`).join('\n')}
             </select>
-          </div>
+          </fieldset>
 
-          <span class="field-label">What Are You Planning? *</span>
-          <div class="check-grid">
-${services.map((s) => `            <label class="check-item"><input type="checkbox" name="service[]" value="${esc(s)}"> ${esc(s)}</label>`).join('\n')}
-          </div>
+          <fieldset class="form-step" data-step="service">
+            <legend class="field-label">What Are You Planning? *</legend>
+            <div class="check-grid">
+${services.map((s) => `              <label class="check-item"><input type="checkbox" name="service[]" value="${esc(s)}"> ${esc(s)}</label>`).join('\n')}
+            </div>
+          </fieldset>
 
-          <span class="field-label">When Would You Like To Start?</span>
-          <div class="radio-grid">
-            <label class="radio-item"><input type="radio" name="timing" value="Timing is flexible"> Timing is Flexible</label>
-            <label class="radio-item"><input type="radio" name="timing" value="Within 3 months"> Within 3 Months</label>
-            <label class="radio-item"><input type="radio" name="timing" value="3+ months out"> 3+ Months Out</label>
-          </div>
+          <fieldset class="form-step" data-step="timing">
+            <legend class="field-label">When Would You Like To Start?</legend>
+            <div class="radio-grid">
+              <label class="radio-item"><input type="radio" name="timing" value="Timing is flexible"> Flexible</label>
+              <label class="radio-item"><input type="radio" name="timing" value="Within 3 months"> Within 3 Mo.</label>
+              <label class="radio-item"><input type="radio" name="timing" value="3+ months out"> 3+ Mo. Out</label>
+            </div>
+          </fieldset>
 
-          <span class="field-label">Project Status</span>
-          <div class="radio-grid" style="grid-template-columns:1fr 1fr;">
-            <label class="radio-item"><input type="radio" name="status" value="Ready to build"> Ready to Build</label>
-            <label class="radio-item"><input type="radio" name="status" value="Gathering quotes"> Just Gathering Quotes</label>
-          </div>
+          <fieldset class="form-step" data-step="status">
+            <legend class="field-label">Project Status</legend>
+            <div class="radio-grid two">
+              <label class="radio-item"><input type="radio" name="status" value="Ready to build"> Ready to Build</label>
+              <label class="radio-item"><input type="radio" name="status" value="Gathering quotes"> Gathering Quotes</label>
+            </div>
+          </fieldset>
 
-          <label class="field-label" for="q-message">Tell Us About Your Project</label>
-          <textarea id="q-message" name="message" placeholder="Lot or home address, square footage, rooms involved, plans you already have, etc."></textarea>
+          <fieldset class="form-step" data-step="message">
+            <legend class="field-label">Anything Else? <span class="optional">(optional)</span></legend>
+            <textarea name="message" aria-label="Project details" placeholder="Address, square footage, rooms involved, plans you already have…"></textarea>
+          </fieldset>
 
-          <button type="submit" class="btn btn-primary">Send My Request</button>
+          <button type="submit" class="btn btn-primary form-submit">Send My Request</button>
         </form>
       </div>
 

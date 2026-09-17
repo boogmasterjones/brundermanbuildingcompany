@@ -119,7 +119,7 @@ write('index.html',
     <div>
       <span class="eyebrow">Port Charlotte &amp; Southwest Florida</span>
       <h1>Home Builder in <span class="accent">Port Charlotte, FL</span></h1>
-      <p class="hero-lead">Brunderman Building Co Inc is a custom home builder and remodeler with four decades of experience. We have built more than 200 homes in Charlotte County — and remodeled kitchens, bathrooms, and whole houses for customers within 50 miles of Port Charlotte.</p>
+      <p class="hero-lead">Custom homes, remodels, kitchens, and baths from a builder with four decades of experience — and more than 200 homes built in Charlotte County.</p>
       <div class="hero-actions">
         <a ${callAttr('hero_phone_button')} class="btn btn-primary">${ICON.phone} Call ${SITE.phoneDisplay}</a>
         <a href="#quote" class="btn btn-outline">Request a Quote</a>
@@ -169,7 +169,7 @@ ${serviceCards()}
       <h2>A Builder Port Charlotte Has Trusted for Four Decades</h2>
       <p>Building in Southwest Florida means building for wind, water, and heat. Experience is what keeps those from becoming your problem.</p>
     </div>
-    <div class="card-grid">
+    <div class="card-grid row-cards">
       <div class="card"><span class="card-icon">${ICON.home}</span><h3>200+ Local Homes</h3><p>More than 200 homes built in Charlotte County — on platted lots, canal lots, and acreage. We know what each one demands before the first form board goes down.</p></div>
       <div class="card"><span class="card-icon">${ICON.people}</span><h3>800+ Customers</h3><p>New builds and remodels for more than 800 customers. One of them put it simply: &ldquo;These people live and breathe building.&rdquo;</p></div>
       <div class="card"><span class="card-icon">${ICON.shield}</span><h3>Top 5% on BuildZoom</h3><p>BuildZoom rates Brunderman Building Co Inc among the top 5% of builders — an independent measure of track record.</p></div>
@@ -195,14 +195,14 @@ ${P.TRUST_BAR}
 <section class="section-alt" id="areas">
   <div class="container">
     <div class="split">
-      <div class="prose">
+      <div class="prose collapsible">
         <span class="eyebrow-dark">Service Area</span>
         <h2>Port Charlotte and 50 Miles Around It</h2>
         <p>Our office is on Pinnacle Street near Charlotte Harbor, minutes from US-41 and the heart of Port Charlotte. From there our service area reaches about 50 miles in every direction: north through North Port to Venice, west along State Road 776 to Englewood and Rotonda West, across the Peace River to Punta Gorda, and south down Burnt Store Road and I-75 to Cape Coral and Fort Myers.</p>
         <p>The region shares a climate and a building code, but every community has its own character. Port Charlotte and North Port are defined by platted lots and canals. Punta Gorda Isles and Cape Coral are waterfront markets where flood elevation and seawalls shape every plan. Englewood has coastal high-hazard zones on Manasota Key, while Venice and Fort Myers have historic districts with design review. As a home builder working across all of them, we plan each project around the local rules rather than finding out about them halfway through.</p>
       </div>
       <div>
-        ${areaGrid().replace('class="area-grid"', 'class="area-grid" style="grid-template-columns:1fr 1fr;"')}
+        ${areaGrid().replace('class="area-grid"', 'class="area-grid two"')}
       </div>
     </div>
   </div>
@@ -248,7 +248,7 @@ ${serviceCards()}
 <section class="section-alt">
   <div class="container">
     <div class="split">
-      <div class="prose">
+      <div class="prose collapsible">
         <h2>One Builder for the Whole Project</h2>
         <p>Many remodeling companies specialize in a single room or a single trade. We are home builders first, which means we are comfortable with every part of a house — foundation, structure, roof, mechanical systems, and finishes. That matters when a kitchen remodel uncovers a plumbing problem in the slab, or when an addition needs an engineered roof tie-in.</p>
         <p>It also keeps things simple for you. Whether you need custom home construction or a bathroom update, our building and remodeling services come with one contract, one schedule, and one company accountable for the result. We coordinate the permits, the subcontractors, the inspections, and the punch list.</p>
@@ -303,7 +303,7 @@ for (const s of SERVICES) {
     `<section>
   <div class="container">
     <div class="split">
-      <div class="prose">
+      <div class="prose collapsible">
         <span class="eyebrow-dark">${s.name}</span>
         <h2>Built by a Builder With Four Decades Behind It</h2>
 ${s.intro.map((p) => `        <p>${p}</p>`).join('\n')}
@@ -321,8 +321,8 @@ ${s.facts.map(([k, v]) => `          <div><dt>${k}</dt><dd>${v}</dd></div>`).joi
 <section class="section-alt">
   <div class="container">
     <div class="section-head"><span class="eyebrow-dark">Scope</span><h2>${s.includesTitle}</h2></div>
-    <div class="card-grid">
-${s.includes.map(([t, d]) => `      <div class="card"><h3>${t}</h3><p>${d}</p></div>`).join('\n')}
+    <div class="card-grid acc-grid">
+${s.includes.map(([t, d]) => `      <details class="card card-acc" open><summary><h3>${t}</h3></summary><p>${d}</p></details>`).join('\n')}
     </div>
   </div>
 </section>
@@ -337,7 +337,7 @@ ${s.steps.map(([t, d]) => `      <li class="step"><h3>${t}</h3><p>${d}</p></li>`
 ${P.TRUST_BAR}
 <section>
   <div class="container">
-    <div class="prose" style="max-width:900px;margin:0 auto;">
+    <div class="prose collapsible narrow">
       <h2>${s.seoH2}</h2>
 ${s.seo.map((p) => `      <p>${p}</p>`).join('\n')}
       <h3>${s.variantsH3}</h3>
@@ -376,7 +376,7 @@ for (const l of LOCATIONS) {
     `<section>
   <div class="container">
     <div class="split">
-      <div class="prose">
+      <div class="prose collapsible">
         <span class="eyebrow-dark">${l.city}, Florida</span>
         <h2>Building in ${l.city}</h2>
 ${l.intro.map((p) => `        <p>${p}</p>`).join('\n')}
@@ -401,7 +401,7 @@ ${serviceCards(l.svc)}
 </section>
 <section class="section-dark">
   <div class="container">
-    <div class="prose" style="max-width:900px;margin:0 auto;">
+    <div class="prose collapsible narrow">
       <span class="eyebrow">Local Knowledge</span>
       <h2>${l.localH2}</h2>
 ${l.local.map((p) => `      <p>${p}</p>`).join('\n')}
@@ -411,7 +411,7 @@ ${l.local.map((p) => `      <p>${p}</p>`).join('\n')}
 ${P.TRUST_BAR}
 <section>
   <div class="container">
-    <div class="prose" style="max-width:900px;margin:0 auto;">
+    <div class="prose collapsible narrow">
       <h2>${l.seoH2}</h2>
 ${l.seo.map((p) => `      <p>${p}</p>`).join('\n')}
       <h3>${l.variantsH3}</h3>
@@ -453,7 +453,7 @@ write('about.html',
   `<section>
   <div class="container">
     <div class="split">
-      <div class="prose">
+      <div class="prose collapsible">
         <span class="eyebrow-dark">Our Story</span>
         <h2>Four Decades of Building in Southwest Florida</h2>
         <p>Brunderman Building Co Inc has been building and remodeling homes in Southwest Florida for four decades. In that time we have completed more than 200 homes in Charlotte County alone and worked for more than 800 customers — families building for the first time, retirees settling on the water, and longtime residents updating the houses they raised their kids in.</p>

@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css?v=2">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -36,31 +36,40 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="city-strip" aria-hidden="true"><div class="city-strip-inner"><span>Port Charlotte</span><span>Punta Gorda</span><span>North Port</span><span>Englewood</span><span>Venice</span><span>Cape Coral</span><span>Fort Myers</span></div></div>
+<div class="city-strip" aria-hidden="true"><div class="city-strip-inner"><div class="city-set"><span>Port Charlotte</span><span>Punta Gorda</span><span>North Port</span><span>Englewood</span><span>Venice</span><span>Cape Coral</span><span>Fort Myers</span></div><div class="city-set dup"><span>Port Charlotte</span><span>Punta Gorda</span><span>North Port</span><span>Englewood</span><span>Venice</span><span>Cape Coral</span><span>Fort Myers</span></div></div></div>
 <header class="site-header">
   <div class="container">
     <a href="/" class="logo" aria-label="Brunderman Building Co Inc — home">
       <span class="logo-icon"><svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M8 32L32 10l24 22" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 30v24h28V30" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><path d="M28 54V40h8v14" stroke="#fff" stroke-width="5" stroke-linejoin="round"/></svg></span>
       <span class="logo-name">Brunderman Building Co.<span class="logo-sub">Port Charlotte &amp; Southwest Florida</span></span>
     </a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-    <nav class="main-nav" id="main-nav" aria-label="Main">
+    <nav class="main-nav" aria-label="Main">
       <div class="nav-drop">
-        <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Services <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="nav-drop-menu">
-          <a href="/services.html">All Services</a>
+        <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true" aria-controls="site-menu">Menu <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-drop-menu" id="site-menu">
+          <span class="menu-label">Services</span>
           <a href="/services/custom-home-construction.html">Custom Home Construction</a>
           <a href="/services/home-remodeling.html">Home Remodeling</a>
           <a href="/services/kitchen-remodeling.html">Kitchen Remodeling</a>
           <a href="/services/bathroom-remodeling.html">Bathroom Remodeling</a>
           <a href="/services/home-additions.html">Home Additions</a>
+          <a href="/services.html">All Services</a>
+          <span class="menu-label">Service Areas</span>
+          <div class="menu-areas">
+            <a href="/locations/port-charlotte.html">Port Charlotte</a>
+            <a href="/locations/punta-gorda.html">Punta Gorda</a>
+            <a href="/locations/north-port.html">North Port</a>
+            <a href="/locations/englewood.html">Englewood</a>
+            <a href="/locations/venice.html">Venice</a>
+            <a href="/locations/cape-coral.html">Cape Coral</a>
+            <a href="/locations/fort-myers.html">Fort Myers</a>
+          </div>
+          <span class="menu-label">Company</span>
+          <a href="/about.html">About &amp; Contact</a>
+          <a href="/about.html#quote">Request a Quote</a>
         </div>
       </div>
-      <a href="/#areas">Service Areas</a>
-      <a href="/about.html">About &amp; Contact</a>
-      <a href="tel:+19416254564" onclick="gtag('event','call_click',{'event_category':'engagement','event_label':'header_phone_button'})" class="btn btn-primary btn-sm header-call"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> (941) 625-4564</a>
+      <a href="tel:+19416254564" onclick="gtag('event','call_click',{'event_category':'engagement','event_label':'header_phone_button'})" class="btn btn-primary btn-sm header-call" aria-label="Call (941) 625-4564"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="call-num">(941) 625-4564</span><span class="call-short">Call</span></a>
     </nav>
   </div>
 </header>
@@ -133,6 +142,6 @@
   <a href="tel:+19416254564" onclick="gtag('event','call_click',{'event_category':'engagement','event_label':'mobile_bar_phone_button'})" class="btn btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> Call Now</a>
   <a href="/about.html#quote" class="btn btn-outline">Get a Quote</a>
 </div>
-<script src="/js/main.js" defer></script>
+<script src="/js/main.js?v=2" defer></script>
 </body>
 </html>
