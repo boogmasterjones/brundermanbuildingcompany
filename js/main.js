@@ -1,4 +1,4 @@
-// Brunderman Building Company — small progressive enhancements, no dependencies.
+// Brunderman Building Co Inc — small progressive enhancements, no dependencies.
 (function () {
   // Mobile nav
   var toggle = document.querySelector('.nav-toggle');

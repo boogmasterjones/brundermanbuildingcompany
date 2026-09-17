@@ -3,9 +3,9 @@
 // change it once, run `node _generate/build.js`, and every page updates.
 
 const SITE = {
-  name: 'Brunderman Building Company',
+  name: 'Brunderman Building Co Inc',
   legalName: 'Brunderman Building Co Inc',
-  domain: 'https://www.brundermanbuildingcompany.com', // ASSUMED — confirm before launch
+  domain: 'https://www.brundermanbuildingcompany.com', // confirmed by client 2026-09-17
   phoneTel: '+19416254564',
   phoneDisplay: '(941) 625-4564',
   street: '4288 Pinnacle St',
@@ -14,7 +14,7 @@ const SITE = {
   zip: '33980',
   gbp: 'https://maps.app.goo.gl/7w4D8ZXbYE2CvKA96',
   ga4: 'G-XXXXXXXXXX', // PLACEHOLDER — replace with real GA4 Measurement ID
-  formAction: 'https://formsubmit.co/gobiggify@gmail.com', // lead inbox — swap if needed
+  formAction: 'https://formsubmit.co/brundermanbuilding@comcast.net', // lead inbox — swap if needed
   lastmod: '2026-09-17',
 };
 

@@ -48,7 +48,7 @@ function workSection() {
     <div class="work-gallery">
       <div class="work-track" tabindex="0" aria-label="Project photo carousel">
 ${WORK.map(([file, t, s]) => `        <div class="work-slide">
-          <div class="work-slide-media"><img src="/images/work/${file}.svg" alt="${esc(t)} project by Brunderman Building Company — ${esc(s)}" loading="lazy" width="480" height="360"></div>
+          <div class="work-slide-media"><img src="/images/work/${file}.svg" alt="${esc(t)} project by Brunderman Building Co Inc — ${esc(s)}" loading="lazy" width="480" height="360"></div>
           <div class="work-slide-caption"><strong>${esc(t)}</strong><span>${esc(s)}</span></div>
         </div>`).join('\n')}
       </div>
@@ -99,15 +99,15 @@ ${P.LOCATIONS_NAV.map(([slug, n, c]) => `      <a class="area-card" href="/locat
 
 // ---------- Homepage ----------
 const HOME_FAQS = [
-  ['What areas does Brunderman Building Company serve?', 'Port Charlotte is the center of our service area, and we work within about 50 miles of it. That includes Punta Gorda, North Port, Englewood, Venice, Cape Coral, Fort Myers, and the smaller communities of Charlotte, Sarasota, Lee, and DeSoto counties in between.'],
+  ['What areas does Brunderman Building Co Inc serve?', 'Port Charlotte is the center of our service area, and we work within about 50 miles of it. That includes Punta Gorda, North Port, Englewood, Venice, Cape Coral, Fort Myers, and the smaller communities of Charlotte, Sarasota, Lee, and DeSoto counties in between.'],
   ['What kinds of projects do you take on?', 'We are both a home builder and a remodeler. Our work includes custom home construction, whole-home remodeling, kitchen remodeling, bathroom remodeling, and home additions.'],
-  ['How long has Brunderman Building Company been in business?', 'We have four decades of experience building in Southwest Florida. In that time we have built more than 200 homes in Charlotte County and served more than 800 customers.'],
+  ['How long has Brunderman Building Co Inc been in business?', 'We have four decades of experience building in Southwest Florida. In that time we have built more than 200 homes in Charlotte County and served more than 800 customers.'],
   ['How do I get a quote for my project?', `Call us at ${SITE.phoneDisplay} or fill out the quote request form on this page. Tell us where the property is and what you have in mind, and we will follow up to discuss scope, budget, and timing.`],
 ];
 
 write('index.html',
   P.head({
-    title: 'Home Builder in Port Charlotte, FL | Brunderman Building Company',
+    title: 'Home Builder in Port Charlotte, FL | Brunderman Building Co Inc',
     description: 'Port Charlotte home builder and remodeler with four decades of experience. 200+ homes built in Charlotte County. Custom homes, kitchens, baths & additions.',
     path: '/',
     schemas: [P.faqSchema(HOME_FAQS), { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.name, url: `${SITE.domain}/` }],
@@ -119,7 +119,7 @@ write('index.html',
     <div>
       <span class="eyebrow">Port Charlotte &amp; Southwest Florida</span>
       <h1>Home Builder in <span class="accent">Port Charlotte, FL</span></h1>
-      <p class="hero-lead">Brunderman Building Company is a custom home builder and remodeler with four decades of experience. We have built more than 200 homes in Charlotte County — and remodeled kitchens, bathrooms, and whole houses for customers within 50 miles of Port Charlotte.</p>
+      <p class="hero-lead">Brunderman Building Co Inc is a custom home builder and remodeler with four decades of experience. We have built more than 200 homes in Charlotte County — and remodeled kitchens, bathrooms, and whole houses for customers within 50 miles of Port Charlotte.</p>
       <div class="hero-actions">
         <a ${callAttr('hero_phone_button')} class="btn btn-primary">${ICON.phone} Call ${SITE.phoneDisplay}</a>
         <a href="#quote" class="btn btn-outline">Request a Quote</a>
@@ -172,7 +172,7 @@ ${serviceCards()}
     <div class="card-grid">
       <div class="card"><span class="card-icon">${ICON.home}</span><h3>200+ Local Homes</h3><p>More than 200 homes built in Charlotte County — on platted lots, canal lots, and acreage. We know what each one demands before the first form board goes down.</p></div>
       <div class="card"><span class="card-icon">${ICON.people}</span><h3>800+ Customers</h3><p>New builds and remodels for more than 800 customers. One of them put it simply: &ldquo;These people live and breathe building.&rdquo;</p></div>
-      <div class="card"><span class="card-icon">${ICON.shield}</span><h3>Top 5% on BuildZoom</h3><p>BuildZoom rates Brunderman Building Company among the top 5% of builders — an independent measure of track record.</p></div>
+      <div class="card"><span class="card-icon">${ICON.shield}</span><h3>Top 5% on BuildZoom</h3><p>BuildZoom rates Brunderman Building Co Inc among the top 5% of builders — an independent measure of track record.</p></div>
     </div>
   </div>
 </section>
@@ -238,7 +238,7 @@ write('services.html',
     <div class="section-head">
       <span class="eyebrow-dark">Our Services</span>
       <h2>What We Build</h2>
-      <p>Brunderman Building Company offers building and remodeling services to homeowners in Port Charlotte and within about 50 miles. Choose a service to see what is involved.</p>
+      <p>Brunderman Building Co Inc offers building and remodeling services to homeowners in Port Charlotte and within about 50 miles. Choose a service to see what is involved.</p>
     </div>
     <div class="card-grid">
 ${serviceCards()}
@@ -435,8 +435,8 @@ ${l.variants.map((v) => `        <li>${v}</li>`).join('\n')}
 // ---------- About & Contact ----------
 write('about.html',
   P.head({
-    title: 'About & Contact | Brunderman Building Company, Port Charlotte',
-    description: `About Brunderman Building Company — four decades of building in Charlotte County, FL. Call ${SITE.phoneDisplay} or request a quote for your home or remodel.`,
+    title: 'About & Contact | Brunderman Building Co Inc, Port Charlotte',
+    description: `About Brunderman Building Co Inc — four decades of building in Charlotte County, FL. Call ${SITE.phoneDisplay} or request a quote for your home or remodel.`,
     path: '/about.html',
     schemas: [P.breadcrumbSchema([['Home', '/'], ['About & Contact', '/about.html']])],
   }) +
@@ -446,7 +446,7 @@ write('about.html',
   P.pageHero({
     crumbs: [['Home', '/'], ['About &amp; Contact', '/about.html']],
     eyebrow: 'About &amp; Contact',
-    h1: 'About Brunderman Building Company',
+    h1: 'About Brunderman Building Co Inc',
     lead: 'A Charlotte County builder with four decades of experience, more than 200 local homes, and over 800 customers.',
     label: 'about_hero_phone_button',
   }) +
@@ -456,9 +456,9 @@ write('about.html',
       <div class="prose">
         <span class="eyebrow-dark">Our Story</span>
         <h2>Four Decades of Building in Southwest Florida</h2>
-        <p>Brunderman Building Company has been building and remodeling homes in Southwest Florida for four decades. In that time we have completed more than 200 homes in Charlotte County alone and worked for more than 800 customers — families building for the first time, retirees settling on the water, and longtime residents updating the houses they raised their kids in.</p>
+        <p>Brunderman Building Co Inc has been building and remodeling homes in Southwest Florida for four decades. In that time we have completed more than 200 homes in Charlotte County alone and worked for more than 800 customers — families building for the first time, retirees settling on the water, and longtime residents updating the houses they raised their kids in.</p>
         <p>Customers who have reviewed us describe owner Brian as &ldquo;a great guy to work with&rdquo; and the company as people who &ldquo;live and breathe building.&rdquo; We think that is the right way to describe it. Building here is not a sideline: it is wind loads and flood elevations, block and tie-beams, permits and inspections, and the thousand finish details that separate a house that is merely done from one that is done well.</p>
-        <p>BuildZoom rates Brunderman Building Company in the top 5% of builders. We are proud of that, but prouder of the homes themselves — many of which you drive past every day in Port Charlotte, Punta Gorda, and the communities around them.</p>
+        <p>BuildZoom rates Brunderman Building Co Inc in the top 5% of builders. We are proud of that, but prouder of the homes themselves — many of which you drive past every day in Port Charlotte, Punta Gorda, and the communities around them.</p>
         <h3>What We Do</h3>
         <ul class="cols">
 ${SERVICES.map((s) => `          <li><a href="/services/${s.slug}.html">${s.name}</a></li>`).join('\n')}
@@ -516,8 +516,8 @@ const simplePage = (file, title, h1, body, robots) =>
 </main>
 ` +
     P.footer().replace('<a href="#quote" class="btn btn-outline">Get a Quote</a>', '<a href="/about.html#quote" class="btn btn-outline">Get a Quote</a>'));
-simplePage('thank-you.html', 'Thank You | Brunderman Building Company', 'Thank You — We Got Your Request', 'Your quote request is on its way to our office. We will be in touch to talk through your project. If it is urgent, call us directly.', true);
-simplePage('404.html', 'Page Not Found | Brunderman Building Company', 'Page Not Found', 'That page does not exist or has moved. Head back to the homepage, or give us a call and we will point you in the right direction.', true);
+simplePage('thank-you.html', 'Thank You | Brunderman Building Co Inc', 'Thank You — We Got Your Request', 'Your quote request is on its way to our office. We will be in touch to talk through your project. If it is urgent, call us directly.', true);
+simplePage('404.html', 'Page Not Found | Brunderman Building Co Inc', 'Page Not Found', 'That page does not exist or has moved. Head back to the homepage, or give us a call and we will point you in the right direction.', true);
 
 // ---------- sitemap, robots ----------
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>

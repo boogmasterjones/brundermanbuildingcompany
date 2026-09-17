@@ -1,4 +1,4 @@
-# Launch To-Do — Brunderman Building Company
+# Launch To-Do — Brunderman Building Co Inc
 
 Site is built and ready to deploy (static, no build step needed to host). Items below need real business input before going live.
 
@@ -19,11 +19,11 @@ Edit there and rebuild rather than hand-editing the 17 HTML files. Deploy = drag
 ## Still needs your input
 
 1. **Project photos (biggest visual gap).** The "See Our Work" carousel uses labelled blueprint placeholders in `images/work/*.svg` — the GBP has no photos to pull. Drop in real photos (export ~960×720 WebP, plus JPG fallback), update the `WORK` list in `_generate/build.js`, rebuild. I did not use stock photos because presenting them as the company's work would be misleading.
-2. **Domain.** Assumed `https://www.brundermanbuildingcompany.com` (canonical, OG, sitemap, schema, form redirect). Change `SITE.domain` if different.
+2. ~~Domain~~ — confirmed: `https://www.brundermanbuildingcompany.com`.
 3. **GA4 Measurement ID** — `SITE.ga4` is `G-XXXXXXXXXX`. Name the property "Builder Port Charlotte" per portfolio convention.
-4. **Form inbox.** The quote form posts to FormSubmit at `gobiggify@gmail.com` (same pattern as clearvantwc.com). First submission triggers a one-time FormSubmit activation email. Change `SITE.formAction` to route leads elsewhere.
-5. **Florida contractor license number.** Not provided, so the site makes **no** "licensed & insured" claim. Florida requires the license number in contractor advertising — add it to the footer + About page before launch.
-6. **Business name / NAP.** Site uses "Brunderman Building Company"; the Google Business Profile says "Brunderman Building Co Inc" (used as `legalName` in schema). Address + phone match the GBP exactly: 4288 Pinnacle St, Punta Gorda, FL 33980 · (941) 625-4564. Pick one name and make GBP + directories match.
+4. **Form inbox** — quote form posts to FormSubmit at `brundermanbuilding@comcast.net`. The first submission triggers a one-time FormSubmit activation email to that inbox; the client must click it or leads will not arrive.
+5. ~~License number~~ — client decision: not included. The site makes no "licensed & insured" claim.
+6. ~~Business name~~ — site now uses "Brunderman Building Co Inc" everywhere, matching the Google Business Profile exactly. Address + phone also match: 4288 Pinnacle St, Punta Gorda, FL 33980 · (941) 625-4564.
 7. **Client copy review.** Trust stats (4 decades, 800+ customers, 200+ homes, BuildZoom top 5%) and reviews are as supplied / verbatim from GBP (incl. the 4-star one shown as 4 stars). Process statements (we handle permits, order cabinets before demo, photo updates for seasonal owners, experience through Charley/Ian) are reasonable for a 40-year builder but have not been confirmed by the client — have them read the service + location pages once.
 8. **Hours** — not in schema (GBP only showed "closes 4 PM"). Add `openingHoursSpecification` once known.
 9. **Add the website to the GBP** — the profile currently has no website link ("Add website").
@@ -42,7 +42,6 @@ Edit there and rebuild rather than hand-editing the 17 HTML files. Deploy = drag
 
 - [ ] Real project photos in the carousel
 - [ ] Confirm domain, swap GA4 ID, confirm form inbox, rebuild
-- [ ] Add license number
 - [ ] Deploy to Netlify, point DNS, force HTTPS
 - [ ] Submit a test quote form + confirm FormSubmit activation
 - [ ] Verify Search Console (DNS TXT) and submit `sitemap.xml`
