@@ -83,8 +83,8 @@ One H1 per page with its words present in body copy · no heading-level jumps ·
 11. Submit one test quote form and click the FormSubmit activation email in `brundermanbuilding@comcast.net`.
 
 ### Content the client must supply (not fabricated here)
-12. **Owner/team bio + photos** for the About page (E-E-A-T). Current copy is limited to supplied facts and review quotes.
-13. **Business hours** → `openingHoursSpecification` in schema.
+12. ~~Owner bio~~ — done 2026-09-21 (Brian Brunderman bio on About, founder + foundingDate 1987 in schema). **Photos of Brian/team still to come** from the client.
+13. ~~Business hours~~ — 24/7, in schema/footer/About/FAQ. Client is updating GBP + socials to match.
 14. **Project case studies** (city, scope, before/after photos) — the strongest possible location-page content; one per city over time.
 15. Contractor **license number** — owner chose to omit. Note that a visible license number is also a trust/ranking-adjacent signal in this niche; revisit if rankings or conversions lag.
 16. Client read-through of process claims (unchanged from LAUNCH_TODO).
@@ -94,6 +94,16 @@ One H1 per page with its words present in body copy · no heading-level jumps ·
 18. `aggregateRating`/`review` schema intentionally **not** added: Google treats self-hosted LocalBusiness review markup as self-serving (no stars, and a policy risk).
 19. Add a guide every month or two (ideas: impact windows vs. shutters, elevating a home in Punta Gorda Isles, lanai enclosure rules, remodel-vs-rebuild after flood damage, choosing a seawall-lot floor plan). Bump `SITE.lastmod` on each content change.
 20. When call volume justifies it, swap in a call-tracking number — one line in `_generate/parts.js` (keep the real number in schema/GBP for NAP).
+
+## Added 2026-09-21 (brand pass)
+- Motto "Houses shouldn't break." in header tagline, hero, an orange motto band on home/service/location pages, footer, and schema .
+- "Hurricane-proof homes" + "impact-rated windows" now appear in the homepage title-adjacent copy, meta description, hero, a dedicated homepage section, every service page (own H2 + two paragraphs each), every location page, FAQ (+FAQ schema), and a new guide: *Impact-Rated Windows vs. Hurricane Shutters*. 21 indexable pages.
+- Note on wording: "hurricane-proof" is the client's chosen phrase; copy pairs it with concrete code-based specifics (block, load path, impact glass, elevation) and never promises a home cannot be damaged.
+
+## Added 2026-09-21 (brand pass)
+- Motto "Houses shouldn't break." in the header tagline, hero, an orange motto band on home/service/location pages, footer, and schema `slogan`.
+- "Hurricane-proof homes" + "impact-rated windows" now appear in the homepage meta description, hero, a dedicated homepage section, every service page (own H2 + two paragraphs each), every location page, the FAQ (+ FAQ schema), and a new guide: *Impact-Rated Windows vs. Hurricane Shutters*. 21 indexable pages.
+- Wording note: "hurricane-proof" is the client's chosen phrase; copy pairs it with concrete, code-based specifics (block, load path, impact glass, elevation) and never promises a home cannot be damaged.
 
 ## How to re-run
 ```

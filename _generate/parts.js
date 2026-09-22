@@ -15,7 +15,10 @@ const SITE = {
   gbp: 'https://maps.app.goo.gl/7w4D8ZXbYE2CvKA96',
   ga4: 'G-XXXXXXXXXX', // PLACEHOLDER — replace with real GA4 Measurement ID
   formAction: 'https://formsubmit.co/brundermanbuilding@comcast.net', // lead inbox — swap if needed
-  lastmod: '2026-09-17',
+  lastmod: '2026-09-21',
+  motto: "Houses shouldn't break.",
+  founded: '1987',
+  founder: 'Brian Brunderman',
   lat: 26.9646837, // from the Google Business Profile pin
   lng: -82.0651628,
 };
@@ -80,8 +83,12 @@ function businessSchema() {
     '@id': `${SITE.domain}/#business`,
     name: SITE.name,
     legalName: SITE.legalName,
+    slogan: SITE.motto,
+    foundingDate: SITE.founded,
+    founder: { '@type': 'Person', name: SITE.founder, jobTitle: 'Owner and Builder' },
     description:
-      'Custom home builder and remodeling contractor based in Charlotte County, Florida, serving Port Charlotte and communities within about 50 miles.',
+      'Custom home builder and remodeling contractor founded in 1987 and based in Charlotte County, Florida. Hurricane-proof custom homes, impact-rated windows, kitchen and bathroom remodeling, and additions for Port Charlotte and communities within about 50 miles.',
+    openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '00:00', closes: '23:59' },
     url: `${SITE.domain}/`,
     telephone: SITE.phoneTel,
     image: `${SITE.domain}/images/og-image.png`,
@@ -97,7 +104,7 @@ function businessSchema() {
       addressCountry: 'US',
     },
     areaServed: LOCATIONS_NAV.map(([, n]) => ({ '@type': 'City', name: `${n}, FL` })),
-    knowsAbout: SERVICES_NAV.map(([, n]) => n),
+    knowsAbout: [...SERVICES_NAV.map(([, n]) => n), 'Hurricane-proof home construction', 'Impact-rated windows and doors', 'Florida Building Code wind-borne debris requirements'],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Building and remodeling services',
@@ -177,7 +184,7 @@ function header(current = '') {
   <div class="container">
     <a href="/" class="logo" aria-label="${esc(SITE.name)} — home">
       <span class="logo-icon">${LOGO_MARK}</span>
-      <span class="logo-name">Brunderman Building Co.<span class="logo-sub">Port Charlotte &amp; Southwest Florida</span></span>
+      <span class="logo-name">Brunderman Building Co.<span class="logo-sub">${SITE.motto}</span></span>
     </a>
     <nav class="main-nav" aria-label="Main">
       <div class="nav-drop">
@@ -210,12 +217,14 @@ function footer() {
     <div class="footer-grid">
       <div>
         <a href="/" class="logo" style="margin-bottom:16px;"><span class="logo-icon">${LOGO_MARK}</span><span class="logo-name">Brunderman Building Co.</span></a>
-        <p>Custom home builder and remodeling contractor. Four decades of building in Charlotte County and across Southwest Florida.</p>
+        <p class="footer-motto">&ldquo;${SITE.motto}&rdquo;</p>
+        <p>Hurricane-proof custom homes and remodeling with impact-rated windows. Building in Charlotte County and across Southwest Florida since ${SITE.founded}.</p>
         <address>
           <strong style="color:#fff;">${SITE.name}</strong><br>
           ${SITE.street}<br>
           ${SITE.city}, ${SITE.region} ${SITE.zip}<br>
-          <a ${callAttr('footer_phone_button')}>${SITE.phoneDisplay}</a>
+          <a ${callAttr('footer_phone_button')}>${SITE.phoneDisplay}</a><br>
+          <span class="footer-hours">Available 24/7</span>
         </address>
       </div>
       <div>
@@ -245,7 +254,7 @@ ${LOCATIONS_NAV.map(([slug, n]) => `          <li><a href="/locations/${slug}.ht
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 ${SITE.name}. All rights reserved.</span>
-      <span>Serving Port Charlotte and communities within 50 miles.</span>
+      <span>Since ${SITE.founded} &middot; Serving Port Charlotte and communities within 50 miles.</span>
     </div>
   </div>
 </footer>
@@ -337,15 +346,15 @@ ${services.map((s) => `              <label class="check-item"><input type="chec
         <p>Tell us what you're planning — a new custom home, a kitchen or bath remodel, an addition — and we'll follow up to talk through scope, budget, and timing. Prefer the phone? Call and talk to a builder directly.</p>
         <a ${callAttr(label)} class="btn btn-primary">${ICON.phone} Call ${SITE.phoneDisplay}</a>
         <div class="quote-trust">
-          <span class="item">${ICON.check} Four Decades of Experience</span>
-          <span class="item">${ICON.check} 200+ Homes Built in Charlotte County</span>
-          <span class="item">${ICON.check} Trusted by 800+ Customers</span>
-          <span class="item">${ICON.check} Rated Top 5% of Builders by BuildZoom</span>
+          <span class="item">${ICON.check} Hurricane-Proof Construction</span>
+          <span class="item">${ICON.check} Impact-Rated Windows &amp; Doors</span>
+          <span class="item">${ICON.check} Building Since ${SITE.founded} &middot; 200+ Local Homes</span>
+          <span class="item">${ICON.check} Available 24/7</span>
         </div>
         <address class="nap-block">
           <strong>${SITE.name}</strong><br>
           ${SITE.street}, ${SITE.city}, ${SITE.region} ${SITE.zip}<br>
-          ${SITE.phoneDisplay}
+          ${SITE.phoneDisplay} &middot; Available 24/7
         </address>
       </div>
     </div>
@@ -410,11 +419,19 @@ function pageHero({ crumbs, eyebrow, h1, lead, label }) {
 }
 
 const TRUST_BAR = `<div class="trust-bar"><div class="container">
-  <div class="trust-item"><strong>4 Decades</strong><span>Of Experience</span></div>
+  <div class="trust-item"><strong>Since ${SITE.founded}</strong><span>Four Decades of Experience</span></div>
   <div class="trust-item"><strong>800+</strong><span>Customers Served</span></div>
   <div class="trust-item"><strong>200+</strong><span>Homes Built in Charlotte County</span></div>
   <div class="trust-item"><strong>Top 5%</strong><span>Of Builders on BuildZoom</span></div>
 </div></div>
 `;
 
-module.exports = { CSS, SITE, SERVICES_NAV, LOCATIONS_NAV, ICON, esc, stars, callAttr, head, header, footer, quoteSection, ctaBand, faqBlock, faqSchema, breadcrumbSchema, pageHero, TRUST_BAR };
+const MOTTO_BAND = `<section class="motto-band" aria-label="Our motto">
+  <div class="container">
+    <p class="motto-quote">&ldquo;${SITE.motto}&rdquo;</p>
+    <p class="motto-text">That is the whole idea behind every home we build and every remodel we take on: a house should stand for decades without major problems. Concrete block, engineered roof connections, impact-rated windows and doors, and correct flood elevation &mdash; built to hold up to whatever Florida weather brings.</p>
+  </div>
+</section>
+`;
+
+module.exports = { CSS, MOTTO_BAND, SITE, SERVICES_NAV, LOCATIONS_NAV, ICON, esc, stars, callAttr, head, header, footer, quoteSection, ctaBand, faqBlock, faqSchema, breadcrumbSchema, pageHero, TRUST_BAR };

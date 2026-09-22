@@ -103,13 +103,16 @@ const HOME_FAQS = [
   ['What areas does Brunderman Building Co Inc serve?', 'Port Charlotte is the center of our service area, and we work within about 50 miles of it. That includes Punta Gorda, North Port, Englewood, Venice, Cape Coral, Fort Myers, and the smaller communities of Charlotte, Sarasota, Lee, and DeSoto counties in between.'],
   ['What kinds of projects do you take on?', 'We are both a home builder and a remodeler. Our work includes custom home construction, whole-home remodeling, kitchen remodeling, bathroom remodeling, and home additions.'],
   ['How long has Brunderman Building Co Inc been in business?', 'We have four decades of experience building in Southwest Florida. In that time we have built more than 200 homes in Charlotte County and served more than 800 customers.'],
+  ['Are your homes hurricane-proof?', 'We build hurricane-proof homes in the practical sense: concrete block construction, engineered roof-to-wall connections, impact-rated windows and doors, and correct flood elevation, all built to meet and exceed the Florida Building Code for our wind-borne debris region. Our motto is "Houses shouldn\'t break," and after four decades of Florida storms it is the standard every home we build is held to.'],
+  ['Do you install impact-rated windows?', 'Yes. Impact-rated windows and doors are standard on our custom homes, and replacing older single-pane or shuttered openings with impact-rated units is one of the most common upgrades in our remodeling work across Port Charlotte and Southwest Florida.'],
+  ['What are your hours?', `We are available 24/7. Call ${SITE.phoneDisplay} any time, or send the quote form and we will follow up.`],
   ['How do I get a quote for my project?', `Call us at ${SITE.phoneDisplay} or fill out the quote request form on this page. Tell us where the property is and what you have in mind, and we will follow up to discuss scope, budget, and timing.`],
 ];
 
 write('index.html',
   P.head({
     title: 'Home Builder in Port Charlotte, FL | Brunderman Building Co Inc',
-    description: 'Port Charlotte home builder and remodeler with four decades of experience. 200+ homes built in Charlotte County. Custom homes, kitchens, baths & additions.',
+    description: 'Port Charlotte home builder since 1987. Hurricane-proof custom homes with impact-rated windows, plus kitchen, bath and whole-home remodeling. 200+ homes built.',
     path: '/',
     schemas: [P.faqSchema(HOME_FAQS), { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${SITE.domain}/#website`, name: SITE.name, url: `${SITE.domain}/`, publisher: { '@id': `${SITE.domain}/#business` } }],
   }) +
@@ -120,15 +123,16 @@ write('index.html',
     <div>
       <span class="eyebrow">Port Charlotte &amp; Southwest Florida</span>
       <h1>Home Builder in <span class="accent">Port Charlotte, FL</span></h1>
-      <p class="hero-lead">Custom homes, remodels, kitchens, and baths from a builder with four decades of experience — and more than 200 homes built in Charlotte County.</p>
+      <p class="hero-motto">&ldquo;${SITE.motto}&rdquo;</p>
+      <p class="hero-lead">Hurricane-proof custom homes and remodels with impact-rated windows, from a builder with four decades of experience and more than 200 homes built in Charlotte County.</p>
       <div class="hero-actions">
         <a ${callAttr('hero_phone_button')} class="btn btn-primary">${ICON.phone} Call ${SITE.phoneDisplay}</a>
         <a href="#quote" class="btn btn-outline">Request a Quote</a>
       </div>
       <ul class="hero-badges">
-        <li>${ICON.check} Custom Homes</li>
-        <li>${ICON.check} Kitchen &amp; Bath Remodeling</li>
-        <li>${ICON.check} Additions</li>
+        <li>${ICON.check} Hurricane-Proof Homes</li>
+        <li>${ICON.check} Impact-Rated Windows</li>
+        <li>${ICON.check} Kitchens, Baths &amp; Additions</li>
         <li>${ICON.star} 4.7 on Google</li>
       </ul>
     </div>
@@ -144,7 +148,23 @@ write('index.html',
   workSection() +
   P.quoteSection({ alt: false, label: 'home_quote_section_phone_button', heading: 'Request a Quote From a Port Charlotte Home Builder' }) +
   reviewsSection().replace('<section id="reviews">', '<section id="reviews" class="section-alt">') +
-  `<section id="services">
+  `${P.MOTTO_BAND}
+<section id="built-to-last">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow-dark">Hurricane-Proof Construction</span>
+      <h2>Homes Built to Stand Up to Florida Weather</h2>
+      <p>Every custom home and remodel we build is engineered for the wind-borne debris region we live in &mdash; so the house holds together when the weather does not.</p>
+    </div>
+    <div class="card-grid row-cards">
+      <div class="card"><span class="card-icon">${ICON.shield}</span><h3>Impact-Rated Windows &amp; Doors</h3><p>Impact-rated windows, sliders, and entry doors are standard on our new homes and the first upgrade we recommend on a remodel. No shutters to hang, no plywood, and a quieter, more efficient house every day of the year.</p></div>
+      <div class="card"><span class="card-icon">${ICON.home}</span><h3>Concrete Block &amp; a Continuous Load Path</h3><p>Concrete block walls, poured tie-beams, and engineered hurricane straps from the trusses down to the footing, so the roof, walls, and foundation act as one structure under hurricane loads.</p></div>
+      <div class="card"><span class="card-icon">${ICON.ruler}</span><h3>Built Above the Flood Line</h3><p>Finished floors set at or above the required flood elevation, with drainage planned so water moves away from the house &mdash; the difference between a bad storm and a rebuild.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow-dark">What We Do</span>
@@ -352,6 +372,15 @@ ${s.variants.map((v) => `        <li>${v}</li>`).join('\n')}
     </div>
   </div>
 </section>
+${P.MOTTO_BAND}
+<section class="section-alt">
+  <div class="container">
+    <div class="prose collapsible narrow">
+      <h2>${s.stormH2}</h2>
+${s.storm.map((p) => `      <p>${p}</p>`).join('\n')}
+    </div>
+  </div>
+</section>
 ` +
     P.faqBlock(s.faqs, `${s.name} FAQ`, true) +
     P.quoteSection({ alt: false, label: 'service_page_quote_phone_button', heading: `Request a ${s.name} Quote` }) +
@@ -415,6 +444,7 @@ ${l.local.map((p) => `      <p>${p}</p>`).join('\n')}
     </div>
   </div>
 </section>
+${P.MOTTO_BAND}
 ${P.TRUST_BAR}
 <section>
   <div class="container">
@@ -443,8 +473,8 @@ ${l.variants.map((v) => `        <li>${v}</li>`).join('\n')}
 // ---------- About & Contact ----------
 write('about.html',
   P.head({
-    title: 'About & Contact | Brunderman Building Co Inc, Port Charlotte',
-    description: `About Brunderman Building Co Inc — four decades of building in Charlotte County, FL. Call ${SITE.phoneDisplay} or request a quote for your home or remodel.`,
+    title: 'About Brian Brunderman | Brunderman Building Co Inc',
+    description: `Meet Brian Brunderman, building hurricane-proof custom homes in Port Charlotte since 1987. Available 24/7 at ${SITE.phoneDisplay}. Request a quote for your project.`,
     path: '/about.html',
     schemas: [P.breadcrumbSchema([['Home', '/'], ['About & Contact', '/about.html']])],
   }) +
@@ -455,7 +485,7 @@ write('about.html',
     crumbs: [['Home', '/'], ['About &amp; Contact', '/about.html']],
     eyebrow: 'About &amp; Contact',
     h1: 'About Brunderman Building Co Inc',
-    lead: 'A Charlotte County builder with four decades of experience, more than 200 local homes, and over 800 customers.',
+    lead: 'Founded by Brian Brunderman in 1987. Four decades of experience, more than 200 local homes, over 800 customers, and one motto: houses shouldn\'t break.',
     label: 'about_hero_phone_button',
   }) +
   `<section>
@@ -463,10 +493,12 @@ write('about.html',
     <div class="split">
       <div class="prose collapsible">
         <span class="eyebrow-dark">Our Story</span>
-        <h2>Four Decades of Building in Southwest Florida</h2>
-        <p>Brunderman Building Co Inc has been building and remodeling homes in Southwest Florida for four decades. In that time we have completed more than 200 homes in Charlotte County alone and worked for more than 800 customers — families building for the first time, retirees settling on the water, and longtime residents updating the houses they raised their kids in.</p>
-        <p>Customers who have reviewed us describe owner Brian as &ldquo;a great guy to work with&rdquo; and the company as people who &ldquo;live and breathe building.&rdquo; We think that is the right way to describe it. Building here is not a sideline: it is wind loads and flood elevations, block and tie-beams, permits and inspections, and the thousand finish details that separate a house that is merely done from one that is done well.</p>
-        <p>BuildZoom rates Brunderman Building Co Inc in the top 5% of builders. We are proud of that, but prouder of the homes themselves — many of which you drive past every day in Port Charlotte, Punta Gorda, and the communities around them.</p>
+        <h2>Meet Brian Brunderman</h2>
+        <p>Brian Brunderman has been in construction his whole life. In his twenties he ran his own framing business, and in 1987 he founded Brunderman Building Company, specializing in custom home building and remodeling. Four decades later he is still on the job, and the company has built more than 200 homes in Charlotte County and worked for more than 800 customers.</p>
+        <p>Brian lives in Port Charlotte with his wife Lori &mdash; a designer whose eye customers mention in their reviews &mdash; in a house he built himself. They have three children and six grandchildren. Building here is not a sideline for the Brundermans: it is the family business, and it has been for nearly forty years.</p>
+        <h3>&ldquo;Houses Shouldn&rsquo;t Break.&rdquo;</h3>
+        <p>That is Brian&rsquo;s motto, and it is the standard behind every project. A house should stand for decades without major problems, and in Southwest Florida that means building for the weather: concrete block, engineered roof connections, impact-rated windows and doors, and floors set above the flood line. Brian is known for hurricane-proof homes because he has spent a career watching what holds up in Florida storms and what does not, and he builds accordingly.</p>
+        <p>Customers describe him as a friend and a pleasure to work with. Their reviews call him &ldquo;a great guy to work with&rdquo; and the company people who &ldquo;live and breathe building.&rdquo; BuildZoom rates Brunderman Building Co Inc in the top 5% of builders. We are proud of that, but prouder of the homes themselves &mdash; many of which you drive past every day in Port Charlotte, Punta Gorda, and the communities around them.</p>
         <h3>What We Do</h3>
         <ul class="cols">
 ${SERVICES.map((s) => `          <li><a href="/services/${s.slug}.html">${s.name}</a></li>`).join('\n')}
@@ -477,6 +509,8 @@ ${SERVICES.map((s) => `          <li><a href="/services/${s.slug}.html">${s.name
         <dl>
           <div><dt>Phone</dt><dd><a ${callAttr('about_card_phone_link')} style="color:#fff;">${SITE.phoneDisplay}</a></dd></div>
           <div><dt>Office</dt><dd>${SITE.street}<br>${SITE.city}, ${SITE.region} ${SITE.zip}</dd></div>
+          <div><dt>Hours</dt><dd>Available 24/7</dd></div>
+          <div><dt>Founded</dt><dd>${SITE.founded}, by Brian Brunderman</dd></div>
           <div><dt>Service area</dt><dd>Port Charlotte and about 50 miles around it</dd></div>
           <div><dt>Google</dt><dd><a href="${SITE.gbp}" target="_blank" rel="noopener" style="color:var(--orange-light);">View our Business Profile</a></dd></div>
         </dl>

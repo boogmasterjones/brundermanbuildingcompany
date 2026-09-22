@@ -25,7 +25,7 @@ Edit there and rebuild rather than hand-editing the HTML files. CSS lives in css
 5. ~~License number~~ — client decision: not included. The site makes no "licensed & insured" claim.
 6. ~~Business name~~ — site now uses "Brunderman Building Co Inc" everywhere, matching the Google Business Profile exactly. Address + phone also match: 4288 Pinnacle St, Punta Gorda, FL 33980 · (941) 625-4564.
 7. **Client copy review.** Trust stats (4 decades, 800+ customers, 200+ homes, BuildZoom top 5%) and reviews are as supplied / verbatim from GBP (incl. the 4-star one shown as 4 stars). Process statements (we handle permits, order cabinets before demo, photo updates for seasonal owners, experience through Charley/Ian) are reasonable for a 40-year builder but have not been confirmed by the client — have them read the service + location pages once.
-8. **Hours** — not in schema (GBP only showed "closes 4 PM"). Add `openingHoursSpecification` once known.
+8. ~~Hours~~ — client confirmed 24/7; in schema (openingHoursSpecification), footer, About page, FAQ.
 9. **Add the website to the GBP** — the profile currently has no website link ("Add website").
 
 ## Already done
@@ -40,7 +40,7 @@ Edit there and rebuild rather than hand-editing the HTML files. CSS lives in css
 
 ## Go-live checklist
 
-- [ ] Real project photos in the carousel
+- [ ] Real project photos in the carousel + owner/team photos for the About page (client will send) + owner/team photos for the About page (client will send)
 - [ ] Confirm domain, swap GA4 ID, confirm form inbox, rebuild
 - [ ] Deploy to Netlify, point DNS, force HTTPS
 - [ ] Submit a test quote form + confirm FormSubmit activation

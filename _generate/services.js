@@ -8,6 +8,45 @@ const AREA = {
   "home-additions": "Where an addition can go depends on local zoning, so it helps that we work with every building department in the area: Charlotte County for <a href=\"/locations/port-charlotte.html\">Port Charlotte</a> and the south side of <a href=\"/locations/englewood.html\">Englewood</a>, the City of <a href=\"/locations/punta-gorda.html\">Punta Gorda</a>, the City of <a href=\"/locations/north-port.html\">North Port</a>, Sarasota County and the City of <a href=\"/locations/venice.html\">Venice</a>, and in Lee County the cities of <a href=\"/locations/cape-coral.html\">Cape Coral</a> and <a href=\"/locations/fort-myers.html\">Fort Myers</a>. We build home additions in all of them, along with Rotonda West, Deep Creek, Burnt Store, and the rest of the communities inside our 50-mile radius. Details for each city are on the <a href=\"/service-areas.html\">service areas page</a>."
 };
 
+// Per-service hurricane-proof / impact-window section: [H2, paragraphs]
+const STORM = {
+  "custom-home-construction": [
+    "Hurricane-Proof Custom Homes With Impact-Rated Windows",
+    [
+      "Ask anyone who has lived through Charley or Ian what matters in a Southwest Florida house, and the answer is not the countertops. Every custom home we build is designed as a hurricane-proof home: concrete block walls on an engineered foundation, poured tie-beams, trusses strapped into a continuous load path down to the footing, a hip roof where the design allows, and impact-rated windows, sliding doors, and entry doors in every opening. These are not upgrades; they are how we build.",
+      "Impact-rated windows deserve special mention. They satisfy the Florida Building Code's opening-protection requirement without shutters, which means nothing to put up when a storm is coming and nothing to take down afterward. They also cut outside noise, block most UV, help the air conditioning, and often reduce insurance premiums. If you are comparing custom home builders, ask each one whether impact glass is standard or an allowance item. For us it is standard."
+    ]
+  ],
+  "home-remodeling": [
+    "Making an Older Home Hurricane-Proof",
+    [
+      "A large share of the remodeling we do in Port Charlotte and the surrounding communities is really about one thing: turning a 1970s or 1980s house into a home that will hold up in a hurricane. The block walls are usually fine. What has not kept up are the openings, the roof connections, and the garage door. Replacing original single-pane or aluminum-frame windows with impact-rated windows and doors is the single most valuable storm upgrade a homeowner can make, and it is the first thing we look at on a whole-home remodel.",
+      "When the scope includes a re-roof, we add the engineered straps and secondary water barrier the code now requires, which also qualifies most homes for wind-mitigation insurance credits. A wind-rated garage door, properly attached soffits, and sealed roof-to-wall connections finish the job. The goal is the same as it is on our new homes: houses shouldn't break, and an older house does not have to."
+    ]
+  ],
+  "kitchen-remodeling": [
+    "Storm-Ready Details in a Kitchen Remodel",
+    [
+      "A kitchen remodel is also the right moment to deal with the openings in that part of the house. Many Port Charlotte kitchens still have a pass-through window to the lanai and a slider off the dining area that predate impact glass. Replacing them with impact-rated windows and sliding doors while the walls are open costs less than doing it later and leaves the kitchen quieter, brighter, and hurricane-ready.",
+      "We build the rest of the kitchen to the same standard we apply to hurricane-proof homes: solid blocking behind wall cabinets, moisture-resistant drywall where it counts, and electrical brought up to current code with the dedicated circuits a modern kitchen needs. It is the difference between a kitchen that looks new and one that will still be sound in twenty years."
+    ]
+  ],
+  "bathroom-remodeling": [
+    "Built to Last, Not Just to Look New",
+    [
+      "Our motto is \"houses shouldn't break,\" and nowhere does a house break faster than in a bathroom that was waterproofed badly. That is why we treat waterproofing as its own trade rather than trusting tile and grout, and why every exhaust fan we install is ducted outside instead of into the attic. A bathroom built this way stays sound through decades of Florida humidity.",
+      "If the bathroom has a window inside the shower or a jalousie-era opening, we replace it with an impact-rated window or glass block as part of the remodel, closing one more gap in the home's storm protection while we have the wall open."
+    ]
+  ],
+  "home-additions": [
+    "Additions Built to Hurricane Standards",
+    [
+      "A new addition has to be built to current code even when the original house was not, and that is a good thing: it means every home addition we build is a hurricane-proof structure in its own right, with engineered footings, block or properly strapped frame walls, a roof tied into the existing structure with a continuous load path, and impact-rated windows and doors throughout.",
+      "Because we are tying new to old, we also look hard at the connection. A properly flashed and strapped roof tie-in is what keeps the seam between the addition and the original house from becoming the weak point in the next storm. Done right, the addition is often the strongest part of the house."
+    ]
+  ]
+};
+
 const INTRO_H2 = {
   "custom-home-construction": "A Custom Home Builder With 200+ Local Homes Behind It",
   "home-remodeling": "Home Remodeling Led by an Experienced Builder",
@@ -46,11 +85,11 @@ module.exports = [
     name: 'Custom Home Construction',
     icon: 'home',
     title: 'Custom Home Construction in Port Charlotte, FL | Brunderman',
-    description: 'Custom home builder in Port Charlotte, FL with 200+ homes built in Charlotte County. Build on your lot with a builder who has four decades of experience.',
+    description: 'Hurricane-proof custom homes in Port Charlotte, FL with impact-rated windows standard. 200+ homes built in Charlotte County by a builder founded in 1987.',
     eyebrow: 'Custom Home Builder · Charlotte County',
     h1: 'Custom Home Construction in Port Charlotte, FL',
-    lead: 'More than 200 homes built in Charlotte County over four decades. When you are ready for custom home construction on your own lot, you work directly with a builder who knows this ground, this code, and this weather.',
-    card: 'New custom homes designed around your lot, your budget, and the Southwest Florida climate.',
+    lead: 'Hurricane-proof custom homes with impact-rated windows, built on your lot by a builder with more than 200 Charlotte County homes behind him. Houses shouldn\'t break, and ours are built not to.',
+    card: 'Hurricane-proof new homes with impact-rated windows, designed around your lot and budget.',
     intro: [
       'A custom home is the largest thing most families will ever commission, and in Southwest Florida it has to do more than look good. It has to sit at the right elevation for its flood zone, stand up to hurricane-force wind, shed summer rain, and stay comfortable through a long humid season without punishing electric bills. Custom home construction done well here is equal parts design and local engineering knowledge.',
       'Brunderman Building Co Inc has been building homes in Charlotte County for four decades — more than 200 of them. That history matters in practical ways. We have built on the quarter-acre platted lots that make up most of Port Charlotte, on saltwater canal lots where the seawall and the setback drive the floor plan, and on acreage east of I-75 where well, septic, and driveway access have to be planned before the first form board goes down.',
@@ -59,7 +98,7 @@ module.exports = [
     facts: [
       ['Experience', 'Four decades building in Southwest Florida'],
       ['Track record', '200+ homes built in Charlotte County'],
-      ['Typical construction', 'Concrete block (CBS) on stem wall or monolithic slab'],
+      ['Construction', 'Concrete block, engineered load path, impact-rated windows'],
       ['Where we build', 'Your lot, within about 50 miles of Port Charlotte'],
     ],
     includesTitle: 'What Custom Home Construction Covers',
@@ -68,7 +107,7 @@ module.exports = [
       ['Plans & Design', 'Start from your own architect\'s drawings, adapt a plan you like, or develop a new one. We help fit the layout to the lot, the view, and the sun so the home lives the way you want.'],
       ['Pricing & Selections', 'A clear scope and allowances for cabinetry, flooring, tile, fixtures, and finishes, so you can see where the money is going and adjust before construction — not during it.'],
       ['Permitting', 'We prepare and submit the permit package to the county or city building department and coordinate the engineering, energy calculations, and surveys the jurisdiction requires.'],
-      ['Construction', 'Site prep, foundation, block and tie-beam, trusses, roofing, impact-rated openings, mechanical trades, drywall, and finishes — scheduled and supervised by a builder who has done it hundreds of times.'],
+      ['Hurricane-Proof Construction', 'Site prep, foundation, block and tie-beam, strapped trusses, roofing, impact-rated windows and doors, mechanical trades, drywall, and finishes — scheduled and supervised by a builder who has done it hundreds of times.'],
       ['Walkthrough & Closeout', 'Final inspections, certificate of occupancy, a detailed walkthrough with you, and a punch list that gets finished rather than forgotten.'],
     ],
     steps: [
@@ -84,7 +123,8 @@ module.exports = [
     ],
     variantsH3: 'Types of Custom Homes We Build',
     variants: [
-      'Single-story concrete block (CBS) homes on platted Port Charlotte and North Port lots',
+      'Hurricane-proof concrete block homes with impact-rated windows and doors',
+      'Single-story CBS homes on platted Port Charlotte and North Port lots',
       'Waterfront and canal-front custom homes with seawall and dock considerations',
       'Elevated and stem-wall homes built to FEMA flood-zone requirements',
       'Homes on acreage with well, septic, and long-driveway site work',
@@ -111,7 +151,7 @@ module.exports = [
     eyebrow: 'Remodeling Contractor · Southwest Florida',
     h1: 'Home Remodeling in Port Charlotte, FL',
     lead: 'Home remodeling by a builder, not a handyman crew. We open up floor plans, rebuild tired interiors, and bring older Port Charlotte homes up to the way people live today.',
-    card: 'Whole-home renovations, layout changes, and updates for older Southwest Florida houses.',
+    card: 'Whole-home renovations, impact-rated window replacement, and updates for older Florida houses.',
     intro: [
       'A great many homes in Port Charlotte were built between the 1960s and the 1980s: solid concrete block shells with low ceilings, small closed-off kitchens, narrow hallways, and original terrazzo hiding under carpet. The bones are good. The layouts are dated. Home remodeling is how those houses become bright, open, and comfortable without giving up a neighborhood or a canal view you already love.',
       'Because Brunderman Building Co Inc builds new homes as well as remodels existing ones, we approach a renovation with a builder\'s understanding of structure. Removing a wall in a block home means knowing what the tie-beam and trusses are doing above it. Moving a kitchen means rerouting plumbing through a slab. Replacing windows means meeting current wind-load and impact requirements. We plan for those realities up front so the remodeling budget you approve is the one you actually live with.',
@@ -127,7 +167,7 @@ module.exports = [
     includes: [
       ['Whole-Home Renovation', 'Flooring, drywall, doors, trim, lighting, kitchens, and baths redone together, so the finished house feels consistent rather than patched room by room.'],
       ['Open Floor Plans', 'Removing or relocating interior walls to connect the kitchen, dining, and living areas — with proper engineering wherever a wall is carrying load.'],
-      ['Window & Door Replacement', 'Impact-rated windows, sliders, and entry doors sized and installed to current Florida Building Code requirements for our wind zone.'],
+      ['Impact-Rated Window & Door Replacement', 'Impact-rated windows, sliders, and entry doors sized and installed to current Florida Building Code requirements for our wind zone — the biggest single storm upgrade for an older home.'],
       ['Storm & Water Damage Rebuilds', 'Putting a home back together after hurricane or flood damage: drywall, insulation, cabinetry, flooring, and the permits that go with them.'],
       ['Flooring, Ceilings & Finishes', 'Tile, luxury vinyl plank, and wood-look flooring; popcorn ceiling removal; new trim, interior doors, and paint-ready drywall finishing.'],
       ['Lanai & Outdoor Living', 'Enclosing, extending, or rebuilding lanais, adding summer kitchens, and reworking the transition between the great room and the pool deck.'],
@@ -148,7 +188,8 @@ module.exports = [
       'Whole-house interior renovations and gut remodels',
       'Kitchen and bathroom remodeling as part of a larger project',
       'Load-bearing wall removal and open-concept conversions',
-      'Impact window, slider, and entry door replacement',
+      'Impact-rated window, slider, and entry door replacement',
+      'Hurricane hardening: roof straps, wind-rated garage doors, sealed soffits',
       'Hurricane and flood damage restoration and rebuilds',
       'Garage conversions and interior reconfigurations',
       'Flooring replacement — tile, LVP, and engineered wood',
@@ -345,4 +386,4 @@ module.exports = [
       ['Can my lanai be converted into a real room?', 'Frequently, yes — but it has to be done properly to count as living area. That usually means verifying or upgrading the slab and footing, building insulated exterior walls, installing impact-rated windows and doors, extending HVAC, and permitting the work.'],
     ],
   },
-].map((s) => ({ ...s, areaP: AREA[s.slug], introH2: INTRO_H2[s.slug], guide: GUIDE[s.slug] }));
+].map((s) => ({ ...s, areaP: AREA[s.slug], introH2: INTRO_H2[s.slug], guide: GUIDE[s.slug], stormH2: STORM[s.slug][0], storm: STORM[s.slug][1] }));
