@@ -4,6 +4,54 @@
 
 module.exports = [
   {
+    slug: 'charlotte-county',
+    city: 'Charlotte County',
+    areaType: 'AdministrativeArea',
+    title: 'Home Builder & Remodeler in Charlotte County, FL | Brunderman',
+    description: 'Charlotte County, FL home builder and remodeler since 1987, with 200+ homes built county-wide. Hurricane-proof custom homes, remodels, kitchens and baths.',
+    eyebrow: 'County-Wide · Building Here Since 1987',
+    h1: 'Home Builder & Remodeler in Charlotte County, FL',
+    lead: 'More than 200 of the homes we have built stand in Charlotte County. From Englewood to Babcock Ranch and from El Jobean to Burnt Store, this county is where we have spent four decades building and remodeling.',
+    facts: [
+      ['Population', 'About 187,000 (2020 Census)'],
+      ['County seat', 'Punta Gorda, the only incorporated city'],
+      ['Our office', 'Pinnacle St, near Charlotte Harbor and US-41'],
+      ['Permits', 'Charlotte County Community Development; City of Punta Gorda inside city limits'],
+    ],
+    intro: [
+      'Charlotte County stretches from the Gulf beaches of Manasota Key and Gasparilla Island, across Charlotte Harbor and the mouths of the Peace and Myakka rivers, to the ranchland east of I-75. About 187,000 people live here, and most of them live outside any city limits. Punta Gorda is the county\'s only incorporated city; everything else — Port Charlotte, the Charlotte County side of Englewood, Rotonda West, Deep Creek, Harbour Heights, Babcock Ranch — is unincorporated and governed directly by the county. For a home builder and remodeler, that means one building department handles most of the work, and knowing how it operates is half the job.',
+      'Brunderman Building Co Inc has worked in Charlotte County since Brian Brunderman founded the company in 1987. More than 200 of the homes we have built are here, along with the remodels, kitchens, baths, and additions we have done for a large share of the 800-plus customers we have served. We have built on quarter-acre platted lots, on sailboat-access canals, on coastal lots on the west side of the county, and on acreage well east of the interstate. The details change from one end of Charlotte County to the other. The standard does not.',
+      'That standard is our motto: houses shouldn\'t break. Hurricane Charley came ashore near Punta Gorda in August 2004 as a Category 4 storm, and Hurricane Ian brought wind and surge back across the county in 2022. Both storms showed, street by street, which homes were built properly and which were not. Every custom home and remodel we take on here is built to be a hurricane-proof home: concrete block walls, engineered roof connections, impact-rated windows and doors, and floors set at or above the flood line.',
+    ],
+    localH2: 'West County, Mid County, South County, and East County',
+    local: [
+      'People who live here divide Charlotte County into four parts, and each one builds differently. West County — Englewood, Rotonda West, Cape Haze, Placida, Grove City, and the Charlotte County ends of Manasota Key and Gasparilla Island — is coastal: high-hazard flood zones near the water, elevated construction on the islands, and the circular canal and golf-course lots of Rotonda. Mid County is Port Charlotte, Murdock, El Jobean, Charlotte Harbor, and Harbour Heights, where the 80-by-125-foot platted lots and roughly 165 miles of canals laid out in the late 1950s still shape almost every project.',
+      'South County means Punta Gorda, Punta Gorda Isles, Burnt Store Isles, and the Burnt Store Road corridor, where waterfront building runs through the City of Punta Gorda\'s own building division. East County is changing fastest: Babcock Ranch, the solar-powered town that drew national attention for how well it came through Hurricane Ian, and the rural acreage along State Roads 31 and 74 where wells, septic systems, and long driveways are the norm. We work in all four areas and plan each project around the flood zone, utilities, and permitting rules for that specific address.',
+    ],
+    svc: [
+      'Hurricane-proof custom homes on platted, canal-front, coastal, and acreage lots anywhere in the county.',
+      'Whole-home remodels that bring 1960s–1990s block homes up to modern layouts and storm standards.',
+      'Kitchens opened to the lanai and the water view, with impact-rated sliders replacing aging glass.',
+      'Walk-in showers, accessible baths, and pool baths built with real waterproofing for Florida humidity.',
+      'Primary suites, in-law suites, garages, and enclosed lanais sited around setbacks, septic, and flood rules.',
+    ],
+    seoH2: 'A Charlotte County Home Builder Near You',
+    seo: [
+      'If you are searching for a home builder near me in Charlotte County FL, a remodeling contractor for a house in Rotonda West, or a custom home builder for acreage out toward Babcock Ranch, you want someone who works here every week — not a company that drives in for one job and leaves. Brunderman Building Co Inc is based on Pinnacle Street near Charlotte Harbor, in the middle of the county, and has been building here for four decades. BuildZoom rates us among the top 5% of builders, and we are available 24/7.',
+      'Our Charlotte County services include custom home construction, home remodeling, kitchen remodeling, bathroom remodeling, and home additions, all under one contract. As a general contractor we handle Charlotte County Community Development permitting for unincorporated addresses and the City of Punta Gorda for addresses inside city limits, coordinate every trade, and build hurricane-proof homes with impact-rated windows to the Florida Building Code requirements for a wind-borne debris region. Whether the project is a new home in Port Charlotte or a remodel near Englewood Beach, it gets the same builder and the same standard.',
+    ],
+    variantsH3: 'Charlotte County Communities We Serve',
+    variants: ['Port Charlotte, Murdock, and Charlotte Harbor', 'Punta Gorda, Punta Gorda Isles, and Burnt Store Isles', 'Englewood (Charlotte County side), Rotonda West, and Cape Haze', 'Placida, Grove City, and Manasota Key', 'Boca Grande on Gasparilla Island', 'Deep Creek, Harbour Heights, and El Jobean', 'Babcock Ranch and East County acreage', 'Gulf Cove, South Gulf Cove, and Burnt Store'],
+    nearbyH3: 'More on Building in Charlotte County',
+    nearby: 'For detail on the county\'s two largest communities, see our pages on <a href="/locations/port-charlotte.html">general contracting in Port Charlotte</a> and <a href="/locations/punta-gorda.html">building and remodeling in Punta Gorda</a>. Just north of the county line we also serve <a href="/locations/north-port.html">North Port</a> and <a href="/locations/venice.html">Venice</a> in Sarasota County. Start at the <a href="/">Brunderman Building Co Inc homepage</a> for everything we do.',
+    faqs: [
+      ['Do you work everywhere in Charlotte County?', 'Yes. Our office is near Charlotte Harbor, in the middle of the county, and we build and remodel from Englewood and Manasota Key on the west side to Babcock Ranch and the rural acreage on the east side, and from El Jobean south to Burnt Store.'],
+      ['Who issues building permits in Charlotte County?', 'For unincorporated areas — most of the county, including Port Charlotte, the Charlotte County side of Englewood, Rotonda West, and Deep Creek — permits are issued by Charlotte County Community Development. Inside Punta Gorda city limits, the City of Punta Gorda issues them. We handle the applications and inspections for the work we perform.'],
+      ['Can you build or remodel in Babcock Ranch?', 'Babcock Ranch has its own builder program and design rules, so the answer depends on the project. Call us and we will tell you what is possible for your address. We also build custom homes on acreage elsewhere in East County.'],
+    ],
+  },
+
+  {
     slug: 'port-charlotte',
     city: 'Port Charlotte',
     title: 'General Contractor in Port Charlotte, FL | Brunderman Building',
@@ -42,7 +90,7 @@ module.exports = [
     variantsH3: 'Port Charlotte Neighborhoods We Work In',
     variants: ['Gulf Cove and South Gulf Cove', 'Murdock and the Town Center area', 'Section 15 and the Edgewater Drive corridor', 'Harbour Heights and Charlotte Harbor', 'El Jobean and the Myakka River side', 'Peachland, Midway, and central Port Charlotte'],
     nearbyH3: 'Also Serving the Communities Around Port Charlotte',
-    nearby: 'From our <a href="/">Port Charlotte home base</a>, the closest neighboring markets are <a href="/locations/punta-gorda.html">Punta Gorda across the Peace River</a> and <a href="/locations/north-port.html">North Port just over the Sarasota County line</a>. We also cover Deep Creek, Lake Suzy, Rotonda West, and the rest of Charlotte County as part of a service area that extends about 50 miles.',
+    nearby: 'From our <a href="/">Port Charlotte home base</a>, the closest neighboring markets are <a href="/locations/punta-gorda.html">Punta Gorda across the Peace River</a> and <a href="/locations/north-port.html">North Port just over the Sarasota County line</a>. We also cover Deep Creek, Lake Suzy, Rotonda West, and <a href="/locations/charlotte-county.html">the rest of Charlotte County</a> as part of a service area that extends about 50 miles.',
     faqs: [
       ['Who issues building permits in Port Charlotte?', 'Because Port Charlotte is unincorporated, permits are issued by Charlotte County Community Development. We prepare and submit the application, coordinate the required engineering and surveys, and schedule inspections for the work we perform.'],
       ['Is my Port Charlotte lot in a flood zone?', 'Many are, especially near saltwater canals, the harbor, and the rivers. The flood zone and base flood elevation determine the minimum floor height for new construction and can affect how much remodeling is allowed under FEMA\'s 50% rule. We check this at the start of every project.'],
@@ -89,7 +137,7 @@ module.exports = [
     variantsH3: 'Where We Work in Punta Gorda',
     variants: ['Punta Gorda Isles (PGI)', 'Burnt Store Isles (BSI)', 'Downtown historic district', 'Burnt Store Meadows', 'Deep Creek', 'Burnt Store Road corridor and Burnt Store Marina area'],
     nearbyH3: 'Nearby Service Areas',
-    nearby: 'Punta Gorda is at the center of our territory. Across the US-41 bridges is <a href="/locations/port-charlotte.html">Port Charlotte, where most of our homes have been built</a>, and heading south on Burnt Store Road leads directly into <a href="/locations/cape-coral.html">northwest Cape Coral</a>. See the <a href="/">Brunderman Building Co Inc homepage</a> for the full 50-mile service area.',
+    nearby: 'Punta Gorda is at the center of our territory. Across the US-41 bridges is <a href="/locations/port-charlotte.html">Port Charlotte, where most of our homes have been built</a>, and the rest of <a href="/locations/charlotte-county.html">Charlotte County</a> — Burnt Store, Deep Creek, Harbour Heights, and Babcock Ranch to the east — is a short drive away. See the <a href="/">Brunderman Building Co Inc homepage</a> for the full service area.',
     faqs: [
       ['Do you build in Punta Gorda Isles and Burnt Store Isles?', 'Yes. We build new waterfront homes and remodel existing ones in both communities, and we work within the deed restrictions and architectural review requirements that apply to many sections.'],
       ['My PGI home is at ground level. How much remodeling can I do?', 'If the home is below the current required flood elevation, improvements are limited by FEMA\'s 50% rule as administered by the City of Punta Gorda. The limit is based on the value of the structure, not the land. We help you understand the numbers before designing the project.'],
@@ -145,53 +193,6 @@ module.exports = [
   },
 
   {
-    slug: 'englewood',
-    city: 'Englewood',
-    title: 'Home Builder & Remodeler in Englewood, FL | Brunderman',
-    description: 'Englewood, FL home builder and remodeler serving Rotonda West, Manasota Key & Cape Haze. Coastal custom homes, remodels, kitchens and baths.',
-    eyebrow: 'Two Counties · One Coastline',
-    h1: 'Home Builder & Remodeler in Englewood, FL',
-    lead: 'Englewood straddles two counties and faces the Gulf. Building and remodeling here takes a contractor who understands coastal construction and knows which building department your address belongs to.',
-    facts: [
-      ['Population', 'About 20,800 (2020 Census)'],
-      ['County', 'Split between Charlotte and Sarasota counties'],
-      ['From our office', 'About 20–25 miles west via SR 776'],
-      ['Permits', 'Charlotte County or Sarasota County, depending on address'],
-    ],
-    intro: [
-      'Englewood is an unincorporated coastal community of about 20,800 people, and the Charlotte–Sarasota county line runs right through it. A house north of the line answers to Sarasota County\'s building department; one a few blocks south answers to Charlotte County\'s. Permit procedures, zoning rules, and even flood-plain administration differ between the two, so the first question on any Englewood project is simply: which side are you on?',
-      'The second question is how close you are to the water. Lemon Bay separates the mainland from Manasota Key, and homes along the bay and on the key face the most demanding building conditions in our service area — high-velocity flood zones, coastal construction setbacks, and wind exposure straight off the Gulf of Mexico. Farther inland, Rotonda West\'s circular plan of golf-course and canal lots, along with Cape Haze and the neighborhoods off Dearborn Street in Old Englewood Village, offer more conventional sites for custom homes and remodeling.',
-      'Brunderman Building Co Inc has worked along this coast for four decades. Hurricane Ian\'s 2022 landfall hit Englewood hard, and a large share of the home remodeling work in the area since has been rebuilding — roofs, windows, drywall, kitchens, and baths in homes that took wind and water.',
-    ],
-    localH2: 'Coastal Construction on Lemon Bay and Manasota Key',
-    local: [
-      'In coastal high-hazard (VE) flood zones, which cover much of Manasota Key and the bayfront, new homes are built on pilings or columns with the living floor elevated above the base flood elevation, and the area underneath limited to parking, storage, and access with breakaway walls. State coastal construction control line rules can also apply on the Gulf side. These homes require specialized engineering, corrosion-resistant connectors and fasteners, and impact-rated windows and doors designed for higher wind pressures. They also reward good design: elevated living areas have remarkable views.',
-      'Inland, Rotonda West and the surrounding subdivisions are primarily slab-on-grade concrete block homes much like those in Port Charlotte, many on lots backing to golf fairways or freshwater canals. Deed restrictions in Rotonda govern things like minimum square footage and exterior appearance, and we account for those at the design stage.',
-    ],
-    svc: [
-      'Elevated coastal homes and block homes on Rotonda West golf and canal lots.',
-      'Storm-damage rebuilds and full interior renovations for homes on both sides of the county line.',
-      'Light, coastal-style kitchens with durable finishes suited to salt air and seasonal use.',
-      'Low-maintenance tiled showers and updated baths for seasonal and full-time residents.',
-      'Guest suites and enclosed lanais, designed to the flood and setback rules for your address.',
-    ],
-    seoH2: 'Englewood Building Contractor and Remodeler Near You',
-    seo: [
-      'Homeowners who search for a building contractor near me in Englewood FL, or for Englewood home remodeling, often run into contractors who work on only one side of the county line. We work on both. Brunderman Building Co Inc prepares permit submittals for Charlotte County and Sarasota County alike, and we understand how each administers flood-plain rules such as FEMA\'s 50% substantial-improvement limit — a major factor for older ground-level homes near Lemon Bay.',
-      'Our Englewood services include custom home construction, home remodeling, kitchen remodeling, bathroom remodeling, and home additions. We are rated in the top 5% of builders by BuildZoom and have served more than 800 customers across the region. For seasonal residents, we are used to coordinating projects while the owner is up north — clear written scopes, regular photo updates, and a home that is ready when you return for the winter.',
-    ],
-    variantsH3: 'Englewood-Area Communities We Serve',
-    variants: ['Rotonda West and Rotonda Lakes', 'Manasota Key and Englewood Beach', 'Old Englewood Village and the Dearborn Street area', 'Cape Haze and Placida', 'Englewood Isles and Lemon Bay waterfront', 'South Gulf Cove and Gulf Cove along SR 776', 'Boca Grande (Gasparilla Island)'],
-    nearbyH3: 'Nearby Areas',
-    nearby: 'State Road 776 connects Englewood east to <a href="/locations/port-charlotte.html">our home market in Port Charlotte</a>, and River Road or SR 776 north leads to <a href="/locations/venice.html">Venice and South Venice</a>. Start at the <a href="/">Brunderman Building Co Inc home page</a> to see everything we do.',
-    faqs: [
-      ['Is my Englewood home in Charlotte County or Sarasota County?', 'It depends on the address — the county line runs through the community. Your property tax bill will tell you. We work with both building departments, so either way we can handle the permitting.'],
-      ['Do you build elevated homes on pilings?', 'Yes. In VE flood zones on Manasota Key and along the bay, elevated construction is required, and we coordinate the structural engineering, foundation, and code-compliant enclosure below the living floor.'],
-      ['I am a seasonal resident. Can you remodel while I am away?', 'Many of our Englewood clients are seasonal. With selections made and a written scope agreed before you leave, we can complete the work during the off-season and keep you updated with photos and calls.'],
-    ],
-  },
-
-  {
     slug: 'venice',
     city: 'Venice',
     title: 'Home Builder & Remodeler in Venice, FL | Brunderman Building',
@@ -230,105 +231,11 @@ module.exports = [
     variantsH3: 'Venice-Area Neighborhoods',
     variants: ['Venice Island and the historic districts', 'South Venice', 'Venice Gardens', 'Nokomis and Laurel', 'Jacaranda Boulevard and east-of-I-75 communities', 'Golden Beach and the Venice Avenue corridor'],
     nearbyH3: 'Areas Near Venice We Also Cover',
-    nearby: 'South of Venice, our work continues into <a href="/locations/north-port.html">North Port and the Wellen Park area</a> and down the coast to <a href="/locations/englewood.html">Englewood and Manasota Key</a>. For an overview of the company, visit the <a href="/">Brunderman Building Co Inc homepage</a>.',
+    nearby: 'South of Venice, our work continues into <a href="/locations/north-port.html">North Port and the Wellen Park area</a> and down through Englewood and Rotonda West into <a href="/locations/charlotte-county.html">Charlotte County</a>, where most of our homes have been built. For an overview of the company, visit the <a href="/">Brunderman Building Co Inc homepage</a>.',
     faqs: [
       ['Do you travel to Venice from Port Charlotte?', 'Yes. Venice is within our 50-mile service area, about a half-hour drive up I-75. We schedule Venice projects so crews and supervision are on site consistently, just as they would be closer to home.'],
       ['My home is in a Venice historic district. Can I replace the windows?', 'Generally yes, with approval. The city\'s review process looks at whether new windows are compatible with the home\'s architecture. We select impact-rated products with appropriate proportions and prepare the submittal.'],
       ['Is my address in the City of Venice or unincorporated Sarasota County?', 'Many "Venice" mailing addresses — including South Venice and Venice Gardens — are actually in unincorporated Sarasota County. We verify the jurisdiction at the start because it determines where permits are filed and which zoning rules apply.'],
-    ],
-  },
-
-  {
-    slug: 'cape-coral',
-    city: 'Cape Coral',
-    title: 'Home Builder & Remodeler in Cape Coral, FL | Brunderman',
-    description: 'Cape Coral, FL home builder and remodeler for canal-front custom homes, kitchen & bath remodeling and additions. Four decades of SW Florida experience.',
-    eyebrow: 'Lee County · 400 Miles of Canals',
-    h1: 'Home Builder & Remodeler in Cape Coral, FL',
-    lead: 'Cape Coral has more canal frontage than any city in the world. We build and remodel homes here with the same waterfront know-how we have used on Charlotte County canals for forty years.',
-    facts: [
-      ['Population', 'About 194,000 (2020 Census)'],
-      ['County', 'Lee County'],
-      ['From our office', 'Roughly 25–30 miles south via Burnt Store Road'],
-      ['Permits', 'City of Cape Coral'],
-    ],
-    intro: [
-      'With about 194,000 residents in the 2020 Census, Cape Coral is by far the largest city in our service area, and it is still filling in. The Rosen brothers began dredging it out of the mangroves in 1957, and the result is a grid of some 400 miles of canals — some freshwater, some saltwater with access to the Caloosahatchee River, Matlacha Pass, and the Gulf. Locals navigate by quadrant: the established Southeast and Southwest Cape, and the rapidly developing Northwest and Northeast.',
-      'Our connection to Cape Coral is geographic. Burnt Store Road runs straight from Punta Gorda into the Northwest Cape, which puts that quadrant — where a great deal of today\'s custom home construction is happening — closer to our office than to parts of Fort Myers. Owners with Gulf-access lots off Old Burnt Store Road, or freshwater lots north of Pine Island Road, regularly look north for a home builder and remodeler with long waterfront experience.',
-      'Brunderman Building Co Inc brings four decades of that experience, along with a record of more than 200 homes built one county up. The canal lots of Port Charlotte and Punta Gorda pose the same questions as Cape Coral\'s: flood elevation, seawalls, fill, dock planning, and how to aim the house at the view.',
-    ],
-    localH2: 'Gulf Access, Freshwater, and the Utility Expansion',
-    local: [
-      'The first thing to establish on a Cape Coral lot is what kind of water it fronts. Gulf-access canals carry saltwater flood-zone designations and command designs that make the most of the rear exposure — southern and western views are especially prized for afternoon sun on the pool. Freshwater canal and dry lots are simpler and more affordable to build on but still require attention to fill and finished-floor elevation.',
-      'The second is utilities. Cape Coral has been extending city water, sewer, and irrigation across the north end in phases through its Utilities Extension Project, with assessments charged to each lot. Where city utilities have not yet arrived, a new home needs a well and septic system now and will connect later. We factor the current status of your specific lot into the construction budget. For existing homes in the older Southeast and Southwest Cape — around Cape Coral Parkway, the Yacht Club area, and Pelican — remodeling after Hurricane Ian\'s 2022 surge and wind damage has been a large part of the work.',
-    ],
-    svc: [
-      'Canal-front custom homes in the Northwest and Southwest Cape, elevated and oriented for the water view.',
-      'Post-Ian rebuilds and full renovations of 1970s–90s homes in the Southeast and Southwest Cape.',
-      'Open, island-centered kitchens that look through sliders to the lanai, pool, and canal.',
-      'Primary bath overhauls plus pool-bath updates for homes that live outdoors.',
-      'Extended lanais, guest suites, and garage additions designed around seawall setbacks.',
-    ],
-    seoH2: 'Cape Coral Home Builder and Remodeler Near You',
-    seo: [
-      'Typing custom home builder near me in Cape Coral FL brings up dozens of names, from high-volume builders putting up the same few models across the north end to boutique firms focused on luxury Gulf-access homes. Brunderman Building Co Inc sits between those extremes: a true custom builder with the experience to handle a complex waterfront home and the practicality to build a well-priced family home on a freshwater lot. BuildZoom rates us among the top 5% of builders, and more than 800 customers have trusted us with their projects.',
-      'We offer Cape Coral homeowners custom home construction, home remodeling, kitchen remodeling, bathroom remodeling, and home additions. As a general contractor we coordinate permitting with the City of Cape Coral, manage every trade, and build hurricane-proof homes to the Florida Building Code standards for wind-borne debris regions — impact-rated windows and doors, engineered roof connections, and proper elevation. If you own a ground-level home in a flood zone, we will also explain how the FEMA 50% rule affects your remodeling options before you spend money on design.',
-    ],
-    variantsH3: 'Parts of Cape Coral We Serve',
-    variants: ['Northwest Cape and the Burnt Store Road corridor', 'Southwest Cape, Cape Harbour, and Tarpon Point', 'Southeast Cape and the Yacht Club area', 'Northeast Cape and the Pine Island Road corridor', 'Gulf-access, freshwater canal, and dry lots', 'Matlacha and the Pine Island approach'],
-    nearbyH3: 'Nearby Service Areas',
-    nearby: 'Cape Coral connects north along Burnt Store Road to <a href="/locations/punta-gorda.html">Punta Gorda and Burnt Store Isles</a>, and east across the Caloosahatchee bridges to <a href="/locations/fort-myers.html">Fort Myers</a>. Read more about our background on the <a href="/">Brunderman Building Co Inc main page</a>.',
-    faqs: [
-      ['Do you build in Northwest Cape Coral?', 'Yes. The Northwest Cape is the closest part of the city to our office, reached directly by Burnt Store Road, and it is where much of the available Gulf-access and freshwater land is located.'],
-      ['Does my Cape Coral lot have city water and sewer?', 'It depends on whether the Utilities Extension Project has reached your area. If not, the home will need a well and septic system initially. We confirm the status of your lot and include the appropriate costs in your budget.'],
-      ['Can you remodel a home that flooded during Hurricane Ian?', 'We can. Rebuilds typically involve new drywall, insulation, cabinetry, flooring, doors, and electrical devices, and in flood zones the scope has to be evaluated against the FEMA 50% rule. We help you work through both the construction and the compliance questions.'],
-    ],
-  },
-
-  {
-    slug: 'fort-myers',
-    city: 'Fort Myers',
-    title: 'Home Builder & Remodeler in Fort Myers, FL | Brunderman',
-    description: 'Fort Myers, FL home builder and remodeler — remodeling for McGregor corridor & historic homes, custom homes and additions. Four decades of experience.',
-    eyebrow: 'Lee County Seat · Caloosahatchee River',
-    h1: 'Home Builder & Remodeler in Fort Myers, FL',
-    lead: 'Fort Myers is the oldest and most architecturally varied city we serve. From riverfront estates off McGregor Boulevard to 1920s bungalows, we bring a builder\'s judgment to every remodel and new home.',
-    facts: [
-      ['Population', 'About 86,000 (2020 Census)'],
-      ['County', 'Lee County (county seat)'],
-      ['From our office', 'About 25–30 miles south via I-75 or US-41'],
-      ['Permits', 'City of Fort Myers or Lee County, depending on address'],
-    ],
-    intro: [
-      'Thomas Edison built his winter estate on the Caloosahatchee River in the 1880s and later lined McGregor Boulevard with the royal palms that gave Fort Myers its "City of Palms" nickname. The city that grew up around those estates — about 86,000 residents as of 2020, and the seat of Lee County — has a range of housing unlike anywhere else in our service area: century-old bungalows in Dean Park, mid-century ranches in Whiskey Creek, riverfront homes off McGregor, and brand-new subdivisions stretching east toward Gateway and I-75.',
-      'That variety calls for judgment more than formula. A 1925 frame bungalow and a 2005 stucco two-story need entirely different approaches to a kitchen remodel. One may have plaster walls, a crawl space, and wiring that has to be replaced before anything else happens; the other may just need better design and better materials. A home builder and remodeler with four decades behind it has seen both many times over.',
-      'Fort Myers lies at the southern edge of Brunderman Building Co Inc\'s territory, a straight run down I-75 from our Charlotte County office. We have built more than 200 homes to the north, earned a top 5% rating on BuildZoom, and served more than 800 customers — and we bring that same standard across the county line.',
-    ],
-    localH2: 'Older Homes, River Flooding, and Building in Lee County',
-    local: [
-      'Fort Myers\' historic neighborhoods — Dean Park, Edison Park, Seminole Park, and the streets near the River District — contain some of the oldest homes in Southwest Florida. Remodeling them often begins with the unglamorous work: replacing cast-iron drains and cloth-insulated wiring, leveling floors over pier foundations, adding insulation and proper HVAC to houses designed for cross-breezes. The city\'s historic preservation rules apply to exterior changes in designated districts, and we design within them.',
-      'Along the Caloosahatchee, Hurricane Ian\'s 2022 storm surge pushed well up the river and flooded homes that had stayed dry for generations. For riverfront and near-river properties off McGregor Boulevard, flood elevation and the FEMA 50% rule are now central to any substantial renovation. East of US-41 and out toward Gateway, conditions are easier: newer block homes on higher ground, where remodeling and home additions are chiefly a matter of design, HOA approval, and good execution.',
-    ],
-    svc: [
-      'Custom homes on infill lots and acreage, plus teardown-and-rebuild projects near the river.',
-      'Systems-first renovations of historic bungalows and full updates of mid-century ranches.',
-      'Kitchen remodeling that suits the era of the house — from period-appropriate to fully modern.',
-      'Bathroom remodeling including re-piping, waterproofed tile showers, and added primary baths.',
-      'Additions that match older rooflines and details, or expand newer homes in HOA communities.',
-    ],
-    seoH2: 'Fort Myers Remodeling Contractor and Builder Near You',
-    seo: [
-      'If you have searched for a general contractor near me in Fort Myers FL or for Fort Myers home remodeling, you already know the market is crowded, particularly since the hurricane. What separates contractors is track record. Brunderman Building Co Inc did not arrive after the storm; we have been building and remodeling homes in Southwest Florida for four decades. Our reviewers describe responsiveness, punctuality, quality, professionalism, and value — the basics that matter most when someone is working on your home.',
-      'For Fort Myers clients we provide home remodeling, kitchen remodeling, bathroom remodeling, home additions, and custom home construction. Addresses inside the city limits are permitted through the City of Fort Myers, while much of what people call Fort Myers — including areas toward Gateway, San Carlos, and south along US-41 — is unincorporated and permitted by Lee County. We work with both, manage all trades under a single contract, and build hurricane-proof homes with impact-rated windows to current Florida Building Code wind and flood standards.',
-    ],
-    variantsH3: 'Fort Myers Neighborhoods We Serve',
-    variants: ['McGregor Boulevard corridor and riverfront', 'Dean Park, Edison Park, and the River District', 'Whiskey Creek', 'Gateway and east Fort Myers', 'North Fort Myers', 'Buckingham and rural acreage east of I-75'],
-    nearbyH3: 'Nearby Areas We Cover',
-    nearby: 'Just across the river bridges is <a href="/locations/cape-coral.html">Cape Coral, with its hundreds of miles of canals</a>, and north on I-75 brings you to <a href="/locations/punta-gorda.html">Punta Gorda and Charlotte Harbor, where our office is located</a>. The <a href="/">Brunderman Building Co Inc homepage</a> outlines our full service area and history.',
-    faqs: [
-      ['Is Fort Myers within your service area?', 'Yes. Fort Myers is roughly 25 to 30 miles from our office, well inside our 50-mile radius. North Fort Myers is closer still.'],
-      ['Do you remodel historic homes in Fort Myers?', 'We do. Older homes usually need mechanical, electrical, and structural updates along with the visible improvements, and exterior changes in designated historic districts require city approval. We plan for both from the start.'],
-      ['Is my property permitted by the City of Fort Myers or Lee County?', 'It depends on whether the address is inside the city limits — many Fort Myers mailing addresses are not. We confirm the jurisdiction before design begins because it determines zoning rules and where permits are filed.'],
     ],
   },
 ];

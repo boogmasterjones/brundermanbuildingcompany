@@ -105,6 +105,14 @@ One H1 per page with its words present in body copy · no heading-level jumps ·
 - "Hurricane-proof homes" + "impact-rated windows" now appear in the homepage meta description, hero, a dedicated homepage section, every service page (own H2 + two paragraphs each), every location page, the FAQ (+ FAQ schema), and a new guide: *Impact-Rated Windows vs. Hurricane Shutters*. 21 indexable pages.
 - Wording note: "hurricane-proof" is the client's chosen phrase; copy pairs it with concrete, code-based specifics (block, load path, impact glass, elevation) and never promises a home cannot be damaged.
 
+## Changed 2026-09-21 (service-area restructure)
+- Removed the Englewood, Cape Coral, and Fort Myers location pages; every link, schema entry, form option, and sitemap URL updated; `_redirects` 301s the old URLs.
+- New **Charlotte County** location page (~1,190 unique words; `AdministrativeArea` in schema) covering West/Mid/South/East County — Englewood, Rotonda West, Boca Grande, Deep Creek, Babcock Ranch, etc.
+- Service-area copy refocused on Charlotte County + southern Sarasota County (Lee County no longer named as served).
+- Services hub 306 → ~1,090 words (per-service "which fits" guide + FAQ with schema); service-areas hub 433 → ~950 (FAQ with schema).
+- Homepage trimmed to ~1,090 unique words: removed the "Why Brunderman" cards, which repeated the hero stats and trust bar verbatim.
+- `node _generate/wordcount.js` reports total and page-unique word counts.
+
 ## How to re-run
 ```
 node _generate/build.js    # rebuild all pages

@@ -100,9 +100,8 @@ ${P.LOCATIONS_NAV.map(([slug, n, c]) => `      <a class="area-card" href="/locat
 
 // ---------- Homepage ----------
 const HOME_FAQS = [
-  ['What areas does Brunderman Building Co Inc serve?', 'Port Charlotte is the center of our service area, and we work within about 50 miles of it. That includes Punta Gorda, North Port, Englewood, Venice, Cape Coral, Fort Myers, and the smaller communities of Charlotte, Sarasota, Lee, and DeSoto counties in between.'],
+  ['What areas does Brunderman Building Co Inc serve?', 'Port Charlotte is the center of our service area, and we work within about 50 miles of it. That includes all of Charlotte County — Port Charlotte, Punta Gorda, Englewood, Rotonda West, Deep Creek, and Babcock Ranch — plus North Port, Venice, and the rest of southern Sarasota County.'],
   ['What kinds of projects do you take on?', 'We are both a home builder and a remodeler. Our work includes custom home construction, whole-home remodeling, kitchen remodeling, bathroom remodeling, and home additions.'],
-  ['How long has Brunderman Building Co Inc been in business?', 'We have four decades of experience building in Southwest Florida. In that time we have built more than 200 homes in Charlotte County and served more than 800 customers.'],
   ['Are your homes hurricane-proof?', 'We build hurricane-proof homes in the practical sense: concrete block construction, engineered roof-to-wall connections, impact-rated windows and doors, and correct flood elevation, all built to meet and exceed the Florida Building Code for our wind-borne debris region. Our motto is "Houses shouldn\'t break," and after four decades of Florida storms it is the standard every home we build is held to.'],
   ['Do you install impact-rated windows?', 'Yes. Impact-rated windows and doors are standard on our custom homes, and replacing older single-pane or shuttered openings with impact-rated units is one of the most common upgrades in our remodeling work across Port Charlotte and Southwest Florida.'],
   ['What are your hours?', `We are available 24/7. Call ${SITE.phoneDisplay} any time, or send the quote form and we will follow up.`],
@@ -183,25 +182,11 @@ ${serviceCards()}
   </div>
 </section>
 
-<section class="section-dark" id="why">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Why Brunderman</span>
-      <h2>A Builder Port Charlotte Has Trusted for Four Decades</h2>
-      <p>Building in Southwest Florida means building for wind, water, and heat. Experience is what keeps those from becoming your problem.</p>
-    </div>
-    <div class="card-grid row-cards">
-      <div class="card"><span class="card-icon">${ICON.home}</span><h3>200+ Local Homes</h3><p>More than 200 homes built in Charlotte County — on platted lots, canal lots, and acreage. We know what each one demands before the first form board goes down.</p></div>
-      <div class="card"><span class="card-icon">${ICON.people}</span><h3>800+ Customers</h3><p>New builds and remodels for more than 800 customers. One of them put it simply: &ldquo;These people live and breathe building.&rdquo;</p></div>
-      <div class="card"><span class="card-icon">${ICON.shield}</span><h3>Top 5% on BuildZoom</h3><p>BuildZoom rates Brunderman Building Co Inc among the top 5% of builders — an independent measure of track record.</p></div>
-    </div>
-  </div>
-</section>
 ${P.TRUST_BAR}
-<section id="process">
+<section id="process" class="section-dark">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow-dark">How It Works</span>
+      <span class="eyebrow">How It Works</span>
       <h2>From First Call to Final Walkthrough</h2>
     </div>
     <ol class="steps">
@@ -219,8 +204,8 @@ ${P.TRUST_BAR}
       <div class="prose collapsible">
         <span class="eyebrow-dark">Service Area</span>
         <h2>Port Charlotte and 50 Miles Around It</h2>
-        <p>Our office is on Pinnacle Street near Charlotte Harbor, minutes from US-41 and the heart of Port Charlotte. From there our service area reaches about 50 miles in every direction: north through <a href="/locations/north-port.html">North Port</a> to <a href="/locations/venice.html">Venice</a>, west along State Road 776 to <a href="/locations/englewood.html">Englewood</a> and Rotonda West, across the Peace River to <a href="/locations/punta-gorda.html">Punta Gorda</a>, and south down Burnt Store Road and I-75 to <a href="/locations/cape-coral.html">Cape Coral</a> and <a href="/locations/fort-myers.html">Fort Myers</a>.</p>
-        <p>The region shares a climate and a building code, but every community has its own character. Port Charlotte and North Port are defined by platted lots and canals. Punta Gorda Isles and Cape Coral are waterfront markets where flood elevation and seawalls shape every plan. Englewood has coastal high-hazard zones on Manasota Key, while Venice and Fort Myers have historic districts with design review. As a home builder working across all of them, we plan each project around the local rules rather than finding out about them halfway through. See <a href="/service-areas.html">all service areas</a>, or read our <a href="/guides.html">homeowner guides</a> on flood rules, permits, and building on your own lot.</p>
+        <p>Our office is on Pinnacle Street near Charlotte Harbor, minutes from US-41 and the heart of Port Charlotte. From there our service area reaches about 50 miles in every direction: north through <a href="/locations/north-port.html">North Port</a> to <a href="/locations/venice.html">Venice</a>, west along State Road 776 to Englewood and Rotonda West, across the Peace River to <a href="/locations/punta-gorda.html">Punta Gorda</a>, and east to Babcock Ranch — all of <a href="/locations/charlotte-county.html">Charlotte County</a> and the southern half of Sarasota County.</p>
+        <p>The region shares a climate and a building code, but every community has its own character. Port Charlotte and North Port are defined by platted lots and canals. Punta Gorda Isles is a waterfront market where flood elevation and seawalls shape every plan. Englewood has coastal high-hazard zones on Manasota Key, while Venice and downtown Punta Gorda have historic districts with design review. As a home builder working across all of them, we plan each project around the local rules rather than finding out about them halfway through. See <a href="/service-areas.html">all service areas</a>, or read our <a href="/guides.html">homeowner guides</a> on flood rules, permits, and building on your own lot.</p>
       </div>
       <div>
         ${areaGrid().replace('class="area-grid"', 'class="area-grid two"')}
@@ -237,12 +222,25 @@ ${P.TRUST_BAR}
   '1.0');
 
 // ---------- Services hub ----------
+const HUB_SERVICE_DETAIL = {
+  'custom-home-construction': 'Choose custom home construction when you own a lot, or are about to buy one, and want a house designed around it rather than picked from a catalog. We evaluate the lot first — flood zone, fill, utilities or well and septic, setbacks — then develop plans, pricing, and selections before anything is permitted. Every new home we build is a hurricane-proof home: concrete block, a continuous load path from roof to footing, impact-rated windows and doors throughout, and a floor at or above the required flood elevation.',
+  'home-remodeling': 'Choose home remodeling when the house is in the right place but no longer works the way you live — closed-off rooms, dated finishes, original windows, or damage from the last storm. Whole-home remodels often combine several services at once: a new kitchen, updated baths, new flooring, and impact-rated window replacement, scheduled as one project instead of five. If your home is in a flood zone, we check the FEMA 50% rule before design begins so the scope you approve is one that can actually be permitted.',
+  'kitchen-remodeling': 'Choose kitchen remodeling when the kitchen is the problem: a galley layout walled off from the family room, low soffits, worn cabinets, or not enough counter space. We start with the layout, then cabinetry, countertops, lighting, and appliances. Because we are builders, walls can move, plumbing can be relocated through the slab, and electrical can be upgraded for modern appliances, all under the same permit.',
+  'bathroom-remodeling': 'Choose bathroom remodeling for a tub-to-shower conversion, a primary bath overhaul, an accessible bathroom for aging in place, or a hall bath that has simply worn out. The part you cannot see matters most: a continuous waterproofing system behind the tile, a properly sloped shower pan, solid blocking for grab bars and glass, and an exhaust fan ducted outside so Florida humidity does not rot the room from within.',
+  'home-additions': 'Choose a home addition when you need more room but want to keep the house, the neighborhood, or the view. Primary suites, in-law suites, extra bedrooms, garages, and lanai conversions all qualify. An addition is new construction joined to an existing building, so it is built to current hurricane code with an engineered roof tie-in, even when the original house was not. We confirm setbacks, septic location, and flood requirements before anything is drawn.',
+};
+const HUB_SERVICE_FAQS = [
+  ['Can one project include more than one service?', 'Yes, and many do. A whole-home remodel frequently includes a new kitchen, one or two bathrooms, and impact-rated window replacement, while an addition often comes with a kitchen or bath update in the existing house. We price and schedule it as one project under one contract and one permit set wherever possible.'],
+  ['Do you only build new homes, or do you take smaller remodels too?', 'We do both. Brunderman Building Co Inc has built more than 200 homes in Charlotte County, and we also take on individual kitchen and bathroom remodels. The same builder-level standard applies to a single bathroom as to a whole house.'],
+  ['Are impact-rated windows included in your projects?', 'On new custom homes and home additions, impact-rated windows and doors are standard. On remodels, replacing older windows and sliders with impact-rated units is the first storm upgrade we recommend, and it can be added to almost any scope.'],
+  ['What does a first conversation involve?', 'Call us — we are available 24/7 — or send the quote form. We will ask where the property is, what you want to build or change, and your rough timing and budget, then set up a visit to see the house or lot in person.'],
+];
 write('services.html',
   P.head({
     title: 'Building & Remodeling Services in Port Charlotte, FL | Brunderman',
-    description: 'Building and remodeling services in Port Charlotte, FL: custom homes, home remodeling, kitchens, bathrooms and additions from one experienced builder.',
+    description: 'Building and remodeling services in Port Charlotte, FL: hurricane-proof custom homes, home remodeling, kitchens, bathrooms and additions from one builder.',
     path: '/services.html',
-    schemas: [P.breadcrumbSchema([['Home', '/'], ['Services', '/services.html']])],
+    schemas: [P.breadcrumbSchema([['Home', '/'], ['Services', '/services.html']]), P.faqSchema(HUB_SERVICE_FAQS)],
   }) +
   P.header('services') +
   `<main id="main">
@@ -251,7 +249,7 @@ write('services.html',
     crumbs: [['Home', '/'], ['Services', '/services.html']],
     eyebrow: 'Builder · Remodeler · General Contractor',
     h1: 'Building &amp; Remodeling Services in Port Charlotte, FL',
-    lead: 'New custom homes and every kind of remodeling, from one builder with four decades of Southwest Florida experience.',
+    lead: 'Hurricane-proof custom homes and every kind of remodeling, from one builder with four decades of Southwest Florida experience.',
     label: 'services_hub_hero_phone_button',
   }) +
   `<section>
@@ -259,7 +257,7 @@ write('services.html',
     <div class="section-head">
       <span class="eyebrow-dark">Our Services</span>
       <h2>What We Build</h2>
-      <p>Brunderman Building Co Inc offers building and remodeling services to homeowners in Port Charlotte and within about 50 miles. Choose a service to see what is involved.</p>
+      <p>Brunderman Building Co Inc offers building and remodeling services to homeowners in Port Charlotte, across Charlotte County, and within about 50 miles. Choose a service to see what is involved.</p>
     </div>
     <div class="card-grid">
 ${serviceCards()}
@@ -268,28 +266,41 @@ ${serviceCards()}
 </section>
 <section class="section-alt">
   <div class="container">
+    <div class="prose collapsible narrow">
+      <h2>Which Service Fits Your Project?</h2>
+      <p>Most people who call us know roughly what they want but not always what to call it. Here is how we think about each of our building and remodeling services, and when each one is the right fit.</p>
+${SERVICES.map((s) => `      <h3><a href="/services/${s.slug}.html">${s.name}</a></h3>\n      <p>${HUB_SERVICE_DETAIL[s.slug]}</p>`).join('\n')}
+    </div>
+  </div>
+</section>
+${P.MOTTO_BAND}
+<section>
+  <div class="container">
     <div class="split">
       <div class="prose collapsible">
         <h2>One Builder for the Whole Project</h2>
         <p>Many remodeling companies specialize in a single room or a single trade. We are home builders first, which means we are comfortable with every part of a house — foundation, structure, roof, mechanical systems, and finishes. That matters when a kitchen remodel uncovers a plumbing problem in the slab, or when an addition needs an engineered roof tie-in.</p>
         <p>It also keeps things simple for you. Whether you need custom home construction or a bathroom update, our building and remodeling services come with one contract, one schedule, and one company accountable for the result. We coordinate the permits, the subcontractors, the inspections, and the punch list.</p>
+        <p>Every service is held to the same standard: Brian Brunderman's motto that houses shouldn't break. In practice that means hurricane-proof construction details wherever the scope allows — impact-rated windows and doors, strapped roof connections, correctly flashed openings, and waterproofing that is its own step rather than an afterthought.</p>
         <h3>Other Work We Are Often Asked About</h3>
         <ul class="cols">
           <li>Hurricane and water damage rebuilds</li>
-          <li>Impact window and door replacement</li>
+          <li>Impact-rated window and door replacement</li>
           <li>Lanai enclosures and outdoor kitchens</li>
           <li>Garage additions and conversions</li>
           <li>Open floor plan conversions</li>
           <li>Aging-in-place modifications</li>
         </ul>
+        <h3>How Scope and Pricing Work</h3>
+        <p>Every project starts with a visit and a conversation about what you want and what you want to spend. From there we put together a written scope of work with pricing and allowances for the finishes you will choose, so you can see where the money goes and adjust before construction rather than during it. Permits, engineering, and inspections are part of the scope, not surprises added later. Read our <a href="/guides/remodeling-permits-southwest-florida.html">guide to remodeling permits</a> for more on what needs one.</p>
       </div>
       <aside class="fact-card">
         <h3>At a Glance</h3>
         <dl>
-          <div><dt>Experience</dt><dd>Four decades</dd></div>
+          <div><dt>Founded</dt><dd>${SITE.founded}, by Brian Brunderman</dd></div>
           <div><dt>Homes built</dt><dd>200+ in Charlotte County</dd></div>
           <div><dt>Customers</dt><dd>800+</dd></div>
-          <div><dt>BuildZoom</dt><dd>Rated top 5% of builders</dd></div>
+          <div><dt>Hours</dt><dd>Available 24/7</dd></div>
         </dl>
         <a ${callAttr('services_hub_card_phone_button')} class="btn btn-primary">Call ${SITE.phoneDisplay}</a>
       </aside>
@@ -297,6 +308,7 @@ ${serviceCards()}
   </div>
 </section>
 ` +
+  P.faqBlock(HUB_SERVICE_FAQS, 'Questions About Our Services', true) +
   P.quoteSection({ alt: false, label: 'services_hub_quote_phone_button', heading: 'Tell Us What You Want Built' }) +
   `</main>
 ` +
@@ -402,7 +414,7 @@ for (const l of LOCATIONS) {
       schemas: [
         P.breadcrumbSchema(crumbs),
         P.faqSchema(l.faqs),
-        { '@context': 'https://schema.org', '@type': 'Service', name: `Home building and remodeling in ${l.city}, FL`, serviceType: 'Home construction and remodeling', provider: { '@id': `${SITE.domain}/#business` }, areaServed: { '@type': 'City', name: `${l.city}, FL` }, url: `${SITE.domain}/locations/${l.slug}.html` },
+        { '@context': 'https://schema.org', '@type': 'Service', name: `Home building and remodeling in ${l.city}, FL`, serviceType: 'Home construction and remodeling', provider: { '@id': `${SITE.domain}/#business` }, areaServed: { '@type': l.areaType || 'City', name: `${l.city}, FL` }, url: `${SITE.domain}/locations/${l.slug}.html` },
       ],
     }) +
     P.header() +
@@ -536,7 +548,7 @@ ${P.TRUST_BAR}
     <div class="section-head">
       <span class="eyebrow-dark">Service Area</span>
       <h2>Where We Work</h2>
-      <p>Port Charlotte is the center of our service area, which extends roughly 50 miles across Charlotte, Sarasota, Lee, and DeSoto counties. Select a community to read about building and remodeling there.</p>
+      <p>Port Charlotte is the center of our service area, which covers all of Charlotte County and the southern half of Sarasota County. Select a community to read about building and remodeling there.</p>
     </div>
     ${areaGrid()}
   </div>
@@ -551,37 +563,41 @@ ${P.TRUST_BAR}
 
 // ---------- Service areas hub ----------
 const AREA_BLURBS = {
-  'port-charlotte': 'Our home market: platted lots, 165 miles of canals, and most of the 200+ homes we have built.',
+  'charlotte-county': 'Our home county, from Englewood and Rotonda West to Babcock Ranch — where more than 200 of our homes stand.',
+  'port-charlotte': 'Platted lots, 165 miles of canals, and GDC-era block homes ready for remodeling.',
   'punta-gorda': 'Waterfront building in Punta Gorda Isles and Burnt Store Isles, plus the downtown historic district.',
   'north-port': 'Build-on-your-lot homes with well, septic, and site work, and remodels in established communities.',
-  'englewood': 'Coastal construction on both sides of the county line — Rotonda West, Manasota Key, Cape Haze.',
   'venice': 'Character-sensitive remodeling on the island and practical updates in South Venice and Venice Gardens.',
-  'cape-coral': 'Canal-front custom homes and post-storm renovations across 400 miles of waterways.',
-  'fort-myers': 'From 1920s bungalows to riverfront homes off McGregor Boulevard and new construction out east.',
 };
+const AREA_FAQS = [
+  ['How far do you travel for a project?', 'Our service area reaches about 50 miles from our office near Charlotte Harbor. In practice most of our work is in Charlotte County and southern Sarasota County — Port Charlotte, Punta Gorda, Englewood, Rotonda West, North Port, and Venice.'],
+  ['My town is not listed. Can you still help?', `Probably. The communities on this page are the ones we work in most, not the only ones. Call ${SITE.phoneDisplay} with the address and we will tell you right away whether it is inside our area.`],
+  ['Does it matter which county or city my home is in?', 'It does, because permits, flood-zone administration, and zoning rules are handled locally. Unincorporated Charlotte County, the City of Punta Gorda, the City of North Port, Sarasota County, and the City of Venice each run their own building departments. We work with all of them and confirm the jurisdiction for your address before design begins.'],
+  ['Do you build hurricane-proof homes in every service area?', 'Yes. The whole region sits in the Florida Building Code wind-borne debris region, and every home we build — anywhere we work — gets concrete block construction, engineered roof connections, impact-rated windows and doors, and correct flood elevation.'],
+];
 write('service-areas.html',
   P.head({
     title: 'Service Areas in Southwest Florida | Brunderman Building Co Inc',
-    description: 'Brunderman Building Co Inc serves Port Charlotte and about 50 miles around it: Punta Gorda, North Port, Englewood, Venice, Cape Coral and Fort Myers, FL.',
+    description: 'Brunderman Building Co Inc builds and remodels homes across Charlotte County and southern Sarasota County: Port Charlotte, Punta Gorda, North Port and Venice.',
     path: '/service-areas.html',
-    schemas: [P.breadcrumbSchema([['Home', '/'], ['Service Areas', '/service-areas.html']])],
+    schemas: [P.breadcrumbSchema([['Home', '/'], ['Service Areas', '/service-areas.html']]), P.faqSchema(AREA_FAQS)],
   }) +
   P.header('areas') +
   `<main id="main">
 ` +
   P.pageHero({
     crumbs: [['Home', '/'], ['Service Areas', '/service-areas.html']],
-    eyebrow: 'Charlotte · Sarasota · Lee · DeSoto Counties',
+    eyebrow: 'Charlotte County · Southern Sarasota County',
     h1: 'Service Areas: Port Charlotte &amp; Southwest Florida',
-    lead: 'Port Charlotte is the center of our service area, which reaches about 50 miles in every direction.',
+    lead: 'Port Charlotte is the center of our service area. From there we build and remodel across Charlotte County and north into North Port and Venice.',
     label: 'areas_hub_hero_phone_button',
   }) +
   `<section>
   <div class="container">
     <div class="section-head">
       <span class="eyebrow-dark">Where We Build</span>
-      <h2>Seven Communities, One Experienced Builder</h2>
-      <p>Each of these Southwest Florida communities has its own building department, flood maps, and housing stock. Choose yours for local detail.</p>
+      <h2>Five Service Areas, One Experienced Builder</h2>
+      <p>Each of these Southwest Florida service areas has its own building department, flood maps, and housing stock. Choose yours for local detail.</p>
     </div>
     <div class="card-grid">
 ${P.LOCATIONS_NAV.map(([slug, n, c]) => `      <a class="card" href="/locations/${slug}.html"><span class="card-icon">${ICON.pin}</span><h3>${n}, FL</h3><p>${AREA_BLURBS[slug]} <em>${esc(c)}.</em></p><span class="card-link">Building in ${n}</span></a>`).join('\n')}
@@ -592,10 +608,18 @@ ${P.LOCATIONS_NAV.map(([slug, n, c]) => `      <a class="card" href="/locations/
   <div class="container">
     <div class="prose collapsible narrow">
       <h2>How Far Our Service Area Reaches</h2>
-      <p>Our office sits on Pinnacle Street near Charlotte Harbor, close to the middle of Charlotte County. From there, a 50-mile radius covers all of Charlotte County, the southern half of Sarasota County, most of Lee County, and the western edge of DeSoto County — the heart of Southwest Florida.</p>
-      <p>Beyond the seven communities above, that includes Deep Creek, Harbour Heights, Lake Suzy, Charlotte Harbor, El Jobean, Gulf Cove and South Gulf Cove, Rotonda West, Cape Haze, Placida, Boca Grande, Burnt Store, Nokomis, Laurel, Osprey, North Fort Myers, Matlacha, and Arcadia. If you are not sure whether your property is inside our service areas, call <a ${callAttr('areas_hub_inline_phone_link')}>${SITE.phoneDisplay}</a> and ask.</p>
+      <p>Our office sits on Pinnacle Street near Charlotte Harbor, close to the middle of Charlotte County and a few minutes from US-41 and the Peace River bridges. From there our service area reaches about 50 miles, and the heart of it is Charlotte County and the southern half of Sarasota County — the communities where Brian Brunderman has been building since 1987.</p>
+      <p>Drive times inside the area are short. Punta Gorda is just across the Peace River bridges, North Port is roughly twenty minutes north, Englewood is about half an hour west on State Road 776, and Venice is around thirty-five minutes up I-75. That proximity matters on a construction project: site visits, inspections, deliveries, and problem-solving happen the same day instead of whenever a crew can make the trip.</p>
+      <h3>Charlotte County</h3>
+      <p>This is home. <a href="/locations/port-charlotte.html">Port Charlotte</a> holds most of the more than 200 homes we have built, on the platted lots and canals laid out in the late 1950s. <a href="/locations/punta-gorda.html">Punta Gorda</a>, the county seat and its only incorporated city, brings sailboat-access waterfront in Punta Gorda Isles and Burnt Store Isles and a historic downtown. Out west are Englewood, Rotonda West, Cape Haze, Placida, and Boca Grande, where coastal flood zones shape every plan; to the east are Deep Creek, Harbour Heights, Babcock Ranch, and rural acreage. Our <a href="/locations/charlotte-county.html">Charlotte County page</a> covers the whole county area by area.</p>
+      <h3>Southern Sarasota County</h3>
+      <p>Just north of the county line, <a href="/locations/north-port.html">North Port</a> has more vacant platted lots than almost anywhere in Florida, which makes it a build-on-your-lot market with well, septic, and site work to plan. Further up I-75 and US-41, <a href="/locations/venice.html">Venice</a>, South Venice, Venice Gardens, Nokomis, and Laurel are primarily remodeling markets, with city historic districts that review exterior changes and older block homes ready for new kitchens, baths, and impact-rated windows.</p>
+      <h3>Smaller Communities Inside Our Area</h3>
+      <p>Beyond the five service areas above, we regularly work in Lake Suzy, Charlotte Harbor, El Jobean, Murdock, Gulf Cove and South Gulf Cove, Grove City, Manasota Key, Burnt Store, Warm Mineral Springs, and Osprey. If you are not sure whether your property is inside our service areas, call <a ${callAttr('areas_hub_inline_phone_link')}>${SITE.phoneDisplay}</a> — we are available 24/7 — and ask.</p>
       <h3>Why Local Knowledge Matters</h3>
-      <p>The Florida Building Code is statewide, but almost everything else about building is local. Port Charlotte and Englewood are unincorporated, so permits run through the county; Punta Gorda, North Port, Venice, Cape Coral, and Fort Myers each run their own building divisions. Flood zones, utility availability, deed restrictions, and historic-district review change from one neighborhood to the next. Four decades of working across this region means we have dealt with nearly all of it before.</p>
+      <p>The Florida Building Code is statewide, but almost everything else about building is local. Port Charlotte, Englewood, and most of Charlotte County are unincorporated, so permits run through Charlotte County Community Development; Punta Gorda, North Port, and Venice each run their own building divisions, and the rest of the area falls to Sarasota County. Flood zones, utility availability, deed restrictions, and historic-district review change from one neighborhood to the next. Four decades of working across this region means we have dealt with nearly all of it before, and we plan each project around those rules from the first conversation.</p>
+      <h3>The Same Standard Everywhere</h3>
+      <p>Whichever community you live in, the house gets built the same way. Our motto is <em>houses shouldn't break</em>, and in a hurricane region that means concrete block, a continuous load path from the roof to the footing, impact-rated windows and doors, and floors set at or above the flood line — in Punta Gorda Isles or on a North Port lot alike.</p>
       <h3>Services Available in Every Area</h3>
       <ul class="cols">
 ${SERVICES.map((s) => `        <li><a href="/services/${s.slug}.html">${s.name}</a></li>`).join('\n')}
@@ -604,7 +628,8 @@ ${SERVICES.map((s) => `        <li><a href="/services/${s.slug}.html">${s.name}<
   </div>
 </section>
 ` +
-  P.quoteSection({ alt: false, label: 'areas_hub_quote_phone_button', heading: 'Request a Quote in Your Area' }) +
+  P.faqBlock(AREA_FAQS, 'Service Area Questions') +
+  P.quoteSection({ alt: true, label: 'areas_hub_quote_phone_button', heading: 'Request a Quote in Your Area' }) +
   `</main>
 ` +
   P.footer(),
@@ -629,7 +654,7 @@ write('guides.html',
   P.pageHero({ crumbs: [['Home', '/'], ['Guides', '/guides.html']], eyebrow: 'Homeowner Guides', h1: 'Building &amp; Remodeling Guides for Southwest Florida Homeowners', lead: 'Straight answers to the questions we hear most, from a builder with four decades of local experience.', label: 'guides_hub_hero_phone_button' }) +
   `<section>
   <div class="container">
-    <div class="section-head"><span class="eyebrow-dark">Guides</span><h2>Read Before You Build or Remodel</h2><p>Practical homeowner guides on the rules and site conditions that shape building and remodeling projects in Charlotte, Sarasota, and Lee counties.</p></div>
+    <div class="section-head"><span class="eyebrow-dark">Guides</span><h2>Read Before You Build or Remodel</h2><p>Practical homeowner guides on the rules and site conditions that shape building and remodeling projects in Charlotte and Sarasota counties.</p></div>
     <div class="card-grid">
 ${GUIDES.map((g) => `      <a class="card" href="/guides/${g.slug}.html"><span class="card-icon">${ICON.ruler}</span><h3>${g.h1}</h3><p>${g.card}</p><span class="card-link">Read the guide</span></a>`).join('\n')}
     </div>

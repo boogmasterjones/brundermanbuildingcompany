@@ -39,13 +39,11 @@ const SERVICES_NAV = [
 ];
 
 const LOCATIONS_NAV = [
+  ['charlotte-county', 'Charlotte County', 'County-wide'],
   ['port-charlotte', 'Port Charlotte', 'Charlotte County'],
   ['punta-gorda', 'Punta Gorda', 'Charlotte County'],
   ['north-port', 'North Port', 'Sarasota County'],
-  ['englewood', 'Englewood', 'Charlotte & Sarasota'],
   ['venice', 'Venice', 'Sarasota County'],
-  ['cape-coral', 'Cape Coral', 'Lee County'],
-  ['fort-myers', 'Fort Myers', 'Lee County'],
 ];
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -103,7 +101,7 @@ function businessSchema() {
       postalCode: SITE.zip,
       addressCountry: 'US',
     },
-    areaServed: LOCATIONS_NAV.map(([, n]) => ({ '@type': 'City', name: `${n}, FL` })),
+    areaServed: LOCATIONS_NAV.map(([slug, n]) => ({ '@type': slug === 'charlotte-county' ? 'AdministrativeArea' : 'City', name: `${n}, FL` })),
     knowsAbout: [...SERVICES_NAV.map(([, n]) => n), 'Hurricane-proof home construction', 'Impact-rated windows and doors', 'Florida Building Code wind-borne debris requirements'],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

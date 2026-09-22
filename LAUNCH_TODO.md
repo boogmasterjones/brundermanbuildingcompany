@@ -30,13 +30,17 @@ Edit there and rebuild rather than hand-editing the HTML files. CSS lives in css
 
 ## Already done
 
-- 20 indexable pages (see SEO_AUDIT.md for the full audit + off-page to-do list): home, services hub, service-areas hub, guides hub + 3 guides, 5 service pages (1,150–1,400 words), 7 location pages (1,000–1,150 words, each written separately with real local detail), about/contact; plus thank-you + 404 (noindex).
+- 19 indexable pages (see SEO_AUDIT.md for the full audit + off-page to-do list): home, services hub, service-areas hub, guides hub + 4 guides, 5 service pages, 5 location pages (Charlotte County, Port Charlotte, Punta Gorda, North Port, Venice), about/contact; plus thank-you + 404 (noindex). Every service + location page is 950+ words of page-unique copy; homepage ~1,090 (`node _generate/wordcount.js`).
 - Unique titles (≤65 chars) + meta descriptions, one H1 per page, canonical, lang, OG/Twitter tags, 1200×630 OG image, favicon, apple-touch-icon.
 - Schema: HomeAndConstructionBusiness (all pages), Service, FAQPage, BreadcrumbList, WebSite.
 - Every `tel:` link fires a GA4 `call_click` event with a distinct `event_label`; form fires `quote_form_submit`.
 - Contrast-safe orange variants, underlined in-copy links, skip link, focus styles, reduced-motion support, no layout-shift (all images sized).
 - sitemap.xml (lastmod 2026-09-17), robots.txt, `_headers` cache rules.
 - Link/anchor check, JSON-LD parse check, and mobile overflow check all pass.
+
+## Removed pages
+
+Englewood, Cape Coral, and Fort Myers location pages were removed 2026-09-21 (client request). `_redirects` 301s them (Englewood → Charlotte County page; the other two → service areas hub) in case any link was shared. Englewood is still covered as a community on the Charlotte County page.
 
 ## Go-live checklist
 
