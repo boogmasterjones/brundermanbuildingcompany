@@ -138,6 +138,7 @@ ${GA_LIVE ? `  gtag('js', new Date());
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="IE6iotBI5p35453S9ZDEE7aC1-nkbEHjqoo58aWa554" />
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="robots" content="${noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'}">
