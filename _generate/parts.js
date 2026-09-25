@@ -6,8 +6,8 @@ const SITE = {
   name: 'Brunderman Building Co Inc',
   legalName: 'Brunderman Building Co Inc',
   domain: 'https://www.brundermanbuildingcompany.com', // confirmed by client 2026-09-17
-  phoneTel: '+19416254564',
-  phoneDisplay: '(941) 625-4564',
+  phoneTel: '+19412760305',
+  phoneDisplay: '(941) 276-0305',
   street: '4288 Pinnacle St',
   city: 'Punta Gorda',
   region: 'FL',
@@ -15,7 +15,7 @@ const SITE = {
   gbp: 'https://maps.app.goo.gl/7w4D8ZXbYE2CvKA96',
   ga4: 'G-XXXXXXXXXX', // PLACEHOLDER — replace with real GA4 Measurement ID
   formAction: 'https://formsubmit.co/brundermanbuilding@comcast.net', // lead inbox — swap if needed
-  lastmod: '2026-09-21',
+  lastmod: '2026-09-25',
   motto: "Houses shouldn't break.",
   founded: '1987',
   founder: 'Brian Brunderman',
