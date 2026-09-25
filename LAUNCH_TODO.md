@@ -23,10 +23,11 @@ Edit there and rebuild rather than hand-editing the HTML files. CSS lives in css
 3. **GA4 Measurement ID** — `SITE.ga4` is `G-XXXXXXXXXX`. Name the property "Builder Port Charlotte" per portfolio convention.
 4. **Form inbox** — quote form posts to FormSubmit at `brundermanbuilding@comcast.net`. The first submission triggers a one-time FormSubmit activation email to that inbox; the client must click it or leads will not arrive.
 5. ~~License number~~ — client decision: not included. The site makes no "licensed & insured" claim.
-6. ~~Business name~~ — site now uses "Brunderman Building Co Inc" everywhere, matching the Google Business Profile exactly. Address + phone also match: 4288 Pinnacle St, Punta Gorda, FL 33980 · (941) 625-4564.
+6. ~~Business name~~ — site now uses "Brunderman Building Co Inc" everywhere, matching the Google Business Profile exactly. Address + phone also match: 4288 Pinnacle St, Punta Gorda, FL 33980 · (941) 276-0305.
 7. **Client copy review.** Trust stats (4 decades, 800+ customers, 200+ homes, BuildZoom top 5%) and reviews are as supplied / verbatim from GBP (incl. the 4-star one shown as 4 stars). Process statements (we handle permits, order cabinets before demo, photo updates for seasonal owners, experience through Charley/Ian) are reasonable for a 40-year builder but have not been confirmed by the client — have them read the service + location pages once.
 8. ~~Hours~~ — client confirmed 24/7; in schema (openingHoursSpecification), footer, About page, FAQ.
 9. **Add the website to the GBP** — the profile currently has no website link ("Add website").
+10. **Update the phone number on the Google Business Profile** to (941) 276-0305 — the site changed 2026-09-25 (was (941) 625-4564). Update it everywhere else the old number is listed too (Facebook, any directories, printed materials) so NAP stays consistent.
 
 ## Already done
 
