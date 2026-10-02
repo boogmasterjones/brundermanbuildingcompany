@@ -1,0 +1,33 @@
+# Old addresses permanently redirect to the new clean addresses.
+/404.html                                                    /404                                               301!
+/about.html                                                  /about                                             301!
+/guides/building-on-your-lot-port-charlotte-north-port.html  /blog/building-on-your-lot-port-charlotte-north-port 301!
+/guides/building-on-your-lot-port-charlotte-north-port       /blog/building-on-your-lot-port-charlotte-north-port 301!
+/guides/fema-50-percent-rule-charlotte-county.html           /blog/fema-50-percent-rule-charlotte-county        301!
+/guides/fema-50-percent-rule-charlotte-county                /blog/fema-50-percent-rule-charlotte-county        301!
+/guides/impact-rated-windows-vs-hurricane-shutters.html      /blog/impact-rated-windows-vs-hurricane-shutters   301!
+/guides/impact-rated-windows-vs-hurricane-shutters           /blog/impact-rated-windows-vs-hurricane-shutters   301!
+/guides/remodeling-permits-southwest-florida.html            /blog/remodeling-permits-southwest-florida         301!
+/guides/remodeling-permits-southwest-florida                 /blog/remodeling-permits-southwest-florida         301!
+/index.html                                                  /                                                  301!
+/index                                                       /                                                  301!
+/locations/charlotte-county.html                             /locations/charlotte-county                        301!
+/locations/north-port.html                                   /locations/north-port                              301!
+/locations/port-charlotte.html                               /locations/port-charlotte                          301!
+/locations/punta-gorda.html                                  /locations/punta-gorda                             301!
+/locations/venice.html                                       /locations/venice                                  301!
+/service-areas.html                                          /locations                                         301!
+/service-areas                                               /locations                                         301!
+/services.html                                               /services                                          301!
+/services/bathroom-remodeling.html                           /services/bathroom-remodeling                      301!
+/services/custom-home-construction.html                      /services/custom-home-construction                 301!
+/services/home-additions.html                                /services/home-additions                           301!
+/services/home-remodeling.html                               /services/home-remodeling                          301!
+/services/kitchen-remodeling.html                            /services/kitchen-remodeling                       301!
+/thank-you.html                                              /thank-you                                         301!
+/guides.html                                                 /blog                                              301!
+/guides                                                      /blog                                              301!
+/locations/englewood.html                                    /locations/charlotte-county                        301!
+/locations/cape-coral.html                                   /locations                                         301!
+/locations/fort-myers.html                                   /locations                                         301!
+

@@ -1,0 +1,234 @@
+---
+title: "Home Builder & Remodeler in Venice, FL | Brunderman Building"
+description: "Venice, FL home builder and remodeler. Remodeling for island homes, South Venice & Venice Gardens, plus custom homes and additions. 4 decades of experience."
+name: "Venice, FL"
+heading: "Home Builder & Remodeler in Venice, FL"
+summary: "Venice was planned as a showpiece city in the 1920s, and it still takes its architecture seriously. We remodel and build here with that character — and the Gulf weather — in mind."
+order: 5
+city: "Venice"
+region: "FL"
+faqs:
+  - question: "Do you travel to Venice from Port Charlotte?"
+    answer: "Yes. Venice is within our 50-mile service area, about a half-hour drive up I-75. We schedule Venice projects so crews and supervision are on site consistently, just as they would be closer to home."
+  - question: "My home is in a Venice historic district. Can I replace the windows?"
+    answer: "Generally yes, with approval. The city's review process looks at whether new windows are compatible with the home's architecture. We select impact-rated products with appropriate proportions and prepare the submittal."
+  - question: "Is my address in the City of Venice or unincorporated Sarasota County?"
+    answer: "Many \"Venice\" mailing addresses — including South Venice and Venice Gardens — are actually in unincorporated Sarasota County. We verify the jurisdiction at the start because it determines where permits are filed and which zoning rules apply."
+---
+
+<section class="hero page-hero">
+  <div class="container">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/locations">Service Areas</a> / <span>Venice, FL</span></nav>
+      <span class="eyebrow">Sarasota County · Gulf Coast</span>
+      <h1>Home Builder &amp; Remodeler in Venice, FL</h1>
+      <p class="hero-lead">Venice was planned as a showpiece city in the 1920s, and it still takes its architecture seriously. We remodel and build here with that character — and the Gulf weather — in mind.</p>
+      <div class="hero-actions">
+        <a href="tel:+19412760305" onclick="if(typeof gtag==='function')gtag('event','call_click',{'event_category':'engagement','event_label':'location_page_hero_phone_button'})" class="btn btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg> Call (941) 276-0305</a>
+        <a href="#quote" class="btn btn-outline">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="split">
+      <div class="prose collapsible">
+        <span class="eyebrow-dark">Venice, Florida</span>
+        <h2>Building in Venice</h2>
+        <p>Few Florida towns have a pedigree like Venice. The city's layout was drawn in 1926 by John Nolen, one of the country's pioneering urban planners, with broad boulevards, parks, and a Northern Italian architectural theme that still defines West Venice Avenue and the historic neighborhoods on the island. About 25,500 people live within the city limits, and a good many more in the unincorporated areas around it — South Venice, Venice Gardens, Nokomis, and the newer communities east of I-75 along Jacaranda Boulevard.</p>
+        <p>For a home builder and remodeler, that mix produces very different projects within a few miles of each other. On the island, we are often asked to update a mid-century or Mediterranean Revival home without losing what makes it charming: barrel-tile roofs, arched openings, stucco detailing. In South Venice and Venice Gardens, the work is practical remodeling of 1960s–80s block homes on modest lots. Out east, it is kitchens, baths, and additions in 1990s and 2000s subdivisions.</p>
+        <p>Venice is at the northern end of Brunderman Building Co Inc's 50-mile service radius, about half an hour up I-75 from our Charlotte County base. We take on projects here selectively and staff them properly, bringing the same four decades of experience that built more than 200 homes to the south.</p>
+      </div>
+      <aside class="fact-card">
+        <h3>Venice at a Glance</h3>
+        <dl>
+          <div><dt>Population</dt><dd>About 25,500 (2020 Census)</dd></div>
+          <div><dt>County</dt><dd>Sarasota County</dd></div>
+          <div><dt>From our office</dt><dd>Roughly 30 miles northwest via I-75 or US-41</dd></div>
+          <div><dt>Permits</dt><dd>City of Venice or Sarasota County, depending on address</dd></div>
+        </dl>
+        <a href="tel:+19412760305" onclick="if(typeof gtag==='function')gtag('event','call_click',{'event_category':'engagement','event_label':'location_page_phone_button'})" class="btn btn-primary">Call (941) 276-0305</a>
+      </aside>
+    </div>
+  </div>
+</section>
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow-dark">Services</span><h2>What We Build in Venice</h2></div>
+    <div class="card-grid">
+      <a class="card" href="/services/custom-home-construction">
+        <span class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path></svg></span>
+        <h3>Custom Home Construction</h3>
+        <p>Custom homes on infill and teardown lots, designed to fit established Venice streetscapes.</p>
+        <span class="card-link">Learn more</span>
+      </a>
+      <a class="card" href="/services/home-remodeling">
+        <span class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 6l4 4"></path><path d="M3 21l9-9"></path><path d="M11 5l3-3 8 8-3 3-3-3-2 2-3-3 2-2z"></path></svg></span>
+        <h3>Home Remodeling</h3>
+        <p>Character-sensitive renovations on the island and practical updates in South Venice and Venice Gardens.</p>
+        <span class="card-link">Learn more</span>
+      </a>
+      <a class="card" href="/services/kitchen-remodeling">
+        <span class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 10h18"></path><path d="M12 10v11"></path><path d="M8 6.5h.01M16 6.5h.01M8 14v2M16 14v2"></path></svg></span>
+        <h3>Kitchen Remodeling</h3>
+        <p>Kitchen renovations that open compact mid-century layouts while keeping period charm.</p>
+        <span class="card-link">Learn more</span>
+      </a>
+      <a class="card" href="/services/bathroom-remodeling">
+        <span class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3z"></path><path d="M6 12V6a2 2 0 0 1 4 0"></path><path d="M7 19l-1 2M17 19l1 2"></path></svg></span>
+        <h3>Bathroom Remodeling</h3>
+        <p>Bathroom remodeling with accessible showers for Venice's many long-term and retired residents.</p>
+        <span class="card-link">Learn more</span>
+      </a>
+      <a class="card" href="/services/home-additions">
+        <span class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12l6-5 6 5"></path><path d="M4 11v9h8v-9"></path><path d="M12 14h9v6h-9"></path><path d="M18 5v6M15 8h6"></path></svg></span>
+        <h3>Home Additions</h3>
+        <p>Primary suites, Florida rooms, and garage additions reviewed against city or county setbacks.</p>
+        <span class="card-link">Learn more</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="section-dark">
+  <div class="container">
+    <div class="prose collapsible narrow">
+      <span class="eyebrow">Local Knowledge</span>
+      <h2>Remodeling Around Venice's Architecture and Review Process</h2>
+      <p>Parts of the City of Venice fall within historic and architectural control districts where exterior changes — windows, doors, roofing, additions, even colors in some cases — go before the city's review board. Approval is very achievable when the design respects the district's Northern Italian and Mediterranean vocabulary, and we plan submittals accordingly. Replacing original windows with impact-rated units that keep the right proportions and muntin patterns is a typical example of balancing preservation with storm protection.</p>
+      <p>Outside the city limits, Sarasota County handles permitting, and the concerns are more familiar: flood zones near the Intracoastal Waterway, Roberts Bay, and the Myakka River; septic systems in South Venice; and homeowner association approvals in the gated communities. Knowing at the outset whether an address is city or county saves time, and we confirm it before any design work begins.</p>
+    </div>
+  </div>
+</section>
+<section class="motto-band" aria-label="Our motto">
+  <div class="container">
+    <p class="motto-quote">“Houses shouldn't break.”</p>
+    <p class="motto-text">That is the whole idea behind every home we build and every remodel we take on: a house should stand for decades without major problems. Concrete block, engineered roof connections, impact-rated windows and doors, and correct flood elevation — built to hold up to whatever Florida weather brings.</p>
+  </div>
+</section>
+<div class="trust-bar"><div class="container">
+  <div class="trust-item"><strong>Since 1987</strong><span>Four Decades of Experience</span></div>
+  <div class="trust-item"><strong>800+</strong><span>Customers Served</span></div>
+  <div class="trust-item"><strong>200+</strong><span>Homes Built in Charlotte County</span></div>
+  <div class="trust-item"><strong>Top 5%</strong><span>Of Builders on BuildZoom</span></div>
+</div></div>
+<section>
+  <div class="container">
+    <div class="prose collapsible narrow">
+      <h2>Venice Remodeling Contractor and Home Builder Near You</h2>
+      <p>Anyone looking up a remodeling contractor near me in Venice FL will find no shortage of options, so it is fair to ask why a Charlotte County builder is worth a call. The answer is depth of experience. Brunderman Building Co Inc has spent four decades building and remodeling concrete block homes in the same climate, under the same Florida Building Code, a few exits down the interstate. We are rated in the top 5% of builders on BuildZoom, more than 800 customers have hired us, and our reviewers consistently mention professionalism, punctuality, and quality.</p>
+      <p>In Venice we provide home remodeling, kitchen remodeling, bathroom remodeling, home additions, and custom home construction. Because so much of the local housing dates from the 1950s through the 1980s, remodeling is the most common request: replacing original kitchens and baths, swapping jalousie and single-pane windows for impact-rated windows, removing walls to open the living area, and upgrading electrical service for modern loads. We handle the design coordination, the permits with the City of Venice or Sarasota County, and every trade involved.</p>
+      <h3>Venice-Area Neighborhoods</h3>
+      <ul class="cols">
+        <li>Venice Island and the historic districts</li>
+        <li>South Venice</li>
+        <li>Venice Gardens</li>
+        <li>Nokomis and Laurel</li>
+        <li>Jacaranda Boulevard and east-of-I-75 communities</li>
+        <li>Golden Beach and the Venice Avenue corridor</li>
+      </ul>
+      <h3>Areas Near Venice We Also Cover</h3>
+      <p>South of Venice, our work continues into <a href="/locations/north-port">North Port and the Wellen Park area</a> and down through Englewood and Rotonda West into <a href="/locations/charlotte-county">Charlotte County</a>, where most of our homes have been built. For an overview of the company, visit the <a href="/">Brunderman Building Co Inc homepage</a>.</p>
+      <p><strong>Helpful reading:</strong> <a href="/blog/impact-rated-windows-vs-hurricane-shutters">Impact-rated windows vs. shutters</a> · <a href="/blog/fema-50-percent-rule-charlotte-county">The FEMA 50% rule explained</a> · <a href="/blog/building-on-your-lot-port-charlotte-north-port">Building on your own lot</a> · <a href="/blog/remodeling-permits-southwest-florida">Which projects need a permit</a></p>
+    </div>
+  </div>
+</section>
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow-dark">FAQ</span><h2>Venice Building &amp; Remodeling FAQ</h2></div>
+    <div class="faq">
+      <details><summary>Do you travel to Venice from Port Charlotte?</summary><p>Yes. Venice is within our 50-mile service area, about a half-hour drive up I-75. We schedule Venice projects so crews and supervision are on site consistently, just as they would be closer to home.</p></details>
+      <details><summary>My home is in a Venice historic district. Can I replace the windows?</summary><p>Generally yes, with approval. The city's review process looks at whether new windows are compatible with the home's architecture. We select impact-rated products with appropriate proportions and prepare the submittal.</p></details>
+      <details><summary>Is my address in the City of Venice or unincorporated Sarasota County?</summary><p>Many "Venice" mailing addresses — including South Venice and Venice Gardens — are actually in unincorporated Sarasota County. We verify the jurisdiction at the start because it determines where permits are filed and which zoning rules apply.</p></details>
+    </div>
+  </div>
+</section>
+<section class="" id="quote">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow-dark">Start Your Project</span>
+      <h2>Request a Quote in Venice</h2>
+    </div>
+    <div class="quote-layout">
+      <div class="quote-card">
+        <form class="quote-form" name="quote-request" method="POST" action="https://formsubmit.co/brundermanbuilding@comcast.net">
+          <input type="hidden" name="_subject" value="New Quote Request — Brunderman Building Co Inc">
+          <input type="hidden" name="_next" value="https://www.brundermanbuildingcompany.com/thank-you">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <p style="display:none"><label>Leave this field blank: <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
+          <div class="form-progress" aria-hidden="true"><span class="form-progress-bar"></span></div>
+          <fieldset class="form-step" data-step="contact">
+            <legend class="field-label">How Can We Reach You? *</legend>
+            <input type="text" name="name" placeholder="Full Name" autocomplete="name" aria-label="Full name" required="">
+            <div class="field-row">
+              <input type="tel" name="phone" placeholder="Phone" autocomplete="tel" aria-label="Phone number">
+              <input type="email" name="email" placeholder="Email" autocomplete="email" aria-label="Email address">
+            </div>
+            <p class="field-hint">Phone or email — whichever you prefer.</p>
+          </fieldset>
+          <fieldset class="form-step" data-step="area">
+            <legend class="field-label">Where Is The Project? *</legend>
+            <select name="service-area" aria-label="City or service area" required="">
+              <option value="" disabled="">City / Service Area</option>
+              <option>Charlotte County</option>
+              <option>Port Charlotte</option>
+              <option>Punta Gorda</option>
+              <option>North Port</option>
+              <option selected="">Venice</option>
+              <option>Other</option>
+            </select>
+          </fieldset>
+          <fieldset class="form-step" data-step="service">
+            <legend class="field-label">What Are You Planning? *</legend>
+            <div class="check-grid">
+              <label class="check-item"><input type="checkbox" name="service[]" value="Custom Home Construction"> Custom Home Construction</label>
+              <label class="check-item"><input type="checkbox" name="service[]" value="Home Remodeling"> Home Remodeling</label>
+              <label class="check-item"><input type="checkbox" name="service[]" value="Kitchen Remodeling"> Kitchen Remodeling</label>
+              <label class="check-item"><input type="checkbox" name="service[]" value="Bathroom Remodeling"> Bathroom Remodeling</label>
+              <label class="check-item"><input type="checkbox" name="service[]" value="Home Additions"> Home Additions</label>
+              <label class="check-item"><input type="checkbox" name="service[]" value="Other"> Other</label>
+            </div>
+          </fieldset>
+          <fieldset class="form-step" data-step="timing">
+            <legend class="field-label">When Would You Like To Start?</legend>
+            <div class="radio-grid">
+              <label class="radio-item"><input type="radio" name="timing" value="Timing is flexible"> Flexible</label>
+              <label class="radio-item"><input type="radio" name="timing" value="Within 3 months"> Within 3 Mo.</label>
+              <label class="radio-item"><input type="radio" name="timing" value="3+ months out"> 3+ Mo. Out</label>
+            </div>
+          </fieldset>
+          <fieldset class="form-step" data-step="status">
+            <legend class="field-label">Project Status</legend>
+            <div class="radio-grid two">
+              <label class="radio-item"><input type="radio" name="status" value="Ready to build"> Ready to Build</label>
+              <label class="radio-item"><input type="radio" name="status" value="Gathering quotes"> Gathering Quotes</label>
+            </div>
+          </fieldset>
+          <fieldset class="form-step" data-step="message">
+            <legend class="field-label">Anything Else? <span class="optional">(optional)</span></legend>
+            <textarea name="message" aria-label="Project details" placeholder="Address, square footage, rooms involved, plans you already have…"></textarea>
+          </fieldset>
+          <button type="submit" class="btn btn-primary form-submit">Send My Request</button>
+        </form>
+      </div>
+      <div class="quote-chat">
+        <span class="eyebrow-dark">Let's Talk</span>
+        <p class="h2-like">Let's Get in Touch!</p>
+        <p>Tell us what you're planning — a new custom home, a kitchen or bath remodel, an addition — and we'll follow up to talk through scope, budget, and timing. Prefer the phone? Call and talk to a builder directly.</p>
+        <a href="tel:+19412760305" onclick="if(typeof gtag==='function')gtag('event','call_click',{'event_category':'engagement','event_label':'location_page_quote_phone_button'})" class="btn btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg> Call (941) 276-0305</a>
+        <div class="quote-trust">
+          <span class="item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg> Hurricane-Proof Construction</span>
+          <span class="item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg> Impact-Rated Windows &amp; Doors</span>
+          <span class="item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg> Building Since 1987 · 200+ Local Homes</span>
+          <span class="item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg> Available 24/7</span>
+        </div>
+        <address class="nap-block">
+          <strong>Brunderman Building Co Inc</strong><br>
+          4288 Pinnacle St, Punta Gorda, FL 33980<br>
+          (941) 276-0305 · Available 24/7
+        </address>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /_generate/
-
-Sitemap: https://www.brundermanbuildingcompany.com/sitemap.xml
