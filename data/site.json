@@ -1,0 +1,72 @@
+{
+  "site": {
+    "url": "https://www.brundermanbuildingcompany.com",
+    "locale": "en-US",
+    "calendlyUrl": "",
+    "formAction": "https://formsubmit.co/brundermanbuilding@comcast.net",
+    "defaultOgImage": "/images/og-image.jpg",
+    "gaMeasurementId": "",
+    "googleSiteVerification": "IE6iotBI5p35453S9ZDEE7aC1-nkbEHjqoo58aWa554"
+  },
+  "business": {
+    "name": "Brunderman Building Co Inc",
+    "kind": "operating",
+    "schemaType": "HomeAndConstructionBusiness",
+    "tagline": "Custom homes, remodeling and additions in Port Charlotte and Charlotte County, FL.",
+    "description": "Brunderman Building Co Inc is a Port Charlotte, Florida home builder and remodeler with four decades of local experience in custom homes, home remodeling, kitchens, bathrooms and additions across Charlotte County.",
+    "phone": "(941) 276-0305",
+    "email": "brundermanbuilding@comcast.net",
+    "regionLabel": "Port Charlotte & Charlotte County",
+    "alsoServing": [],
+    "address": {
+      "street": "4288 Pinnacle St",
+      "city": "Punta Gorda",
+      "region": "FL",
+      "postalCode": "33980",
+      "showOnSite": true
+    },
+    "hours": [
+      {
+        "days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [],
+    "googleMapsUrl": "https://maps.app.goo.gl/7w4D8ZXbYE2CvKA96",
+    "rating": null
+  },
+  "brand": {
+    "logoText": "Brunderman Building",
+    "colors": {
+      "primary": "#1B2A3A",
+      "primaryAlt": "#243648",
+      "action": "#C8762B",
+      "accent": "#E8B86D",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#F5F3EE",
+      "ink": "#1B2A3A",
+      "body": "#3D4A5C"
+    },
+    "fonts": {
+      "heading": "Georgia",
+      "body": "Arial",
+      "googleFontsUrl": ""
+    }
+  },
+  "trustBadges": [
+    "Four Decades Local",
+    "Free Estimates"
+  ],
+  "stats": [],
+  "cta": {
+    "label": "Request a Quote",
+    "href": "/about#quote"
+  }
+}
