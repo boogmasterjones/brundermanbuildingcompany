@@ -411,6 +411,11 @@ section:not(.section-dark) .step p { color: var(--muted); }
 
   /* ---- cards: 2-up grid ---- */
   .card-grid, .card-grid.two { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .card-grid.guides { grid-template-columns: 1fr; gap: 14px; } /* long guide titles need the full width on phones */
+  .card-grid.guides a.card { display: flex; flex-direction: column; padding: 18px; }
+  .card-grid.guides a.card h3 { font-size: 1rem; line-height: 1.2; margin-bottom: 8px; }
+  .card-grid.guides a.card p { -webkit-line-clamp: 3; line-clamp: 3; margin: 0 0 10px; }
+  .card-grid.guides a.card .card-link { display: inline; }
   .card { padding: 14px; border-radius: 12px; }
   .card-icon { width: 36px; height: 36px; border-radius: 9px; margin-bottom: 10px; }
   .card-icon svg { width: 20px; height: 20px; }

@@ -28,7 +28,7 @@ const description = "Straight answers to the building and remodeling questions S
   <section>
     <div class="container">
       <div class="section-head"><span class="eyebrow-dark">Guides</span><h2>Read Before You Build or Remodel</h2></div>
-      <div class="card-grid">
+      <div class="card-grid guides">
       {posts.length === 0 && <p>New articles are coming soon.</p>}
       {posts.map((p) => (
         <a class="card" href={`/blog/${p.id}`}><h3>{p.data.title}</h3><p>{p.data.description}</p><span class="card-link">Read the guide</span></a>

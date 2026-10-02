@@ -123,7 +123,6 @@ path: "/about"
         <div class="review-meta"><span class="review-avatar" aria-hidden="true">J</span><span><strong class="review-author">JJ</strong><span class="review-source">Google Review</span></span></div>
       </div>
     </div>
-    <div class="reviews-cta"><a href="https://maps.app.goo.gl/7w4D8ZXbYE2CvKA96" target="_blank" rel="noopener" class="btn btn-outline-dark">Read Our Reviews on Google</a></div>
   </div>
 </section>
 <section class="section-alt" id="quote">
