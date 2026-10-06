@@ -1,7 +1,7 @@
 ---
-title: "The FEMA 50% Rule, Explained for Southwest Florida Homeowners"
-description: "What the FEMA 50% rule means for remodeling a home in a flood zone in Port Charlotte, Punta Gorda, Englewood or North Port — and how to plan around it."
-date: 2026-09-25
+title: "FEMA 50% Rule Explained for Charlotte County Homeowners"
+description: "A plain explanation of how the FEMA 50% rule affects repairing or rebuilding a hurricane- or flood-damaged home in Charlotte County, and how to plan for it."
+date: "2026-09-25"
 category: "Homeowner Guide"
 author: "Brunderman Building Co Inc"
 ---
@@ -54,3 +54,11 @@ This guide is general information, not legal or regulatory advice. Floodplain ru
 -   [Impact-Rated Windows vs. Hurricane Shutters: What Southwest Florida Homes Need](/blog/impact-rated-windows-vs-hurricane-shutters)
 -   [Building on Your Own Lot in Port Charlotte or North Port: What to Check First](/blog/building-on-your-lot-port-charlotte-north-port)
 -   [Which Remodeling Projects Need a Permit in Southwest Florida?](/blog/remodeling-permits-southwest-florida)
+
+## The FEMA 50% Rule Explained in Plain Terms
+
+If your home is in a special flood hazard area and sits below today's required flood elevation, the 50% rule limits how much you can spend repairing or improving it. The limit is half the market value of the structure alone, not the land. If the work costs that much or more, the whole house must meet current floodplain rules, which usually means elevating or replacing it.
+
+**A simple example:** say the county values your house, without the lot, at a certain figure. Storm repairs costing less than half that figure can generally go ahead as repairs. Repairs costing half or more trigger full compliance, so the owner is choosing between elevating, rebuilding or scaling back the work. Rules and values differ by property, so check with the Charlotte County floodplain office before you decide.
+
+Our [home remodeling](/services/home-remodeling) work includes hurricane and water damage rebuilds. If the numbers point toward starting over, see our [custom home construction](/services/custom-home-construction) page.

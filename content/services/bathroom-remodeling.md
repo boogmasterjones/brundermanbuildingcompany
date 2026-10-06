@@ -1,19 +1,23 @@
 ---
-title: "Bathroom Remodeling in Port Charlotte, FL | Brunderman Building"
-description: "Bathroom remodeling in Port Charlotte, FL: walk-in showers, tub conversions, vanities & accessible baths from a builder with four decades of experience."
+title: "Bathroom Remodeling Port Charlotte, FL | Brunderman Building Co"
+description: "Walk-in showers, tub-to-shower conversions and accessible baths in Port Charlotte. Permits and inspections under one contract. Since 1987. (941) 276-0305"
 name: "Bathroom Remodeling"
 heading: "Bathroom Remodeling in Port Charlotte, FL"
 summary: "Bathroom remodeling built to last in Florida humidity — properly waterproofed walk-in showers, new vanities, better lighting, and safer, more accessible layouts."
 order: 4
 faqs:
   - question: "How long does a bathroom remodel take?"
-    answer: "It varies with scope. Replacing fixtures and tile in the same layout is quicker than a remodel that moves plumbing in the slab or changes walls. Material lead times — especially custom glass, which is measured after tile — also play a part. We give you a project-specific schedule before we start."
+    answer: "It varies with scope. Replacing fixtures and tile in the same layout is quicker than a remodel that moves plumbing in the slab or changes walls. Material lead times — especially custom glass, which is measured after tile — also play a part."
   - question: "Can you convert my bathtub to a walk-in shower?"
     answer: "Yes. It is one of the most common bathroom remodeling requests we receive. The drain usually needs to be resized and sometimes relocated, and the new shower is fully waterproofed before tile. Low-threshold and curbless entries are both options in most homes."
   - question: "How do you prevent leaks and mold behind the tile?"
     answer: "By treating waterproofing as its own step rather than relying on tile and grout, which are not waterproof. We use a continuous waterproofing system on shower walls and pans, slope pans correctly to the drain, and vent exhaust fans to the outside of the house."
   - question: "Can you make a bathroom safer for aging in place?"
     answer: "Absolutely. Curbless showers, built-in benches, grab bars anchored to solid blocking, wider doorways, comfort-height toilets, and better lighting all make a meaningful difference, and they can be designed to look like deliberate upgrades rather than medical equipment."
+  - question: "Do I need a permit for a bathroom remodel in Charlotte County?"
+    answer: "It depends on the scope of your project. When a permit is needed, we handle it: permits, subcontractors and inspections are coordinated under one contract, so you are not dealing with the county on your own. Our guide to remodeling permits in Southwest Florida explains more."
+  - question: "Do you work in Punta Gorda and North Port?"
+    answer: "Yes. Our office is at 4288 Pinnacle St in Punta Gorda, and North Port is in our service area too, along with Port Charlotte, Englewood, Venice, Deep Creek, Harbour Heights, South Gulf Cove, Rotonda West and Punta Gorda Isles. Call (941) 276-0305 to talk about your bathroom."
 ---
 
 <section class="hero page-hero">
@@ -38,13 +42,13 @@ faqs:
         <h2>Bathroom Remodeling Built for Florida Humidity</h2>
         <p>A bathroom is the smallest room in the house and the least forgiving. Water finds every shortcut. In Southwest Florida's humidity, a shower that was tiled over the wrong backer board or a fan that vents into the attic will show its problems within a few years. Bathroom remodeling done right is mostly about what you cannot see once the tile goes up.</p>
         <p>Brunderman Building Co Inc remodels bathrooms the way we build them in new homes: a sound substrate, a continuous waterproofing system behind the tile, correctly sloped shower pans, solid blocking for glass and grab bars, and ventilation ducted to the exterior. On top of that foundation go the things you will enjoy every day — a walk-in shower with a bench and niche, a double vanity with real storage, good mirrors and lighting, and tile chosen to suit the house.</p>
-        <p>Many of our bathroom remodeling clients in Port Charlotte, Punta Gorda, and Englewood are planning to stay in their homes for the long term. For them we design with accessibility in mind: curbless or low-threshold showers, wider doorways, comfort-height fixtures, and grab bars that look like they belong there. A bathroom can be both safe and good-looking.</p>
+        <p>For homeowners in <a href="/locations/port-charlotte">Port Charlotte</a>, Punta Gorda, and Englewood who plan to stay in their homes for the long term, we offer accessible bathrooms, walk-in showers and aging-in-place modifications. A bathroom can be both safe and good-looking.</p>
       </div>
       <aside class="fact-card">
         <h3>Quick Facts</h3>
         <dl>
           <div><dt>Experience</dt><dd>Four decades of building and remodeling</dd></div>
-          <div><dt>Most requested</dt><dd>Tub-to-walk-in-shower conversions</dd></div>
+          <div><dt>One contract</dt><dd>Permits, subcontractors and inspections coordinated</dd></div>
           <div><dt>Built for Florida</dt><dd>Full waterproofing and exterior-vented fans</dd></div>
           <div><dt>Rating</dt><dd>Top 5% of builders on BuildZoom</dd></div>
         </dl>
@@ -58,7 +62,7 @@ faqs:
     <div class="section-head"><span class="eyebrow-dark">Scope</span><h2>Bathroom Remodeling Services</h2></div>
     <div class="card-grid acc-grid">
       <details class="card card-acc" open=""><summary><h3>Walk-In Showers</h3></summary><p>Custom tiled showers with waterproofed walls and pans, benches, recessed niches, frameless glass, and rain or handheld fixtures.</p></details>
-      <details class="card card-acc" open=""><summary><h3>Tub-to-Shower Conversions</h3></summary><p>Replacing an unused bathtub with a low-threshold or curbless shower — one of the most popular bathroom remodeling upgrades in the area.</p></details>
+      <details class="card card-acc" open=""><summary><h3>Tub-to-Shower Conversions</h3></summary><p>Replacing an unused bathtub with a walk-in shower.</p></details>
       <details class="card card-acc" open=""><summary><h3>Vanities &amp; Countertops</h3></summary><p>Single and double vanities, quartz or granite tops, undermount sinks, and storage that ends the cluttered counter.</p></details>
       <details class="card card-acc" open=""><summary><h3>Tile &amp; Flooring</h3></summary><p>Porcelain and ceramic floor tile, shower wall tile, and accent details installed over proper underlayment with clean, consistent layout.</p></details>
       <details class="card card-acc" open=""><summary><h3>Accessible &amp; Aging-in-Place Baths</h3></summary><p>Curbless entries, widened doors, blocking and grab bars, comfort-height toilets, and slip-resistant flooring.</p></details>
@@ -126,8 +130,8 @@ faqs:
   <div class="container">
     <div class="section-head"><span class="eyebrow-dark">FAQ</span><h2>Bathroom Remodeling FAQ</h2></div>
     <div class="faq">
-      <details><summary>How long does a bathroom remodel take?</summary><p>It varies with scope. Replacing fixtures and tile in the same layout is quicker than a remodel that moves plumbing in the slab or changes walls. Material lead times — especially custom glass, which is measured after tile — also play a part. We give you a project-specific schedule before we start.</p></details>
-      <details><summary>Can you convert my bathtub to a walk-in shower?</summary><p>Yes. It is one of the most common bathroom remodeling requests we receive. The drain usually needs to be resized and sometimes relocated, and the new shower is fully waterproofed before tile. Low-threshold and curbless entries are both options in most homes.</p></details>
+      <details><summary>How long does a bathroom remodel take?</summary><p>It varies with scope. Replacing fixtures and tile in the same layout is quicker than a remodel that moves plumbing in the slab or changes walls. Material lead times also play a part. We give you a project-specific schedule before we start.</p></details>
+      <details><summary>Can you convert my bathtub to a walk-in shower?</summary><p>Yes. Tub-to-shower conversions and walk-in showers are part of our bathroom remodeling services, with permits and inspections coordinated under one contract.</p></details>
       <details><summary>How do you prevent leaks and mold behind the tile?</summary><p>By treating waterproofing as its own step rather than relying on tile and grout, which are not waterproof. We use a continuous waterproofing system on shower walls and pans, slope pans correctly to the drain, and vent exhaust fans to the outside of the house.</p></details>
       <details><summary>Can you make a bathroom safer for aging in place?</summary><p>Absolutely. Curbless showers, built-in benches, grab bars anchored to solid blocking, wider doorways, comfort-height toilets, and better lighting all make a meaningful difference, and they can be designed to look like deliberate upgrades rather than medical equipment.</p></details>
     </div>
@@ -222,3 +226,15 @@ faqs:
     </div>
   </div>
 </section>
+
+## Walk-In Showers and Tub-to-Shower Conversions
+
+Walk-in showers and tub-to-shower conversions are both part of Brunderman Building Co Inc's bathroom remodeling work for homeowners in [Port Charlotte](/locations/port-charlotte), [Punta Gorda](/locations/punta-gorda), [North Port](/locations/north-port) and the rest of [Charlotte County](/locations/charlotte-county). The same company also handles accessible bathrooms, flooring replacement and larger [home remodeling](/services/home-remodeling) projects.
+
+Every project runs under one contract, with permits, subcontractors and inspections coordinated for you, so you are not managing separate trades. Brian Brunderman founded the company in 1987, and it has served more than 800 customers since. To talk through your bathroom, call (941) 276-0305.
+
+## Aging-in-Place and Accessible Bathrooms
+
+Aging-in-place modifications and accessible bathrooms are services we offer for homeowners in Port Charlotte and Southwest Florida, including long-term residents and seasonal owners. If you are planning one, it can be scoped alongside a walk-in shower or tub-to-shower conversion.
+
+Bigger changes, such as an in-law suite or a primary suite addition, fall under our [home additions](/services/home-additions) work. As with every remodel, permits, subcontractors and inspections are coordinated under one contract. Call (941) 276-0305 to discuss what your bathroom needs.
