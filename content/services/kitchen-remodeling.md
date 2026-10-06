@@ -15,7 +15,7 @@ faqs:
   - question: "Does a kitchen remodel require a permit?"
     answer: "If the project involves electrical, plumbing, mechanical, or structural changes, it does. A simple countertop swap typically does not. We handle permitting with the appropriate building department for the work we perform."
   - question: "Do you need a permit to remodel your kitchen in Charlotte County?"
-    answer: "It depends on the work involved. Permitting is one of the services Brunderman Building Co Inc provides, and remodeling projects are handled under one contract with permits, subcontractors and inspections coordinated. For more background on how permits work for remodels in this area, read our guide to [remodeling permits in Southwest Florida](/blog/remodeling-permits-southwest-florida), or call (941) 276-0305 to talk about your kitchen."
+    answer: "It depends on the work involved. Permitting is one of the services Brunderman Building Co Inc provides, and remodeling projects are handled under one contract with permits, subcontractors and inspections coordinated. For more background on how permits work for remodels in this area, read our guide to remodeling permits in Southwest Florida, or call (941) 276-0305 to talk about your kitchen."
 ---
 
 <section class="hero page-hero">
