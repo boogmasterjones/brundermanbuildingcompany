@@ -1,6 +1,6 @@
 ---
-title: "Kitchen Remodeling in Port Charlotte, FL | Brunderman Building"
-description: "Kitchen remodeling in Port Charlotte, FL — cabinets, countertops, islands & full layout changes by a builder with four decades of local experience."
+title: "Kitchen Remodeling & Renovation, Port Charlotte FL | Brunderman"
+description: "Kitchen remodeling and renovation in Port Charlotte and Charlotte County: open floor plans, pantry builds, permits coordinated. Call (941) 276-0305."
 name: "Kitchen Remodeling"
 heading: "Kitchen Remodeling in Port Charlotte, FL"
 summary: "Kitchen remodeling that fixes the layout, not just the finishes. New cabinetry, countertops, islands, and lighting — planned and built by a company that has worked in Port Charlotte homes for four…"
@@ -14,6 +14,8 @@ faqs:
     answer: "Yes. We work with cabinet and stone suppliers and help you choose lines that fit your budget and the look you want. Countertops are templated after cabinets are installed so the fit is exact."
   - question: "Does a kitchen remodel require a permit?"
     answer: "If the project involves electrical, plumbing, mechanical, or structural changes, it does. A simple countertop swap typically does not. We handle permitting with the appropriate building department for the work we perform."
+  - question: "Do you need a permit to remodel your kitchen in Charlotte County?"
+    answer: "It depends on the work involved. Permitting is one of the services Brunderman Building Co Inc provides, and remodeling projects are handled under one contract with permits, subcontractors and inspections coordinated. For more background on how permits work for remodels in this area, read our guide to [remodeling permits in Southwest Florida](/blog/remodeling-permits-southwest-florida), or call (941) 276-0305 to talk about your kitchen."
 ---
 
 <section class="hero page-hero">
@@ -68,7 +70,7 @@ faqs:
 </section>
 <section class="section-dark">
   <div class="container">
-    <div class="section-head"><span class="eyebrow">Our Process</span><h2>How a Kitchen Remodeling Project Works</h2></div>
+    <div class="section-head"><span class="eyebrow">Our Process</span><h2>Kitchen Renovation in Port Charlotte: What to Expect</h2></div>
     <ol class="steps">
       <li class="step"><h3>Consult &amp; Measure</h3><p>We see the existing kitchen, take measurements, and talk through what you want to change.</p></li>
       <li class="step"><h3>Design &amp; Selections</h3><p>Layout drawings, cabinet and countertop choices, and a written price for the full scope.</p></li>
@@ -222,3 +224,11 @@ faqs:
     </div>
   </div>
 </section>
+
+## Open Floor Plan Conversions and Pantry Builds
+
+Two of our services tie directly into kitchen work: open floor plan conversions and pantry builds. Either can be part of your kitchen remodeling project instead of a separate job.
+
+Brunderman Building Co Inc works under one contract for remodeling, with permits, subcontractors and inspections coordinated, so the kitchen and the related work are handled together. Brian Brunderman founded the company in 1987, and we have served more than 800 customers since then.
+
+If your plans reach beyond the kitchen, see our [home remodeling](/services/home-remodeling) page. We work with homeowners in [Port Charlotte](/locations/port-charlotte), [Punta Gorda](/locations/punta-gorda), [North Port](/locations/north-port) and across [Charlotte County](/locations/charlotte-county). Call (941) 276-0305 to talk through your kitchen.
