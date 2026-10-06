@@ -1,6 +1,6 @@
 ---
-title: "Home Additions in Port Charlotte, FL | Brunderman Building Co."
-description: "Home additions in Port Charlotte, FL — primary suites, in-law suites, garages & lanai conversions built to Florida code by a four-decade builder."
+title: "Home Additions in Port Charlotte, FL | Brunderman Building Co"
+description: "Primary suites, in-law suites, second-story rooms, bonus rooms and garage additions in Port Charlotte and Charlotte County, with permits handled."
 name: "Home Additions"
 heading: "Home Additions in Port Charlotte, FL"
 summary: "Home additions that look like they were always part of the house: primary suites, in-law suites, extra bedrooms, garages, and enclosed lanais built by an experienced custom home builder."
@@ -14,6 +14,8 @@ faqs:
     answer: "That is the goal. We match the construction type, roof pitch and material, stucco texture, window style, and floor height as closely as possible so the addition reads as original. Where an exact roofing or tile match is no longer made, we will show you the closest options."
   - question: "Can my lanai be converted into a real room?"
     answer: "Frequently, yes — but it has to be done properly to count as living area. That usually means verifying or upgrading the slab and footing, building insulated exterior walls, installing impact-rated windows and doors, extending HVAC, and permitting the work."
+  - question: "How do permits and timelines work for a home addition in Charlotte County?"
+    answer: "A home addition is new construction, so it has to be permitted and inspected. We handle permitting and coordinate the subcontractors and inspections under one contract, so you are not managing the county yourself. The timeline depends on the size of the addition, the design and the permit review, so we talk through expected timing once the scope is set. Our guide to remodeling permits in Southwest Florida explains the process, and you can read more about our work in Port Charlotte."
 ---
 
 <section class="hero page-hero">
@@ -87,7 +89,7 @@ faqs:
   <div class="container">
     <div class="prose collapsible narrow">
       <h2>Home Addition Contractors Near You</h2>
-      <p>If you are looking for home addition contractors near me in Port Charlotte or a room addition builder anywhere in Charlotte County, experience with ground-up construction should be at the top of your checklist. Home additions involve foundations, structural block or framing, trusses, roofing, and every mechanical trade — the same skills as building a new house, plus the added challenge of joining new to old. Brunderman Building Co Inc brings four decades of that experience, a top 5% rating on BuildZoom, and the confidence of more than 800 customers.</p>
+      <p>If you are looking for home addition contractors near me in <a href="/locations/port-charlotte">Port Charlotte</a> or a room addition builder anywhere in <a href="/locations/charlotte-county">Charlotte County</a>, experience with ground-up construction should be at the top of your checklist. Joining new to old is the hard part of any addition. Brunderman Building Co Inc has been building since 1987, with a top 5% rating on BuildZoom, and the confidence of more than 800 customers.</p>
       <p>Local conditions shape home additions here more than most people expect. Standard Port Charlotte and North Port lots are roughly 80 by 125 feet, and side and rear setbacks limit how far an addition can extend. Homes on septic systems must keep additions clear of the tank and drain field, or the system has to be relocated. In flood zones, a new addition generally has to be built at the current required elevation, which can mean a step up from the existing floor — and a large enough project can trigger FEMA's substantial improvement rule for the whole house. We sort through these questions with you at the feasibility stage so the design you pay for is one that can actually be permitted.</p>
       <h3>Addition Projects We Build</h3>
       <ul class="cols">
@@ -222,3 +224,19 @@ faqs:
     </div>
   </div>
 </section>
+
+## Primary Suite and In-Law Suite Additions
+
+A primary suite addition gives you a new bedroom with a walk-in closet and a full bathroom, and frees the old primary bedroom for guests or an office. An in-law suite adds private living space for a family member, usually a bedroom, bath and sitting area attached to the main home.
+
+Both can be planned with aging in mind. We also build walk-in showers, tub-to-shower conversions and accessible bathrooms, so a new suite can be designed for the way you or a parent will live in it years from now. See our [bathroom remodeling](/services/bathroom-remodeling) page for more on that work.
+
+Our lot evaluation work helps make sure the suite fits the lot and the rules.
+
+## Second-Story Additions, Bonus Rooms and Garage Additions
+
+On a smaller lot, building up can make more sense than building out. Where the structure and zoning permit, a second-story addition or bonus room adds living space without giving up yard.
+
+Garage additions and garage conversions are another common way to gain space. A new garage adds parking and storage, while a conversion turns existing garage space into a room you can use every day.
+
+Whatever the type, the addition has to tie into the existing house properly: foundation, roof, finishes, floor heights and mechanical systems. We handle the work under one contract, with permits, subcontractors and inspections coordinated. Brunderman Building Co Inc has built more than 200 homes in Charlotte County, and that ground-up experience is what an addition calls for. Call (941) 276-0305 to talk through your project.
