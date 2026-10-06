@@ -1,6 +1,6 @@
 ---
-title: "General Contractor in Port Charlotte, FL | Brunderman Building"
-description: "General contractor in Port Charlotte, FL for new homes, remodels and additions. Four decades of local experience and 200+ homes built in Charlotte County."
+title: "General Contractor in Port Charlotte, FL: Remodels & Additions"
+description: "Kitchen, bathroom and whole-home remodeling, home additions and custom homes in Port Charlotte, FL, from a Punta Gorda builder in business since 1987."
 name: "Port Charlotte, FL"
 heading: "General Contractor in Port Charlotte, FL"
 summary: "Port Charlotte is where we have done most of our building for four decades. If you need a general contractor who knows these streets, canals, and block homes, you have found one."
@@ -14,6 +14,8 @@ faqs:
     answer: "Many are, especially near saltwater canals, the harbor, and the rivers. The flood zone and base flood elevation determine the minimum floor height for new construction and can affect how much remodeling is allowed under FEMA's 50% rule. We check this at the start of every project."
   - question: "Do you remodel older 1960s and 1970s Port Charlotte homes?"
     answer: "Regularly. Those concrete block homes are structurally sound and respond very well to remodeling — opening the kitchen, replacing windows with impact-rated units, updating baths, and adding a proper primary suite are all common projects for us."
+  - question: "Do you handle hurricane and water damage rebuilds in Port Charlotte?"
+    answer: "Yes. Hurricane and water damage rebuilds are part of our work in Port Charlotte. You get one contract, with permits, subcontractors and inspections coordinated for you. Before planning a rebuild, read our article on the FEMA 50% rule in Charlotte County."
 ---
 
 <section class="hero page-hero">
@@ -36,16 +38,17 @@ faqs:
       <div class="prose collapsible">
         <span class="eyebrow-dark">Port Charlotte, Florida</span>
         <h2>Building in Port Charlotte</h2>
+        <p>In Port Charlotte we handle <a href="/services/home-remodeling">home remodeling</a>, <a href="/services/kitchen-remodeling">kitchen remodeling</a>, <a href="/services/bathroom-remodeling">bathroom remodeling</a> and <a href="/services/home-additions">home additions</a>, as well as new custom homes.</p>
         <p>Port Charlotte was laid out in the late 1950s by General Development Corporation as one of the largest planned communities in Florida — tens of thousands of platted lots threaded with roughly 165 miles of canals. With around 60,000 residents today, it remains unincorporated, which means building permits run through Charlotte County rather than a city hall. Brunderman Building Co Inc has spent four decades working inside that system, and the majority of the 200-plus homes we have built in Charlotte County stand here.</p>
         <p>That history gives us an unusual familiarity with the housing stock. We know the low-slung 1960s and 70s block ranches off Edgewater Drive and Midway Boulevard, with their terrazzo floors and jalousie-era window openings. We know the 1980s and 90s homes around Murdock and the newer construction in Gulf Cove and South Gulf Cove. And we know what Hurricane Charley in 2004 and Hurricane Ian in 2022 did to roofs, soffits, lanais, and interiors across every one of those neighborhoods, because we were building here through both storms.</p>
-        <p>Whether you are building new on a vacant lot in Section 15 or finally redoing the kitchen in a house you have owned for thirty years, working with a general contractor based right here in Port Charlotte keeps the project simple. Site visits are easy, suppliers are close, and the local permitting process is one we work with every week.</p>
+        <p>Whether you are building new on a vacant lot or remodeling the home you live in, working with a general contractor based in nearby Punta Gorda keeps the project simple. Site visits are easy, suppliers are close, and the local permitting process is one we work with every week.</p>
       </div>
       <aside class="fact-card">
         <h3>Port Charlotte at a Glance</h3>
         <dl>
           <div><dt>Population</dt><dd>About 60,000 (2020 Census)</dd></div>
           <div><dt>County</dt><dd>Charlotte County (unincorporated)</dd></div>
-          <div><dt>From our office</dt><dd>Minutes away — our office is on Pinnacle St, off US-41</dd></div>
+          
           <div><dt>Permits</dt><dd>Charlotte County Community Development</dd></div>
         </dl>
         <a href="tel:+19412760305" onclick="if(typeof gtag==='function')gtag('event','call_click',{'event_category':'engagement','event_label':'location_page_phone_button'})" class="btn btn-primary">Call (941) 276-0305</a>
