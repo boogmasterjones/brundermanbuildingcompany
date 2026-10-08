@@ -135,7 +135,7 @@ path: "/about"
       <div class="quote-card">
         <form class="quote-form" name="quote-request" method="POST" action="https://formsubmit.co/brundermanbuilding@comcast.net">
           <input type="hidden" name="_subject" value="New Quote Request — Brunderman Building Co Inc">
-          <input type="hidden" name="_next" value="https://www.brundermanbuildingcompany.com/thank-you">
+          <input type="hidden" name="_next" value="https://brundermanbuildingcompany.com/thank-you">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
           <p style="display:none"><label>Leave this field blank: <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
