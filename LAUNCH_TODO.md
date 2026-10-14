@@ -19,7 +19,7 @@ Edit there and rebuild rather than hand-editing the HTML files. CSS lives in css
 ## Still needs your input
 
 1. **Project photos (biggest visual gap).** The "See Our Work" carousel uses labelled blueprint placeholders in `images/work/*.svg` — the GBP has no photos to pull. Drop in real photos (export ~960×720 WebP, plus JPG fallback), update the `WORK` list in `_generate/build.js`, rebuild. I did not use stock photos because presenting them as the company's work would be misleading.
-2. ~~Domain~~ — confirmed: `https://www.brundermanbuildingcompany.com`.
+2. ~~Domain~~ — confirmed: `https://www.brundermanbuilding.net`.
 3. **GA4 Measurement ID** — `SITE.ga4` is `G-XXXXXXXXXX`. Name the property "Builder Port Charlotte" per portfolio convention.
 4. **Form inbox** — quote form posts to FormSubmit at `brundermanbuilding@comcast.net`. The first submission triggers a one-time FormSubmit activation email to that inbox; the client must click it or leads will not arrive.
 5. ~~License number~~ — client decision: not included. The site makes no "licensed & insured" claim.
