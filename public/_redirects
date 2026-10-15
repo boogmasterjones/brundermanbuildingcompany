@@ -1,3 +1,8 @@
+# The business moved to brundermanbuilding.net. Everything on the old domain goes to the same path on the new one.
+http://brundermanbuildingcompany.com/*       https://brundermanbuilding.net/:splat   301!
+https://brundermanbuildingcompany.com/*      https://brundermanbuilding.net/:splat   301!
+http://www.brundermanbuildingcompany.com/*   https://brundermanbuilding.net/:splat   301!
+https://www.brundermanbuildingcompany.com/*  https://brundermanbuilding.net/:splat   301!
 # Old addresses permanently redirect to the new clean addresses.
 /404.html                                                    /404                                               301!
 /about.html                                                  /about                                             301!
