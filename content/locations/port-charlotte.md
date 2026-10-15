@@ -48,7 +48,6 @@ faqs:
         <dl>
           <div><dt>Population</dt><dd>About 60,000 (2020 Census)</dd></div>
           <div><dt>County</dt><dd>Charlotte County (unincorporated)</dd></div>
-          
           <div><dt>Permits</dt><dd>Charlotte County Community Development</dd></div>
         </dl>
         <a href="tel:+19412760305" onclick="if(typeof gtag==='function')gtag('event','call_click',{'event_category':'engagement','event_label':'location_page_phone_button'})" class="btn btn-primary">Call (941) 276-0305</a>
